@@ -60,7 +60,6 @@
 <script setup lang="ts">
 import { ref, nextTick, computed, reactive, watch} from 'vue'
 import {RoomStore} from '@/stores/user'
-import type { Ref } from 'vue'
 import { useSocketStore } from '../../stores/socket'
 import statut from '../UI/ConnexionStatut.vue'
 import gear from '../../assets/SVG/GearSvg.vue'
