@@ -1,0 +1,18 @@
+export const  forbiddenName = [
+    'Serveur',
+    'Admin',
+    'Utilisateur',
+    'Root',
+    'Invité',
+    'Joueur',
+    'Joueur_',
+    'Serveur',
+    'serveur',
+    'server',
+    'admin',
+    'user',
+    'root',
+    'guest',
+    'player',
+    'player_',
+];
