@@ -35,6 +35,7 @@ export default class Game {
         break;
       case "presentation":
         this.phaseGame = "question";
+        this.refreshPlayers();
         this.askQuestion();
         break;
       case "question":
@@ -66,6 +67,22 @@ export default class Game {
       });
     });
   }
+  private refreshPlayers() {
+    this.players.forEach((el) => {
+      el.player.response = {
+        response: null,
+        time: null,
+      };
+    });
+  }
+  private sendUpdateResponse(){
+    let data=this.players.filter(el=>el.player.response.time!==null).map(el=>{
+      return el.player.id
+  })
+    this.players.forEach((el) => {
+      el.player.socket?.emit("update:response",data);
+  });
+  }
   private askQuestion() {
     this.createEvent(async () => {
       this.changePhaseGame();
@@ -74,6 +91,23 @@ export default class Game {
     this.players.forEach((el) => {
       el.player.socket?.emit("question:game", this.getInfoGame());
     });
+  }
+  savePlayerResponse(player: Player, response:{response:number | null,time:number}) {
+    if(!this.canResponse(player)) return
+
+    console.log('ok pour sauvegarder')
+    const user = this.players.find((el) => el.player.id === player.id);
+    if (user) {
+      user.player.response = response;
+      this.sendUpdateResponse()
+    }
+  }
+ private canResponse(player: Player) {
+    const user = this.players.find((el) => el.player.id === player.id);
+    if (user) {
+      return user.player.response.response === null && user.player.response.time === null;
+    }
+    return false;
   }
 
   private async getQuestion() {
@@ -113,7 +147,10 @@ export default class Game {
 
 class GamePlayer {
   player: Partial<Player> & {
-    response: string | null;
+    response: {
+      response: number | null;
+      time: number | null;
+    };
     score: number;
     streak: number;
   };
@@ -125,7 +162,10 @@ class GamePlayer {
       name: player.name,
       score: 0,
       streak: 0,
-      response: null,
+      response: {
+        response: null,
+        time:null
+      },
     };
   }
 }

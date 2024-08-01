@@ -1,7 +1,7 @@
 <template>
   <div class=" theme-comp">
     <h1>Thème</h1>
-    <p>{{game.gameQuestions.category}}</p>
+    <p class="important">{{game.gameQuestions.category}}</p>
     <h1>Difficulté</h1>
     <difficulty :difficulty="game.gameQuestions.difficulty"></difficulty>
 
@@ -36,5 +36,10 @@ h1{
 p{
   text-align:center;
   color:white;
+}
+.important{
+  font-size: 30px;
+  color: #d6b810e3;
+  text-shadow: rgba(255, 255, 255, 0.219) 1px 0px 2px, rgba(0, 0, 0, 0.219) -1px 0px 2px;
 }
 </style>

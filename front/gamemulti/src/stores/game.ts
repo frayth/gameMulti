@@ -3,9 +3,10 @@ import { reactive, ref, type Ref } from "vue";
 import type { GameStatus,InfoGameRoom  } from "@/models/room.model";
 import { useSocketStore } from "./socket";
 import type Player from "@/models/player.model";
-
+import { userStore } from "./user";
 
 export const gameStore= defineStore('game', () => {
+  const user = userStore()
   const status:Ref<GameStatus> = ref('waiting')
   const phaseGame=ref<'intro'|'presentation' | 'question' |'score'>('intro')
   const players=ref<Player[]>([])
@@ -32,6 +33,18 @@ export const gameStore= defineStore('game', () => {
     init() {
       this.lauchGame = false
     }
+  })
+  const InfoCurrentQuestion=reactive({
+    currentResponse: [] as number[],
+    personnalResponse:null as number | null,
+    userHaveRespond(){
+      return this.currentResponse.includes(user.id)
+    },
+    refresh(){
+      this.currentResponse=[]
+      this.personnalResponse=null
+    }
+
   })
   socket.socket?.on('infoGameRoom:room',(data:InfoGameRoom)=>{
     status.value=data.status
@@ -63,15 +76,26 @@ export const gameStore= defineStore('game', () => {
     phaseGame.value=data.phaseGame
     gameQuestions.category=data.category
     gameQuestions.difficulty=data.difficulty
+    InfoCurrentQuestion.refresh()
   })
 
   socket.socket?.on('score:game',(data:InfoGameRoom )=>{
     console.log('score:game',data)
     phaseGame.value='score'
   })
+  socket.socket?.on('update:response',(data:number[])=>{
+    console.log('update:response',data)
+   InfoCurrentQuestion.currentResponse=data
+  })
+
   function getInfogame(){
     socket.socket?.emit('getInfoGame:room')
   }
+  function sendResponse(response:number){
+    if(InfoCurrentQuestion.userHaveRespond()) return
+    InfoCurrentQuestion.personnalResponse=response
+    socket.socket?.emit('response:game',{response,time:Date.now()})
+  }
 
-  return {getInfogame,status,players,owner,waitLobbyProperties,gameQuestions,phaseGame}
+  return {getInfogame,status,players,owner,waitLobbyProperties,gameQuestions,phaseGame,InfoCurrentQuestion,sendResponse}
 })

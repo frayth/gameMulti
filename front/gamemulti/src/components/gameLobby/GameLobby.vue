@@ -6,8 +6,8 @@
     <div v-else-if="game.phaseGame === 'presentation'">
       <Theme></Theme>
     </div>
-    <question v-else-if="game.phaseGame === 'question'"></question>
-    <div v-else>Ceci est le score de la partie</div>
+    <question v-else-if="game.phaseGame === 'question'" ></question>
+    <div v-else>Ceci est le score de la partie</div> 
   </div>
 </template>
 
@@ -19,3 +19,4 @@ const game = gameStore()
 </script>
 
 <style scoped></style>
+//
