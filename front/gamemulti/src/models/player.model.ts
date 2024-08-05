@@ -4,4 +4,11 @@ export default interface Player {
   connected: boolean;
   ready?: boolean;
 }
+
+export interface listStatPlayer{
+  id:number,
+  name:string,
+  score:number
+  streak:number
+}
 export type PlayerStatus = 'connect' | 'disconnect';

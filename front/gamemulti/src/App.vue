@@ -13,6 +13,7 @@ const user = userStore()
 const appli = appliStore()
 onBeforeMount(() => {
   user.init()
+  appli.checkIfMobile()
 })
 
 function ping() {
@@ -28,11 +29,12 @@ window.addEventListener('popstate', function () {
   <bandeau v-if="!appli.isOnline" />
   <header>
     <p @click="ping">Quizz game</p>
+    <div>
+      <button v-if="user.isConnect" @click="user.logout">LOGOUT</button>
+    </div>
   </header>
-  <div>
-    <button v-if="user.isConnect" @click="user.logout">LOGOUT</button>
-  </div>
-  <RouterView />
+
+  <RouterView class="view" />
 </template>
 
 <style scoped>
@@ -45,5 +47,8 @@ header {
 }
 video{
   background-color: transparent;
+}
+.view{
+  margin-top: 10px;
 }
 </style>

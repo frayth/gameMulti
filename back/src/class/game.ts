@@ -1,6 +1,7 @@
 import Player from "./player";
 import questions from "../assets/question.json";
 import type { QuestionModel } from "../models/game.model";
+import { response } from "express";
 const offsetResponseTime=2000
 export default class Game {
   players: GamePlayer[];
@@ -43,7 +44,7 @@ export default class Game {
           this.changePhaseGame()
         },5000)
         this.phaseGame = "score";
-        this.sendScore();
+        this.calculateScore(); 
         break;
     }
   }
@@ -54,8 +55,9 @@ export default class Game {
     },5000)
   }
   private sendScore(){
+    console.log('sendScore',this.players.map(el=>el.player.score))
     this.players.forEach((el) => {
-      el.player.socket?.emit("score:game",this.getInfoGame());
+      el.player.socket?.emit("score:game",this.players.map(el=>el.getStats()));
   });
 }
   private sendPresentation(){
@@ -66,6 +68,7 @@ export default class Game {
         difficulty: this.question.question.difficulty,
       });
     });
+
   }
   private refreshPlayers() {
     this.players.forEach((el) => {
@@ -74,6 +77,20 @@ export default class Game {
         time: null,
       };
     });
+  }
+  private async calculateScore() {
+    await new Promise((resolve) => {
+      this.players.forEach((el) => {
+        if (el.player.response.response === this.question.question.response) {
+          el.player.score += 10;
+          el.player.streak += 1;
+        } else {
+          el.player.streak = 0;
+        }
+      });
+      resolve(null);
+    });
+    this.sendScore();
   }
   private sendUpdateResponse(){
     let data=this.players.filter(el=>el.player.response.time!==null).map(el=>{
@@ -92,13 +109,13 @@ export default class Game {
       el.player.socket?.emit("question:game", this.getInfoGame());
     });
   }
-  savePlayerResponse(player: Player, response:{response:number | null,time:number}) {
+  savePlayerResponse(player: Player, response:{response:number | null}) {
     if(!this.canResponse(player)) return
 
     console.log('ok pour sauvegarder')
     const user = this.players.find((el) => el.player.id === player.id);
     if (user) {
-      user.player.response = response;
+      user.player.response = {response:response.response,time:Date.now()};
       this.sendUpdateResponse()
     }
   }
@@ -134,6 +151,10 @@ export default class Game {
       category: this.question.question.category,
       nextEvent:this.nextEvent-offsetResponseTime,
       phaseGame: this.phaseGame,
+      gameStats: this.players.map((el) => el.getStats()),
+      userResponse:this.players.filter(el=>el.player.response.time!==null).map(el=>{
+        return el.player.id
+    })
     };
   }
 
@@ -166,6 +187,15 @@ class GamePlayer {
         response: null,
         time:null
       },
+    };
+  }
+  getStats() {
+    return {
+      id: this.player.id,
+      name: this.player.name,
+      score: this.player.score,
+      streak: this.player.streak,
+      response: this.player.response,
     };
   }
 }

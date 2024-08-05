@@ -2,8 +2,9 @@ import { defineStore } from "pinia";
 import { reactive, ref, type Ref } from "vue";
 import type { GameStatus,InfoGameRoom  } from "@/models/room.model";
 import { useSocketStore } from "./socket";
-import type Player from "@/models/player.model";
+import type Player  from "@/models/player.model";
 import { userStore } from "./user";
+import type { listStatPlayer } from "@/models/player.model";
 
 export const gameStore= defineStore('game', () => {
   const user = userStore()
@@ -12,6 +13,15 @@ export const gameStore= defineStore('game', () => {
   const players=ref<Player[]>([])
   const socket=useSocketStore()
   const owner=ref<number>(0)
+  const gameStat=reactive({
+    players:[] as listStatPlayer[],
+    initPlayers(players:Player[]){
+      this.players=players.map(player=>({id:player.id,name:player.name,score:0,streak:0}))
+    },
+    sortedPlayerByScore():listStatPlayer[]{
+      return this.players.sort((a,b)=>b.score-a.score).map((player)=>player)
+    }
+  })
   const gameQuestions=reactive({
     question: '' as string,
     answers: [] as {id:number,value:string}[],
@@ -47,6 +57,9 @@ export const gameStore= defineStore('game', () => {
 
   })
   socket.socket?.on('infoGameRoom:room',(data:InfoGameRoom)=>{
+    console.log('infoGameRoom:room',data)
+
+    gameStat.players=data.game?.gameStats || []
     status.value=data.status
     players.value=data.players
     owner.value=data.owner
@@ -55,7 +68,8 @@ export const gameStore= defineStore('game', () => {
     gameQuestions.difficulty=data.game?.difficulty || 0
     gameQuestions.category=data.game?.category || ''
     gameQuestions.nextEvent=data.game?.nextEvent || Date.now()
-    phaseGame.value=data.game?.phaseGame || 'intro'
+    phaseGame.value=data.game?.phaseGame || 'intro',
+    InfoCurrentQuestion.currentResponse=data.game?.userResponse || []  
   })
 
   socket.socket?.on('startCount:timer',()=>{
@@ -87,15 +101,20 @@ export const gameStore= defineStore('game', () => {
     console.log('update:response',data)
    InfoCurrentQuestion.currentResponse=data
   })
+  socket.socket?.on('score:game',(data:listStatPlayer[])=>{
+    console.log('score:game',data)
+    gameStat.players=data
+  })
 
   function getInfogame(){
     socket.socket?.emit('getInfoGame:room')
   }
   function sendResponse(response:number){
     if(InfoCurrentQuestion.userHaveRespond()) return
+   
     InfoCurrentQuestion.personnalResponse=response
-    socket.socket?.emit('response:game',{response,time:Date.now()})
+    socket.socket?.emit('response:game',{response:response===-1?null:response})
   }
 
-  return {getInfogame,status,players,owner,waitLobbyProperties,gameQuestions,phaseGame,InfoCurrentQuestion,sendResponse}
+  return {getInfogame,status,players,owner,waitLobbyProperties,gameQuestions,phaseGame,InfoCurrentQuestion,sendResponse,gameStat}
 })

@@ -119,8 +119,8 @@ io.on("connect", (socket: Socket) => {
       user.room.room?.startGame();
     }
   });
-  socket.on('response:game', (data: {response:number | null,time:number}) => {
-    console.log('[socket.ts]',"response:game");
+  socket.on('response:game', (data: {response:number | null}) => {
+    console.log('[socket.ts]',"response:game",data);
     const user = usersList.getUser(socket);
     if (user && user.room.room instanceof GameRoom) {
       console.log('savePlayerResponse',user.name)

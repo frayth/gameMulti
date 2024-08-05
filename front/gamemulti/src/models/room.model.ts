@@ -1,5 +1,5 @@
 import type Player from './player.model';
-
+import type { listStatPlayer } from './player.model';
 
 export default interface Room {
   name: string;
@@ -24,7 +24,9 @@ export interface InfoGameRoom {
     difficulty:number,
     category:string,
     nextEvent:number,
-    phaseGame:'intro'|'presentation' | 'question' |'score'
+    phaseGame:'intro'|'presentation' | 'question' |'score',
+    gameStats:listStatPlayer[],
+    userResponse:number[]
   }|null
 }
 
