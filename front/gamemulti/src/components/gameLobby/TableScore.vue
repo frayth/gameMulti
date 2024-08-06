@@ -25,7 +25,7 @@
   const userId=userStore().id;
   const game=gameStore();
 
-  const score=computed(()=>game.gameStat.sortedPlayerByScore())
+  const score=computed(()=>game.gameStat.players)
 
 </script>
 

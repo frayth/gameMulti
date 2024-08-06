@@ -16,10 +16,11 @@ export const gameStore= defineStore('game', () => {
   const gameStat=reactive({
     players:[] as listStatPlayer[],
     initPlayers(players:Player[]){
-      this.players=players.map(player=>({id:player.id,name:player.name,score:0,streak:0}))
+      this.players=players.map(player=>({id:player.id,name:player.name,score:0,streak:0,bonus:[],response:{response:null,time:null}}))
     },
-    sortedPlayerByScore():listStatPlayer[]{
-      return this.players.sort((a,b)=>b.score-a.score).map((player)=>player)
+    sortedPlayerByScore(){
+      console.log('sortedPlayerByScore',this.players)
+      this.players=this.players.sort((a,b)=>b.score-a.score).map((player)=>player)
     }
   })
   const gameQuestions=reactive({
@@ -93,18 +94,35 @@ export const gameStore= defineStore('game', () => {
     InfoCurrentQuestion.refresh()
   })
 
-  socket.socket?.on('score:game',(data:InfoGameRoom )=>{
+  socket.socket?.on('score:game',(data:{
+    playersStats:{
+      id: number,
+      name: string,
+      score:number,
+      streak: number,
+      response:{
+        response: number | null,
+        time: number | null
+      },
+      bonus:{
+        type:'faster' | 'correct' | 'incorrect' | 'streak',
+        value:number
+      }[]
+    }[],
+    correctAnswer:string     
+  })=>{
     console.log('score:game',data)
+    gameStat.players=data.playersStats
+    gameStat.sortedPlayerByScore()
     phaseGame.value='score'
   })
+
   socket.socket?.on('update:response',(data:number[])=>{
     console.log('update:response',data)
    InfoCurrentQuestion.currentResponse=data
   })
-  socket.socket?.on('score:game',(data:listStatPlayer[])=>{
-    console.log('score:game',data)
-    gameStat.players=data
-  })
+
+
 
   function getInfogame(){
     socket.socket?.emit('getInfoGame:room')

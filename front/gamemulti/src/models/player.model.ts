@@ -10,5 +10,13 @@ export interface listStatPlayer{
   name:string,
   score:number
   streak:number
+  bonus:{
+    type:'faster' | 'correct' | 'incorrect' | 'streak',
+    value:number
+  }[]
+  response:{
+    response:number | null,
+    time:number | null
+  }
 }
 export type PlayerStatus = 'connect' | 'disconnect';

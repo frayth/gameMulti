@@ -30,8 +30,8 @@
     ],
     "category": "Geography",
     "difficulty": 1,
-    "response":1,
-    "descriptionResponse":"Paris is the capital of France"
+    "response": 1,
+    "descriptionResponse": "Paris is the capital of France"
   },
   {
     "id": 2,
@@ -2072,907 +2072,2134 @@
     "difficulty": 9,
     "response": 3,
     "descriptionResponse": "Max Planck est le physicien qui a développé la théorie quantique."
-  },{
+  },
+  {
     "id": 62,
     "question": "Quel jeu vidéo met en scène un plombier italien nommé Mario ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "The Legend of Zelda"
-        },
-        {
-            "id": 2,
-            "value": "Metroid"
-        },
-        {
-            "id": 3,
-            "value": "Super Mario Bros."
-        },
-        {
-            "id": 4,
-            "value": "Donkey Kong"
-        },
-        {
-            "id": 5,
-            "value": "Pac-Man"
-        },
-        {
-            "id": 6,
-            "value": "Final Fantasy"
-        }
+      {
+        "id": 1,
+        "value": "The Legend of Zelda"
+      },
+      {
+        "id": 2,
+        "value": "Metroid"
+      },
+      {
+        "id": 3,
+        "value": "Super Mario Bros."
+      },
+      {
+        "id": 4,
+        "value": "Donkey Kong"
+      },
+      {
+        "id": 5,
+        "value": "Pac-Man"
+      },
+      {
+        "id": 6,
+        "value": "Final Fantasy"
+      }
     ],
     "category": "Jeux vidéo",
     "difficulty": 1,
     "response": 3,
     "descriptionResponse": "Super Mario Bros. met en scène un plombier italien nommé Mario."
-},
-{
-  "id": 63,
-  "question": "Dans quel jeu vidéo de la série 'The Legend of Zelda' trouve-t-on le personnage de Midna pour la première fois ?",
-  "answers": [
+  },
+  {
+    "id": 63,
+    "question": "Dans quel jeu vidéo de la série 'The Legend of Zelda' trouve-t-on le personnage de Midna pour la première fois ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "The Legend of Zelda: Ocarina of Time"
+        "id": 1,
+        "value": "The Legend of Zelda: Ocarina of Time"
       },
       {
-          "id": 2,
-          "value": "The Legend of Zelda: Majora's Mask"
+        "id": 2,
+        "value": "The Legend of Zelda: Majora's Mask"
       },
       {
-          "id": 3,
-          "value": "The Legend of Zelda: The Wind Waker"
+        "id": 3,
+        "value": "The Legend of Zelda: The Wind Waker"
       },
       {
-          "id": 4,
-          "value": "The Legend of Zelda: Twilight Princess"
+        "id": 4,
+        "value": "The Legend of Zelda: Twilight Princess"
       },
       {
-          "id": 5,
-          "value": "The Legend of Zelda: Skyward Sword"
+        "id": 5,
+        "value": "The Legend of Zelda: Skyward Sword"
       },
       {
-          "id": 6,
-          "value": "The Legend of Zelda: Breath of the Wild"
+        "id": 6,
+        "value": "The Legend of Zelda: Breath of the Wild"
       }
-  ],
-  "category": "Jeux vidéo",
-  "difficulty": 6,
-  "response": 4,
-  "descriptionResponse": "Midna apparaît pour la première fois dans 'The Legend of Zelda: Twilight Princess'."
-},
-  {
-      "id": 64,
-      "question": "Quel sport est pratiqué à Wimbledon ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Football"
-          },
-          {
-              "id": 2,
-              "value": "Tennis"
-          },
-          {
-              "id": 3,
-              "value": "Basketball"
-          },
-          {
-              "id": 4,
-              "value": "Rugby"
-          },
-          {
-              "id": 5,
-              "value": "Golf"
-          },
-          {
-              "id": 6,
-              "value": "Cricket"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 1,
-      "response": 2,
-      "descriptionResponse": "Le tennis est pratiqué à Wimbledon."
+    ],
+    "category": "Jeux vidéo",
+    "difficulty": 6,
+    "response": 4,
+    "descriptionResponse": "Midna apparaît pour la première fois dans 'The Legend of Zelda: Twilight Princess'."
   },
   {
-      "id": 65,
-      "question": "Combien de joueurs composent une équipe de football sur le terrain ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "9"
-          },
-          {
-              "id": 2,
-              "value": "10"
-          },
-          {
-              "id": 3,
-              "value": "11"
-          },
-          {
-              "id": 4,
-              "value": "12"
-          },
-          {
-              "id": 5,
-              "value": "13"
-          },
-          {
-              "id": 6,
-              "value": "14"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 2,
-      "response": 3,
-      "descriptionResponse": "Une équipe de football est composée de 11 joueurs sur le terrain."
+    "id": 64,
+    "question": "Quel sport est pratiqué à Wimbledon ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Football"
+      },
+      {
+        "id": 2,
+        "value": "Tennis"
+      },
+      {
+        "id": 3,
+        "value": "Basketball"
+      },
+      {
+        "id": 4,
+        "value": "Rugby"
+      },
+      {
+        "id": 5,
+        "value": "Golf"
+      },
+      {
+        "id": 6,
+        "value": "Cricket"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 1,
+    "response": 2,
+    "descriptionResponse": "Le tennis est pratiqué à Wimbledon."
   },
   {
-      "id": 66,
-      "question": "Quel est le pays d'origine du sumo ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Chine"
-          },
-          {
-              "id": 2,
-              "value": "Corée du Sud"
-          },
-          {
-              "id": 3,
-              "value": "Thaïlande"
-          },
-          {
-              "id": 4,
-              "value": "Japon"
-          },
-          {
-              "id": 5,
-              "value": "Vietnam"
-          },
-          {
-              "id": 6,
-              "value": "Inde"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 3,
-      "response": 4,
-      "descriptionResponse": "Le sumo est originaire du Japon."
+    "id": 65,
+    "question": "Combien de joueurs composent une équipe de football sur le terrain ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "value": "12"
+      },
+      {
+        "id": 5,
+        "value": "13"
+      },
+      {
+        "id": 6,
+        "value": "14"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 2,
+    "response": 3,
+    "descriptionResponse": "Une équipe de football est composée de 11 joueurs sur le terrain."
   },
   {
-      "id": 67,
-      "question": "Quel joueur de basketball est surnommé 'King James' ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Michael Jordan"
-          },
-          {
-              "id": 2,
-              "value": "Kobe Bryant"
-          },
-          {
-              "id": 3,
-              "value": "LeBron James"
-          },
-          {
-              "id": 4,
-              "value": "Stephen Curry"
-          },
-          {
-              "id": 5,
-              "value": "Kevin Durant"
-          },
-          {
-              "id": 6,
-              "value": "Shaquille O'Neal"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 4,
-      "response": 3,
-      "descriptionResponse": "LeBron James est surnommé 'King James'."
+    "id": 66,
+    "question": "Quel est le pays d'origine du sumo ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Chine"
+      },
+      {
+        "id": 2,
+        "value": "Corée du Sud"
+      },
+      {
+        "id": 3,
+        "value": "Thaïlande"
+      },
+      {
+        "id": 4,
+        "value": "Japon"
+      },
+      {
+        "id": 5,
+        "value": "Vietnam"
+      },
+      {
+        "id": 6,
+        "value": "Inde"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "Le sumo est originaire du Japon."
   },
   {
-      "id": 68,
-      "question": "Quel est le nom du cycliste ayant remporté le plus de Tours de France ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Miguel Indurain"
-          },
-          {
-              "id": 2,
-              "value": "Eddy Merckx"
-          },
-          {
-              "id": 3,
-              "value": "Bernard Hinault"
-          },
-          {
-              "id": 4,
-              "value": "Lance Armstrong"
-          },
-          {
-              "id": 5,
-              "value": "Jacques Anquetil"
-          },
-          {
-              "id": 6,
-              "value": "Chris Froome"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 5,
-      "response": 2,
-      "descriptionResponse": "Eddy Merckx a remporté le plus de Tours de France."
+    "id": 67,
+    "question": "Quel joueur de basketball est surnommé 'King James' ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Michael Jordan"
+      },
+      {
+        "id": 2,
+        "value": "Kobe Bryant"
+      },
+      {
+        "id": 3,
+        "value": "LeBron James"
+      },
+      {
+        "id": 4,
+        "value": "Stephen Curry"
+      },
+      {
+        "id": 5,
+        "value": "Kevin Durant"
+      },
+      {
+        "id": 6,
+        "value": "Shaquille O'Neal"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 4,
+    "response": 3,
+    "descriptionResponse": "LeBron James est surnommé 'King James'."
   },
   {
-      "id": 69,
-      "question": "Dans quel sport utilise-t-on une épée, un sabre ou un fleuret ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Judo"
-          },
-          {
-              "id": 2,
-              "value": "Escrime"
-          },
-          {
-              "id": 3,
-              "value": "Karaté"
-          },
-          {
-              "id": 4,
-              "value": "Boxe"
-          },
-          {
-              "id": 5,
-              "value": "Taekwondo"
-          },
-          {
-              "id": 6,
-              "value": "Sumo"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 6,
-      "response": 2,
-      "descriptionResponse": "L'escrime utilise une épée, un sabre ou un fleuret."
+    "id": 68,
+    "question": "Quel est le nom du cycliste ayant remporté le plus de Tours de France ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Miguel Indurain"
+      },
+      {
+        "id": 2,
+        "value": "Eddy Merckx"
+      },
+      {
+        "id": 3,
+        "value": "Bernard Hinault"
+      },
+      {
+        "id": 4,
+        "value": "Lance Armstrong"
+      },
+      {
+        "id": 5,
+        "value": "Jacques Anquetil"
+      },
+      {
+        "id": 6,
+        "value": "Chris Froome"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 5,
+    "response": 2,
+    "descriptionResponse": "Eddy Merckx a remporté le plus de Tours de France."
   },
   {
-      "id": 70,
-      "question": "Quel joueur de tennis a remporté 20 titres du Grand Chelem avant Roger Federer ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Rafael Nadal"
-          },
-          {
-              "id": 2,
-              "value": "Novak Djokovic"
-          },
-          {
-              "id": 3,
-              "value": "Pete Sampras"
-          },
-          {
-              "id": 4,
-              "value": "Björn Borg"
-          },
-          {
-              "id": 5,
-              "value": "Rod Laver"
-          },
-          {
-              "id": 6,
-              "value": "Roy Emerson"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 7,
-      "response": 1,
-      "descriptionResponse": "Rafael Nadal a remporté 20 titres du Grand Chelem avant Roger Federer."
+    "id": 69,
+    "question": "Dans quel sport utilise-t-on une épée, un sabre ou un fleuret ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Judo"
+      },
+      {
+        "id": 2,
+        "value": "Escrime"
+      },
+      {
+        "id": 3,
+        "value": "Karaté"
+      },
+      {
+        "id": 4,
+        "value": "Boxe"
+      },
+      {
+        "id": 5,
+        "value": "Taekwondo"
+      },
+      {
+        "id": 6,
+        "value": "Sumo"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 6,
+    "response": 2,
+    "descriptionResponse": "L'escrime utilise une épée, un sabre ou un fleuret."
   },
   {
-      "id": 71,
-      "question": "Dans quelle ville se déroulent les 24 Heures du Mans ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Le Mans"
-          },
-          {
-              "id": 2,
-              "value": "Paris"
-          },
-          {
-              "id": 3,
-              "value": "Monaco"
-          },
-          {
-              "id": 4,
-              "value": "Spa"
-          },
-          {
-              "id": 5,
-              "value": "Silverstone"
-          },
-          {
-              "id": 6,
-              "value": "Daytona"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 8,
-      "response": 1,
-      "descriptionResponse": "Les 24 Heures du Mans se déroulent dans la ville du Mans."
+    "id": 70,
+    "question": "Quel joueur de tennis a remporté 20 titres du Grand Chelem avant Roger Federer ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Rafael Nadal"
+      },
+      {
+        "id": 2,
+        "value": "Novak Djokovic"
+      },
+      {
+        "id": 3,
+        "value": "Pete Sampras"
+      },
+      {
+        "id": 4,
+        "value": "Björn Borg"
+      },
+      {
+        "id": 5,
+        "value": "Rod Laver"
+      },
+      {
+        "id": 6,
+        "value": "Roy Emerson"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Rafael Nadal a remporté 20 titres du Grand Chelem avant Roger Federer."
   },
   {
-      "id": 72,
-      "question": "Quel boxeur a été surnommé 'The Greatest' et 'The People's Champion' ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Mike Tyson"
-          },
-          {
-              "id": 2,
-              "value": "George Foreman"
-          },
-          {
-              "id": 3,
-              "value": "Evander Holyfield"
-          },
-          {
-              "id": 4,
-              "value": "Muhammad Ali"
-          },
-          {
-              "id": 5,
-              "value": "Joe Frazier"
-          },
-          {
-              "id": 6,
-              "value": "Lennox Lewis"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 9,
-      "response": 4,
-      "descriptionResponse": "Muhammad Ali a été surnommé 'The Greatest' et 'The People's Champion'."
+    "id": 71,
+    "question": "Dans quelle ville se déroulent les 24 Heures du Mans ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le Mans"
+      },
+      {
+        "id": 2,
+        "value": "Paris"
+      },
+      {
+        "id": 3,
+        "value": "Monaco"
+      },
+      {
+        "id": 4,
+        "value": "Spa"
+      },
+      {
+        "id": 5,
+        "value": "Silverstone"
+      },
+      {
+        "id": 6,
+        "value": "Daytona"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 8,
+    "response": 1,
+    "descriptionResponse": "Les 24 Heures du Mans se déroulent dans la ville du Mans."
   },
   {
-      "id": 73,
-      "question": "Quel joueur de football a marqué 'La Main de Dieu' en Coupe du Monde ?",
-      "answers": [
-          {
-              "id": 1,
-              "value": "Pelé"
-          },
-          {
-              "id": 2,
-              "value": "Diego Maradona"
-          },
-          {
-              "id": 3,
-              "value": "Lionel Messi"
-          },
-          {
-              "id": 4,
-              "value": "Zinédine Zidane"
-          },
-          {
-              "id": 5,
-              "value": "Cristiano Ronaldo"
-          },
-          {
-              "id": 6,
-              "value": "Ronaldinho"
-          }
-      ],
-      "category": "Sport",
-      "difficulty": 10,
-      "response": 2,
-      "descriptionResponse": "Diego Maradona a marqué 'La Main de Dieu' en Coupe du Monde."
-  }, {
+    "id": 72,
+    "question": "Quel boxeur a été surnommé 'The Greatest' et 'The People's Champion' ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Mike Tyson"
+      },
+      {
+        "id": 2,
+        "value": "George Foreman"
+      },
+      {
+        "id": 3,
+        "value": "Evander Holyfield"
+      },
+      {
+        "id": 4,
+        "value": "Muhammad Ali"
+      },
+      {
+        "id": 5,
+        "value": "Joe Frazier"
+      },
+      {
+        "id": 6,
+        "value": "Lennox Lewis"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 9,
+    "response": 4,
+    "descriptionResponse": "Muhammad Ali a été surnommé 'The Greatest' et 'The People's Champion'."
+  },
+  {
+    "id": 73,
+    "question": "Quel joueur de football a marqué 'La Main de Dieu' en Coupe du Monde ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Pelé"
+      },
+      {
+        "id": 2,
+        "value": "Diego Maradona"
+      },
+      {
+        "id": 3,
+        "value": "Lionel Messi"
+      },
+      {
+        "id": 4,
+        "value": "Zinédine Zidane"
+      },
+      {
+        "id": 5,
+        "value": "Cristiano Ronaldo"
+      },
+      {
+        "id": 6,
+        "value": "Ronaldinho"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 10,
+    "response": 2,
+    "descriptionResponse": "Diego Maradona a marqué 'La Main de Dieu' en Coupe du Monde."
+  },
+  {
     "id": 74,
     "question": "Quel film met en scène un grand requin blanc terrorisant une station balnéaire ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Titanic"
-        },
-        {
-            "id": 2,
-            "value": "Les Dents de la mer"
-        },
-        {
-            "id": 3,
-            "value": "Jurassic Park"
-        },
-        {
-            "id": 4,
-            "value": "King Kong"
-        },
-        {
-            "id": 5,
-            "value": "Godzilla"
-        },
-        {
-            "id": 6,
-            "value": "Le Monde Perdu"
-        }
+      {
+        "id": 1,
+        "value": "Titanic"
+      },
+      {
+        "id": 2,
+        "value": "Les Dents de la mer"
+      },
+      {
+        "id": 3,
+        "value": "Jurassic Park"
+      },
+      {
+        "id": 4,
+        "value": "King Kong"
+      },
+      {
+        "id": 5,
+        "value": "Godzilla"
+      },
+      {
+        "id": 6,
+        "value": "Le Monde Perdu"
+      }
     ],
     "category": "Films",
     "difficulty": 1,
     "response": 2,
     "descriptionResponse": "'Les Dents de la mer' met en scène un grand requin blanc terrorisant une station balnéaire."
-},
-{
+  },
+  {
     "id": 75,
     "question": "Quel film d'animation raconte l'histoire d'un lionceau nommé Simba ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Aladdin"
-        },
-        {
-            "id": 2,
-            "value": "Le Roi Lion"
-        },
-        {
-            "id": 3,
-            "value": "La Petite Sirène"
-        },
-        {
-            "id": 4,
-            "value": "Pocahontas"
-        },
-        {
-            "id": 5,
-            "value": "Mulan"
-        },
-        {
-            "id": 6,
-            "value": "La Belle et la Bête"
-        }
+      {
+        "id": 1,
+        "value": "Aladdin"
+      },
+      {
+        "id": 2,
+        "value": "Le Roi Lion"
+      },
+      {
+        "id": 3,
+        "value": "La Petite Sirène"
+      },
+      {
+        "id": 4,
+        "value": "Pocahontas"
+      },
+      {
+        "id": 5,
+        "value": "Mulan"
+      },
+      {
+        "id": 6,
+        "value": "La Belle et la Bête"
+      }
     ],
     "category": "Films",
     "difficulty": 2,
     "response": 2,
     "descriptionResponse": "'Le Roi Lion' raconte l'histoire d'un lionceau nommé Simba."
-},
-{
+  },
+  {
     "id": 76,
     "question": "Qui a réalisé le film 'Inception' sorti en 2010 ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "James Cameron"
-        },
-        {
-            "id": 2,
-            "value": "Steven Spielberg"
-        },
-        {
-            "id": 3,
-            "value": "Christopher Nolan"
-        },
-        {
-            "id": 4,
-            "value": "Quentin Tarantino"
-        },
-        {
-            "id": 5,
-            "value": "Martin Scorsese"
-        },
-        {
-            "id": 6,
-            "value": "Ridley Scott"
-        }
+      {
+        "id": 1,
+        "value": "James Cameron"
+      },
+      {
+        "id": 2,
+        "value": "Steven Spielberg"
+      },
+      {
+        "id": 3,
+        "value": "Christopher Nolan"
+      },
+      {
+        "id": 4,
+        "value": "Quentin Tarantino"
+      },
+      {
+        "id": 5,
+        "value": "Martin Scorsese"
+      },
+      {
+        "id": 6,
+        "value": "Ridley Scott"
+      }
     ],
     "category": "Films",
     "difficulty": 3,
     "response": 3,
     "descriptionResponse": "Christopher Nolan a réalisé le film 'Inception' sorti en 2010."
-},
-{
+  },
+  {
     "id": 77,
     "question": "Quel acteur joue le rôle principal dans le film 'Gladiator' de Ridley Scott ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Tom Cruise"
-        },
-        {
-            "id": 2,
-            "value": "Brad Pitt"
-        },
-        {
-            "id": 3,
-            "value": "Russell Crowe"
-        },
-        {
-            "id": 4,
-            "value": "Leonardo DiCaprio"
-        },
-        {
-            "id": 5,
-            "value": "George Clooney"
-        },
-        {
-            "id": 6,
-            "value": "Johnny Depp"
-        }
+      {
+        "id": 1,
+        "value": "Tom Cruise"
+      },
+      {
+        "id": 2,
+        "value": "Brad Pitt"
+      },
+      {
+        "id": 3,
+        "value": "Russell Crowe"
+      },
+      {
+        "id": 4,
+        "value": "Leonardo DiCaprio"
+      },
+      {
+        "id": 5,
+        "value": "George Clooney"
+      },
+      {
+        "id": 6,
+        "value": "Johnny Depp"
+      }
     ],
     "category": "Films",
     "difficulty": 4,
     "response": 3,
     "descriptionResponse": "Russell Crowe joue le rôle principal dans le film 'Gladiator' de Ridley Scott."
-},
-{
+  },
+  {
     "id": 78,
     "question": "Dans quel film de 1994 peut-on entendre la phrase 'La vie, c'est comme une boîte de chocolats' ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Pulp Fiction"
-        },
-        {
-            "id": 2,
-            "value": "Forrest Gump"
-        },
-        {
-            "id": 3,
-            "value": "The Shawshank Redemption"
-        },
-        {
-            "id": 4,
-            "value": "Léon"
-        },
-        {
-            "id": 5,
-            "value": "Speed"
-        },
-        {
-            "id": 6,
-            "value": "The Mask"
-        }
+      {
+        "id": 1,
+        "value": "Pulp Fiction"
+      },
+      {
+        "id": 2,
+        "value": "Forrest Gump"
+      },
+      {
+        "id": 3,
+        "value": "The Shawshank Redemption"
+      },
+      {
+        "id": 4,
+        "value": "Léon"
+      },
+      {
+        "id": 5,
+        "value": "Speed"
+      },
+      {
+        "id": 6,
+        "value": "The Mask"
+      }
     ],
     "category": "Films",
     "difficulty": 5,
     "response": 2,
     "descriptionResponse": "Dans 'Forrest Gump', on peut entendre la phrase 'La vie, c'est comme une boîte de chocolats'."
-},
-{
+  },
+  {
     "id": 79,
     "question": "Quel film de science-fiction réalisé par George Lucas est sorti en 1977 ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Blade Runner"
-        },
-        {
-            "id": 2,
-            "value": "2001: L'Odyssée de l'espace"
-        },
-        {
-            "id": 3,
-            "value": "Rencontres du troisième type"
-        },
-        {
-            "id": 4,
-            "value": "Star Wars: Un nouvel espoir"
-        },
-        {
-            "id": 5,
-            "value": "Alien"
-        },
-        {
-            "id": 6,
-            "value": "Le Jour où la Terre s'arrêta"
-        }
+      {
+        "id": 1,
+        "value": "Blade Runner"
+      },
+      {
+        "id": 2,
+        "value": "2001: L'Odyssée de l'espace"
+      },
+      {
+        "id": 3,
+        "value": "Rencontres du troisième type"
+      },
+      {
+        "id": 4,
+        "value": "Star Wars: Un nouvel espoir"
+      },
+      {
+        "id": 5,
+        "value": "Alien"
+      },
+      {
+        "id": 6,
+        "value": "Le Jour où la Terre s'arrêta"
+      }
     ],
     "category": "Films",
     "difficulty": 6,
     "response": 4,
     "descriptionResponse": "'Star Wars: Un nouvel espoir' est un film de science-fiction réalisé par George Lucas et sorti en 1977."
-},
-{
+  },
+  {
     "id": 80,
     "question": "Quel est le nom de l'intelligence artificielle dans le film '2001: L'Odyssée de l'espace' ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "HAL 9000"
-        },
-        {
-            "id": 2,
-            "value": "Siri"
-        },
-        {
-            "id": 3,
-            "value": "Skynet"
-        },
-        {
-            "id": 4,
-            "value": "JARVIS"
-        },
-        {
-            "id": 5,
-            "value": "GLaDOS"
-        },
-        {
-            "id": 6,
-            "value": "Deep Thought"
-        }
+      {
+        "id": 1,
+        "value": "HAL 9000"
+      },
+      {
+        "id": 2,
+        "value": "Siri"
+      },
+      {
+        "id": 3,
+        "value": "Skynet"
+      },
+      {
+        "id": 4,
+        "value": "JARVIS"
+      },
+      {
+        "id": 5,
+        "value": "GLaDOS"
+      },
+      {
+        "id": 6,
+        "value": "Deep Thought"
+      }
     ],
     "category": "Films",
     "difficulty": 7,
     "response": 1,
     "descriptionResponse": "L'intelligence artificielle dans '2001: L'Odyssée de l'espace' est HAL 9000."
-},
-{
+  },
+  {
     "id": 81,
     "question": "Quel réalisateur est connu pour les films 'Pulp Fiction' et 'Kill Bill' ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Quentin Tarantino"
-        },
-        {
-            "id": 2,
-            "value": "Martin Scorsese"
-        },
-        {
-            "id": 3,
-            "value": "Steven Spielberg"
-        },
-        {
-            "id": 4,
-            "value": "James Cameron"
-        },
-        {
-            "id": 5,
-            "value": "Christopher Nolan"
-        },
-        {
-            "id": 6,
-            "value": "Ridley Scott"
-        }
+      {
+        "id": 1,
+        "value": "Quentin Tarantino"
+      },
+      {
+        "id": 2,
+        "value": "Martin Scorsese"
+      },
+      {
+        "id": 3,
+        "value": "Steven Spielberg"
+      },
+      {
+        "id": 4,
+        "value": "James Cameron"
+      },
+      {
+        "id": 5,
+        "value": "Christopher Nolan"
+      },
+      {
+        "id": 6,
+        "value": "Ridley Scott"
+      }
     ],
     "category": "Films",
     "difficulty": 8,
     "response": 1,
     "descriptionResponse": "Quentin Tarantino est connu pour les films 'Pulp Fiction' et 'Kill Bill'."
-},
-{
+  },
+  {
     "id": 82,
     "question": "Quel acteur a joué le rôle de Jack Dawson dans 'Titanic' ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Tom Cruise"
-        },
-        {
-            "id": 2,
-            "value": "Brad Pitt"
-        },
-        {
-            "id": 3,
-            "value": "Johnny Depp"
-        },
-        {
-            "id": 4,
-            "value": "Leonardo DiCaprio"
-        },
-        {
-            "id": 5,
-            "value": "Matt Damon"
-        },
-        {
-            "id": 6,
-            "value": "George Clooney"
-        }
+      {
+        "id": 1,
+        "value": "Tom Cruise"
+      },
+      {
+        "id": 2,
+        "value": "Brad Pitt"
+      },
+      {
+        "id": 3,
+        "value": "Johnny Depp"
+      },
+      {
+        "id": 4,
+        "value": "Leonardo DiCaprio"
+      },
+      {
+        "id": 5,
+        "value": "Matt Damon"
+      },
+      {
+        "id": 6,
+        "value": "George Clooney"
+      }
     ],
     "category": "Films",
     "difficulty": 9,
     "response": 4,
     "descriptionResponse": "Leonardo DiCaprio a joué le rôle de Jack Dawson dans 'Titanic'."
-},
-{
+  },
+  {
     "id": 83,
     "question": "Dans quel film de Stanley Kubrick peut-on voir le personnage de Jack Torrance sombrer dans la folie ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Orange mécanique"
-        },
-        {
-            "id": 2,
-            "value": "Full Metal Jacket"
-        },
-        {
-            "id": 3,
-            "value": "2001: L'Odyssée de l'espace"
-        },
-        {
-            "id": 4,
-            "value": "Shining"
-        },
-        {
-            "id": 5,
-            "value": "Barry Lyndon"
-        },
-        {
-            "id": 6,
-            "value": "Eyes Wide Shut"
-        }
+      {
+        "id": 1,
+        "value": "Orange mécanique"
+      },
+      {
+        "id": 2,
+        "value": "Full Metal Jacket"
+      },
+      {
+        "id": 3,
+        "value": "2001: L'Odyssée de l'espace"
+      },
+      {
+        "id": 4,
+        "value": "Shining"
+      },
+      {
+        "id": 5,
+        "value": "Barry Lyndon"
+      },
+      {
+        "id": 6,
+        "value": "Eyes Wide Shut"
+      }
     ],
     "category": "Films",
     "difficulty": 10,
     "response": 4,
     "descriptionResponse": "Dans 'Shining' de Stanley Kubrick, Jack Torrance sombre dans la folie."
-},{
-  "id": 84,
-  "question": "Quel est le festival indien des lumières célébré chaque année ?",
-  "answers": [
+  },
+  {
+    "id": 84,
+    "question": "Quel est le festival indien des lumières célébré chaque année ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Holi"
+        "id": 1,
+        "value": "Holi"
       },
       {
-          "id": 2,
-          "value": "Diwali"
+        "id": 2,
+        "value": "Diwali"
       },
       {
-          "id": 3,
-          "value": "Eid"
+        "id": 3,
+        "value": "Eid"
       },
       {
-          "id": 4,
-          "value": "Loy Krathong"
+        "id": 4,
+        "value": "Loy Krathong"
       },
       {
-          "id": 5,
-          "value": "Songkran"
+        "id": 5,
+        "value": "Songkran"
       },
       {
-          "id": 6,
-          "value": "Vesak"
+        "id": 6,
+        "value": "Vesak"
       }
-  ],
-  "category": "Culture",
-  "difficulty": 1,
-  "response": 2,
-  "descriptionResponse": "Diwali est le festival indien des lumières célébré chaque année."
+    ],
+    "category": "Culture",
+    "difficulty": 1,
+    "response": 2,
+    "descriptionResponse": "Diwali est le festival indien des lumières célébré chaque année."
+  },
+  {
+    "id": 85,
+    "question": "Dans quel pays se trouve la ville de Marrakech, connue pour ses marchés et ses palais ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Égypte"
+      },
+      {
+        "id": 2,
+        "value": "Tunisie"
+      },
+      {
+        "id": 3,
+        "value": "Algérie"
+      },
+      {
+        "id": 4,
+        "value": "Maroc"
+      },
+      {
+        "id": 5,
+        "value": "Libye"
+      },
+      {
+        "id": 6,
+        "value": "Jordanie"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 2,
+    "response": 4,
+    "descriptionResponse": "Marrakech, connue pour ses marchés et ses palais, se trouve au Maroc."
+  },
+  {
+    "id": 86,
+    "question": "Quel est le principal texte religieux de l'Islam ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La Bible"
+      },
+      {
+        "id": 2,
+        "value": "La Torah"
+      },
+      {
+        "id": 3,
+        "value": "Le Tripitaka"
+      },
+      {
+        "id": 4,
+        "value": "Le Coran"
+      },
+      {
+        "id": 5,
+        "value": "Le Veda"
+      },
+      {
+        "id": 6,
+        "value": "L'Avesta"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "Le principal texte religieux de l'Islam est le Coran."
+  },
+  {
+    "id": 87,
+    "question": "Quel est le plat national du Japon à base de riz vinaigré accompagné de poisson cru ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Tempura"
+      },
+      {
+        "id": 2,
+        "value": "Ramen"
+      },
+      {
+        "id": 3,
+        "value": "Sashimi"
+      },
+      {
+        "id": 4,
+        "value": "Sushi"
+      },
+      {
+        "id": 5,
+        "value": "Yakitori"
+      },
+      {
+        "id": 6,
+        "value": "Okonomiyaki"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 4,
+    "response": 4,
+    "descriptionResponse": "Le plat national du Japon à base de riz vinaigré accompagné de poisson cru est le sushi."
+  },
+  {
+    "id": 88,
+    "question": "Quelle danse traditionnelle est souvent associée à l'Espagne et implique des mouvements de mains et des claquements de pieds ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Tango"
+      },
+      {
+        "id": 2,
+        "value": "Samba"
+      },
+      {
+        "id": 3,
+        "value": "Flamenco"
+      },
+      {
+        "id": 4,
+        "value": "Fado"
+      },
+      {
+        "id": 5,
+        "value": "Ballet"
+      },
+      {
+        "id": 6,
+        "value": "Cha-cha-cha"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 5,
+    "response": 3,
+    "descriptionResponse": "Le flamenco est une danse traditionnelle souvent associée à l'Espagne et implique des mouvements de mains et des claquements de pieds."
+  },
+  {
+    "id": 89,
+    "question": "Quelle est la fête mexicaine célébrée le 2 novembre en mémoire des défunts ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Cinco de Mayo"
+      },
+      {
+        "id": 2,
+        "value": "Día de los Muertos"
+      },
+      {
+        "id": 3,
+        "value": "La Tomatina"
+      },
+      {
+        "id": 4,
+        "value": "Las Fallas"
+      },
+      {
+        "id": 5,
+        "value": "Carnaval de Veracruz"
+      },
+      {
+        "id": 6,
+        "value": "Semana Santa"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 6,
+    "response": 2,
+    "descriptionResponse": "Día de los Muertos est la fête mexicaine célébrée le 2 novembre en mémoire des défunts."
+  },
+  {
+    "id": 90,
+    "question": "Quel est le nom de la cérémonie du thé traditionnelle japonaise ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Ikebana"
+      },
+      {
+        "id": 2,
+        "value": "Origami"
+      },
+      {
+        "id": 3,
+        "value": "Sadō"
+      },
+      {
+        "id": 4,
+        "value": "Karaoke"
+      },
+      {
+        "id": 5,
+        "value": "Kabuki"
+      },
+      {
+        "id": 6,
+        "value": "Sumo"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 7,
+    "response": 3,
+    "descriptionResponse": "La cérémonie du thé traditionnelle japonaise s'appelle Sadō."
+  },
+  {
+    "id": 91,
+    "question": "Quelle langue est principalement parlée au Brésil ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Espagnol"
+      },
+      {
+        "id": 2,
+        "value": "Portugais"
+      },
+      {
+        "id": 3,
+        "value": "Français"
+      },
+      {
+        "id": 4,
+        "value": "Italien"
+      },
+      {
+        "id": 5,
+        "value": "Anglais"
+      },
+      {
+        "id": 6,
+        "value": "Allemand"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 8,
+    "response": 2,
+    "descriptionResponse": "La langue principalement parlée au Brésil est le portugais."
+  },
+  {
+    "id": 92,
+    "question": "Quel pays célèbre le Nouvel An chinois avec des festivités grandioses, incluant des danses du dragon et des feux d'artifice ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Japon"
+      },
+      {
+        "id": 2,
+        "value": "Inde"
+      },
+      {
+        "id": 3,
+        "value": "Corée du Sud"
+      },
+      {
+        "id": 4,
+        "value": "Thaïlande"
+      },
+      {
+        "id": 5,
+        "value": "Chine"
+      },
+      {
+        "id": 6,
+        "value": "Vietnam"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 9,
+    "response": 5,
+    "descriptionResponse": "La Chine célèbre le Nouvel An chinois avec des festivités grandioses, incluant des danses du dragon et des feux d'artifice."
+  },
+  {
+    "id": 93,
+    "question": "Quelle est la religion majoritaire en Inde, connue pour ses nombreuses divinités et sa philosophie de la non-violence ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Christianisme"
+      },
+      {
+        "id": 2,
+        "value": "Islam"
+      },
+      {
+        "id": 3,
+        "value": "Bouddhisme"
+      },
+      {
+        "id": 4,
+        "value": "Judaïsme"
+      },
+      {
+        "id": 5,
+        "value": "Hindouisme"
+      },
+      {
+        "id": 6,
+        "value": "Sikhisme"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 10,
+    "response": 5,
+    "descriptionResponse": "L'hindouisme est la religion majoritaire en Inde, connue pour ses nombreuses divinités et sa philosophie de la non-violence."
+  },
+  {
+    "id": 94,
+    "question": "Quel est le moteur de recherche le plus utilisé dans le monde ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Bing"
+      },
+      {
+        "id": 2,
+        "value": "Yahoo!"
+      },
+      {
+        "id": 3,
+        "value": "DuckDuckGo"
+      },
+      {
+        "id": 4,
+        "value": "Google"
+      },
+      {
+        "id": 5,
+        "value": "Baidu"
+      },
+      {
+        "id": 6,
+        "value": "Ask"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 1,
+    "response": 4,
+    "descriptionResponse": "Google est le moteur de recherche le plus utilisé dans le monde."
+  },
+  {
+    "id": 95,
+    "question": "Quelle entreprise a été fondée par Steve Jobs, Steve Wozniak, et Ronald Wayne ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Microsoft"
+      },
+      {
+        "id": 2,
+        "value": "Apple"
+      },
+      {
+        "id": 3,
+        "value": "IBM"
+      },
+      {
+        "id": 4,
+        "value": "Intel"
+      },
+      {
+        "id": 5,
+        "value": "HP"
+      },
+      {
+        "id": 6,
+        "value": "Dell"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 2,
+    "response": 2,
+    "descriptionResponse": "Apple a été fondée par Steve Jobs, Steve Wozniak, et Ronald Wayne."
+  },
+  {
+    "id": 96,
+    "question": "Quel est le langage de programmation principalement utilisé pour développer des applications Android ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Python"
+      },
+      {
+        "id": 2,
+        "value": "Swift"
+      },
+      {
+        "id": 3,
+        "value": "Java"
+      },
+      {
+        "id": 4,
+        "value": "C#"
+      },
+      {
+        "id": 5,
+        "value": "Ruby"
+      },
+      {
+        "id": 6,
+        "value": "PHP"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 3,
+    "response": 3,
+    "descriptionResponse": "Java est le langage de programmation principalement utilisé pour développer des applications Android."
+  },
+  {
+    "id": 97,
+    "question": "Quelle technologie de stockage de données est basée sur des cellules de mémoire flash et est utilisée dans des dispositifs comme les SSD ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Disque dur"
+      },
+      {
+        "id": 2,
+        "value": "Bande magnétique"
+      },
+      {
+        "id": 3,
+        "value": "DVD"
+      },
+      {
+        "id": 4,
+        "value": "Mémoire flash"
+      },
+      {
+        "id": 5,
+        "value": "CD-ROM"
+      },
+      {
+        "id": 6,
+        "value": "Disquette"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 4,
+    "response": 4,
+    "descriptionResponse": "La mémoire flash est la technologie de stockage de données utilisée dans des dispositifs comme les SSD."
+  },
+  {
+    "id": 98,
+    "question": "Quel est le protocole de communication sans fil principalement utilisé pour les réseaux locaux et connu sous le nom de Wi-Fi ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Bluetooth"
+      },
+      {
+        "id": 2,
+        "value": "Zigbee"
+      },
+      {
+        "id": 3,
+        "value": "WiMAX"
+      },
+      {
+        "id": 4,
+        "value": "IEEE 802.11"
+      },
+      {
+        "id": 5,
+        "value": "NFC"
+      },
+      {
+        "id": 6,
+        "value": "RFID"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 5,
+    "response": 4,
+    "descriptionResponse": "Le protocole de communication sans fil principalement utilisé pour les réseaux locaux et connu sous le nom de Wi-Fi est IEEE 802.11."
+  },
+  {
+    "id": 99,
+    "question": "Quel est le terme pour désigner la technologie permettant de créer des objets tridimensionnels à partir de modèles numériques ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Impression laser"
+      },
+      {
+        "id": 2,
+        "value": "Gravure"
+      },
+      {
+        "id": 3,
+        "value": "CNC"
+      },
+      {
+        "id": 4,
+        "value": "Impression 3D"
+      },
+      {
+        "id": 5,
+        "value": "Photocopie"
+      },
+      {
+        "id": 6,
+        "value": "Lithographie"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 6,
+    "response": 4,
+    "descriptionResponse": "La technologie permettant de créer des objets tridimensionnels à partir de modèles numériques est l'impression 3D."
+  },
+  {
+    "id": 100,
+    "question": "Quelle société a créé le système d'exploitation Windows ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Apple"
+      },
+      {
+        "id": 2,
+        "value": "Google"
+      },
+      {
+        "id": 3,
+        "value": "Microsoft"
+      },
+      {
+        "id": 4,
+        "value": "IBM"
+      },
+      {
+        "id": 5,
+        "value": "Intel"
+      },
+      {
+        "id": 6,
+        "value": "Amazon"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 7,
+    "response": 3,
+    "descriptionResponse": "Microsoft a créé le système d'exploitation Windows."
+  },
+  {
+    "id": 101,
+    "question": "Quelle est la différence principale entre les langages de programmation compilés et interprétés ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Les langages compilés sont plus lents."
+      },
+      {
+        "id": 2,
+        "value": "Les langages interprétés n'ont pas besoin de compilation avant l'exécution."
+      },
+      {
+        "id": 3,
+        "value": "Les langages interprétés sont plus sécurisés."
+      },
+      {
+        "id": 4,
+        "value": "Les langages compilés nécessitent un interprète pour l'exécution."
+      },
+      {
+        "id": 5,
+        "value": "Les langages interprétés ne peuvent pas être exécutés sur des systèmes d'exploitation."
+      },
+      {
+        "id": 6,
+        "value": "Les langages compilés n'ont pas besoin d'un environnement d'exécution."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 8,
+    "response": 2,
+    "descriptionResponse": "Les langages interprétés n'ont pas besoin de compilation avant l'exécution, contrairement aux langages compilés."
+  },
+  {
+    "id": 102,
+    "question": "Quel est le nom de la technologie de traitement parallèle des données utilisée dans les superordinateurs et les centres de données pour accélérer les performances ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Clustering"
+      },
+      {
+        "id": 2,
+        "value": "Multithreading"
+      },
+      {
+        "id": 3,
+        "value": "Virtualisation"
+      },
+      {
+        "id": 4,
+        "value": "Grid computing"
+      },
+      {
+        "id": 5,
+        "value": "Deep learning"
+      },
+      {
+        "id": 6,
+        "value": "Machine learning"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 9,
+    "response": 4,
+    "descriptionResponse": "Le Grid computing est la technologie de traitement parallèle des données utilisée dans les superordinateurs et les centres de données pour accélérer les performances."
+  },
+  {
+    "id": 103,
+    "question": "Quel est le concept de la blockchain et comment est-il principalement utilisé ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Un type de base de données traditionnelle, principalement utilisé pour stocker des fichiers multimédias."
+      },
+      {
+        "id": 2,
+        "value": "Une technologie de comptabilité décentralisée, principalement utilisée pour les cryptomonnaies."
+      },
+      {
+        "id": 3,
+        "value": "Une méthode de cryptage des données, principalement utilisée dans la sécurité des réseaux."
+      },
+      {
+        "id": 4,
+        "value": "Un algorithme d'apprentissage automatique, principalement utilisé dans l'intelligence artificielle."
+      },
+      {
+        "id": 5,
+        "value": "Un protocole de communication réseau, principalement utilisé pour les transmissions de données sans fil."
+      },
+      {
+        "id": 6,
+        "value": "Un format de compression de données, principalement utilisé pour les images et les vidéos."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 10,
+    "response": 2,
+    "descriptionResponse": "La blockchain est une technologie de comptabilité décentralisée, principalement utilisée pour les cryptomonnaies."
+  },
+  {
+    "id": 104,
+    "question": "Qu'est-ce que l'Internet des objets (IoT) ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Une technologie de réalité augmentée."
+      },
+      {
+        "id": 2,
+        "value": "Un réseau d'objets physiques connectés à Internet."
+      },
+      {
+        "id": 3,
+        "value": "Un type de réseau social."
+      },
+      {
+        "id": 4,
+        "value": "Une technologie de reconnaissance faciale."
+      },
+      {
+        "id": 5,
+        "value": "Un protocole de sécurité informatique."
+      },
+      {
+        "id": 6,
+        "value": "Un format de fichier audio compressé."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 1,
+    "response": 2,
+    "descriptionResponse": "L'Internet des objets (IoT) est un réseau d'objets physiques connectés à Internet."
+  },
+  {
+    "id": 105,
+    "question": "Quelle est la principale fonction d'un serveur DNS ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Fournir des adresses IP aux dispositifs connectés."
+      },
+      {
+        "id": 2,
+        "value": "Traduire les noms de domaine en adresses IP."
+      },
+      {
+        "id": 3,
+        "value": "Sécuriser les transactions en ligne."
+      },
+      {
+        "id": 4,
+        "value": "Transmettre des données à travers les réseaux."
+      },
+      {
+        "id": 5,
+        "value": "Héberger des sites web."
+      },
+      {
+        "id": 6,
+        "value": "Gérer les permissions utilisateur sur un réseau."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 2,
+    "response": 2,
+    "descriptionResponse": "La principale fonction d'un serveur DNS est de traduire les noms de domaine en adresses IP."
+  },
+  {
+    "id": 106,
+    "question": "Qu'est-ce qu'un réseau privé virtuel (VPN) ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Un type de réseau social sécurisé."
+      },
+      {
+        "id": 2,
+        "value": "Une connexion sécurisée entre deux réseaux via Internet."
+      },
+      {
+        "id": 3,
+        "value": "Un logiciel de cryptage de fichiers."
+      },
+      {
+        "id": 4,
+        "value": "Un système de sauvegarde de données."
+      },
+      {
+        "id": 5,
+        "value": "Un protocole de communication sans fil."
+      },
+      {
+        "id": 6,
+        "value": "Une technologie de stockage en cloud."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 3,
+    "response": 2,
+    "descriptionResponse": "Un réseau privé virtuel (VPN) est une connexion sécurisée entre deux réseaux via Internet."
+  },
+  {
+    "id": 107,
+    "question": "Quel est le but de la technologie 5G ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Améliorer la qualité des appels téléphoniques."
+      },
+      {
+        "id": 2,
+        "value": "Fournir des débits de données plus rapides et une latence réduite."
+      },
+      {
+        "id": 3,
+        "value": "Augmenter la capacité de stockage des smartphones."
+      },
+      {
+        "id": 4,
+        "value": "Améliorer la sécurité des réseaux Wi-Fi."
+      },
+      {
+        "id": 5,
+        "value": "Réduire la consommation d'énergie des appareils mobiles."
+      },
+      {
+        "id": 6,
+        "value": "Offrir une meilleure résolution pour les vidéos."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 4,
+    "response": 2,
+    "descriptionResponse": "Le but de la technologie 5G est de fournir des débits de données plus rapides et une latence réduite."
+  },
+  {
+    "id": 108,
+    "question": "Que signifie l'acronyme \"HTML\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "HyperText Markup Language."
+      },
+      {
+        "id": 2,
+        "value": "HighText Machine Language."
+      },
+      {
+        "id": 3,
+        "value": "HyperTool Multi Language."
+      },
+      {
+        "id": 4,
+        "value": "Hyperlink and Text Markup Language."
+      },
+      {
+        "id": 5,
+        "value": "HyperText Modeling Language."
+      },
+      {
+        "id": 6,
+        "value": "HighText Markup Language."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "HTML signifie HyperText Markup Language."
+  },
+  {
+    "id": 109,
+    "question": "Qu'est-ce qu'un \"algorithme\" en programmation informatique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Une procédure ou une formule pour résoudre un problème."
+      },
+      {
+        "id": 2,
+        "value": "Un langage de programmation spécifique."
+      },
+      {
+        "id": 3,
+        "value": "Un type de matériel informatique."
+      },
+      {
+        "id": 4,
+        "value": "Un protocole de communication."
+      },
+      {
+        "id": 5,
+        "value": "Un type de logiciel de gestion de bases de données."
+      },
+      {
+        "id": 6,
+        "value": "Une interface utilisateur graphique."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Un algorithme en programmation informatique est une procédure ou une formule pour résoudre un problème."
+  },
+  {
+    "id": 110,
+    "question": "Quelle est la fonction principale d'un routeur dans un réseau informatique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Fournir de l'électricité aux dispositifs connectés."
+      },
+      {
+        "id": 2,
+        "value": "Connecter différents réseaux et diriger le trafic de données."
+      },
+      {
+        "id": 3,
+        "value": "Stocker des fichiers et des données."
+      },
+      {
+        "id": 4,
+        "value": "Fournir des adresses IP aux dispositifs connectés."
+      },
+      {
+        "id": 5,
+        "value": "Sécuriser les réseaux contre les cyberattaques."
+      },
+      {
+        "id": 6,
+        "value": "Gérer les autorisations des utilisateurs sur un réseau."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 7,
+    "response": 2,
+    "descriptionResponse": "La fonction principale d'un routeur est de connecter différents réseaux et de diriger le trafic de données."
+  },
+  {
+    "id": 111,
+    "question": "Qu'est-ce que le \"cloud computing\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Une méthode de refroidissement des centres de données."
+      },
+      {
+        "id": 2,
+        "value": "Un service de stockage et de traitement des données sur Internet."
+      },
+      {
+        "id": 3,
+        "value": "Un type de réseau local."
+      },
+      {
+        "id": 4,
+        "value": "Une technologie de sauvegarde de données sur des disques durs."
+      },
+      {
+        "id": 5,
+        "value": "Un protocole de communication sécurisé."
+      },
+      {
+        "id": 6,
+        "value": "Un logiciel de cryptage des données."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 8,
+    "response": 2,
+    "descriptionResponse": "Le cloud computing est un service de stockage et de traitement des données sur Internet."
+  },
+  {
+    "id": 112,
+    "question": "Que permet le langage de programmation Python ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Développer des applications web."
+      },
+      {
+        "id": 2,
+        "value": "Créer des algorithmes d'intelligence artificielle."
+      },
+      {
+        "id": 3,
+        "value": "Automatiser des tâches répétitives."
+      },
+      {
+        "id": 4,
+        "value": "Toutes ces réponses."
+      },
+      {
+        "id": 5,
+        "value": "Développer des jeux vidéo uniquement."
+      },
+      {
+        "id": 6,
+        "value": "Créer des animations 3D uniquement."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 9,
+    "response": 4,
+    "descriptionResponse": "Python permet de développer des applications web, créer des algorithmes d'intelligence artificielle et automatiser des tâches répétitives."
+  },
+  {
+    "id": 113,
+    "question": "Qu'est-ce qu'un \"système d'exploitation\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Un logiciel qui gère les ressources matérielles et logicielles d'un ordinateur."
+      },
+      {
+        "id": 2,
+        "value": "Un programme utilisé pour naviguer sur Internet."
+      },
+      {
+        "id": 3,
+        "value": "Une application pour créer des documents et des présentations."
+      },
+      {
+        "id": 4,
+        "value": "Un outil de gestion de bases de données."
+      },
+      {
+        "id": 5,
+        "value": "Un logiciel pour la modélisation 3D."
+      },
+      {
+        "id": 6,
+        "value": "Un langage de programmation."
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 10,
+    "response": 1,
+    "descriptionResponse": "Un système d'exploitation est un logiciel qui gère les ressources matérielles et logicielles d'un ordinateur."
+  },
+  {
+    "id": 114,
+    "question": "Quel est l'animal terrestre le plus rapide ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "Lion"
+        },
+        {
+            "id": 2,
+            "value": "Guépard"
+        },
+        {
+            "id": 3,
+            "value": "Éléphant"
+        },
+        {
+            "id": 4,
+            "value": "Girafe"
+        },
+        {
+            "id": 5,
+            "value": "Zèbre"
+        },
+        {
+            "id": 6,
+            "value": "Tigre"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 1,
+    "response": 2,
+    "descriptionResponse": "Le guépard est l'animal terrestre le plus rapide, pouvant atteindre des vitesses de 112 km/h."
 },
 {
-  "id": 85,
-  "question": "Dans quel pays se trouve la ville de Marrakech, connue pour ses marchés et ses palais ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Égypte"
-      },
-      {
-          "id": 2,
-          "value": "Tunisie"
-      },
-      {
-          "id": 3,
-          "value": "Algérie"
-      },
-      {
-          "id": 4,
-          "value": "Maroc"
-      },
-      {
-          "id": 5,
-          "value": "Libye"
-      },
-      {
-          "id": 6,
-          "value": "Jordanie"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 2,
-  "response": 4,
-  "descriptionResponse": "Marrakech, connue pour ses marchés et ses palais, se trouve au Maroc."
+    "id": 115,
+    "question": "Quel est le plus grand mammifère marin ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "Dauphin"
+        },
+        {
+            "id": 2,
+            "value": "Orque"
+        },
+        {
+            "id": 3,
+            "value": "Requin"
+        },
+        {
+            "id": 4,
+            "value": "Baleine bleue"
+        },
+        {
+            "id": 5,
+            "value": "Lamantin"
+        },
+        {
+            "id": 6,
+            "value": "Phoque"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 2,
+    "response": 4,
+    "descriptionResponse": "La baleine bleue est le plus grand mammifère marin et aussi le plus grand animal existant."
 },
 {
-  "id": 86,
-  "question": "Quel est le principal texte religieux de l'Islam ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "La Bible"
-      },
-      {
-          "id": 2,
-          "value": "La Torah"
-      },
-      {
-          "id": 3,
-          "value": "Le Tripitaka"
-      },
-      {
-          "id": 4,
-          "value": "Le Coran"
-      },
-      {
-          "id": 5,
-          "value": "Le Veda"
-      },
-      {
-          "id": 6,
-          "value": "L'Avesta"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 3,
-  "response": 4,
-  "descriptionResponse": "Le principal texte religieux de l'Islam est le Coran."
+    "id": 116,
+    "question": "Quelle est la durée de vie moyenne d'un éléphant d'Afrique ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "20-30 ans"
+        },
+        {
+            "id": 2,
+            "value": "40-50 ans"
+        },
+        {
+            "id": 3,
+            "value": "60-70 ans"
+        },
+        {
+            "id": 4,
+            "value": "80-90 ans"
+        },
+        {
+            "id": 5,
+            "value": "100-110 ans"
+        },
+        {
+            "id": 6,
+            "value": "120-130 ans"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 3,
+    "response": 3,
+    "descriptionResponse": "La durée de vie moyenne d'un éléphant d'Afrique est de 60 à 70 ans."
 },
 {
-  "id": 87,
-  "question": "Quel est le plat national du Japon à base de riz vinaigré accompagné de poisson cru ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Tempura"
-      },
-      {
-          "id": 2,
-          "value": "Ramen"
-      },
-      {
-          "id": 3,
-          "value": "Sashimi"
-      },
-      {
-          "id": 4,
-          "value": "Sushi"
-      },
-      {
-          "id": 5,
-          "value": "Yakitori"
-      },
-      {
-          "id": 6,
-          "value": "Okonomiyaki"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 4,
-  "response": 4,
-  "descriptionResponse": "Le plat national du Japon à base de riz vinaigré accompagné de poisson cru est le sushi."
+    "id": 117,
+    "question": "Quel animal est connu pour ses bandes noires et blanches ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "Lion"
+        },
+        {
+            "id": 2,
+            "value": "Tigre"
+        },
+        {
+            "id": 3,
+            "value": "Guépard"
+        },
+        {
+            "id": 4,
+            "value": "Zèbre"
+        },
+        {
+            "id": 5,
+            "value": "Girafe"
+        },
+        {
+            "id": 6,
+            "value": "Panthère"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 4,
+    "response": 4,
+    "descriptionResponse": "Le zèbre est connu pour ses bandes noires et blanches distinctives."
 },
 {
-  "id": 88,
-  "question": "Quelle danse traditionnelle est souvent associée à l'Espagne et implique des mouvements de mains et des claquements de pieds ?",
+    "id": 118,
+    "question": "Combien de cœurs possède une pieuvre ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "1"
+        },
+        {
+            "id": 2,
+            "value": "2"
+        },
+        {
+            "id": 3,
+            "value": "3"
+        },
+        {
+            "id": 4,
+            "value": "4"
+        },
+        {
+            "id": 5,
+            "value": "5"
+        },
+        {
+            "id": 6,
+            "value": "6"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 5,
+    "response": 3,
+    "descriptionResponse": "Une pieuvre possède trois cœurs : un pour pomper le sang à travers son corps et deux pour pomper le sang à travers ses branchies."
+},
+{
+    "id": 119,
+    "question": "Quel oiseau est connu pour son aptitude à imiter des sons, y compris la parole humaine ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "Perroquet"
+        },
+        {
+            "id": 2,
+            "value": "Aigle"
+        },
+        {
+            "id": 3,
+            "value": "Pélican"
+        },
+        {
+            "id": 4,
+            "value": "Hirondelle"
+        },
+        {
+            "id": 5,
+            "value": "Colibri"
+        },
+        {
+            "id": 6,
+            "value": "Flamant rose"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Le perroquet est connu pour sa capacité à imiter des sons, y compris la parole humaine."
+},
+{
+    "id": 120,
+    "question": "Quel est le seul mammifère capable de voler ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "Écureuil volant"
+        },
+        {
+            "id": 2,
+            "value": "Chauve-souris"
+        },
+        {
+            "id": 3,
+            "value": "Hérisson"
+        },
+        {
+            "id": 4,
+            "value": "Koala"
+        },
+        {
+            "id": 5,
+            "value": "Rat"
+        },
+        {
+            "id": 6,
+            "value": "Hamster"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 7,
+    "response": 2,
+    "descriptionResponse": "La chauve-souris est le seul mammifère capable de voler."
+},
+{
+    "id": 121,
+    "question": "Combien de temps un chameau peut-il survivre sans eau ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "1 jour"
+        },
+        {
+            "id": 2,
+            "value": "3 jours"
+        },
+        {
+            "id": 3,
+            "value": "1 semaine"
+        },
+        {
+            "id": 4,
+            "value": "2 semaines"
+        },
+        {
+            "id": 5,
+            "value": "1 mois"
+        },
+        {
+            "id": 6,
+            "value": "2 mois"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 8,
+    "response": 5,
+    "descriptionResponse": "Un chameau peut survivre jusqu'à un mois sans eau, grâce à sa capacité à conserver l'eau."
+},
+{
+    "id": 122,
+    "question": "Quelle est la période de gestation d'un éléphant ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "6 mois"
+        },
+        {
+            "id": 2,
+            "value": "9 mois"
+        },
+        {
+            "id": 3,
+            "value": "12 mois"
+        },
+        {
+            "id": 4,
+            "value": "18 mois"
+        },
+        {
+            "id": 5,
+            "value": "22 mois"
+        },
+        {
+            "id": 6,
+            "value": "24 mois"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 9,
+    "response": 5,
+    "descriptionResponse": "La période de gestation d'un éléphant est d'environ 22 mois, la plus longue de tous les mammifères."
+},
+{
+    "id": 123,
+    "question": "Quel animal est connu pour son cri ressemblant à un rire ?",
+    "answers": [
+        {
+            "id": 1,
+            "value": "Hyène"
+        },
+        {
+            "id": 2,
+            "value": "Dauphin"
+        },
+        {
+            "id": 3,
+            "value": "Singe"
+        },
+        {
+            "id": 4,
+            "value": "Perroquet"
+        },
+        {
+            "id": 5,
+            "value": "Chouette"
+        },
+        {
+            "id": 6,
+            "value": "Loup"
+        }
+    ],
+    "category": "Animaux",
+    "difficulty": 10,
+    "response": 1,
+    "descriptionResponse": "La hyène est connue pour son cri qui ressemble à un rire humain."
+},
+{
+  "id": 124,
+  "question": "Quel type de danse est connu pour ses mouvements rapides des pieds et son origine irlandaise ?",
   "answers": [
       {
           "id": 1,
-          "value": "Tango"
+          "value": "Salsa"
       },
       {
           "id": 2,
-          "value": "Samba"
-      },
-      {
-          "id": 3,
           "value": "Flamenco"
       },
       {
+          "id": 3,
+          "value": "Tango"
+      },
+      {
           "id": 4,
-          "value": "Fado"
+          "value": "Step dance"
       },
       {
           "id": 5,
@@ -2980,521 +4207,318 @@
       },
       {
           "id": 6,
+          "value": "Breakdance"
+      }
+  ],
+  "category": "Danse",
+  "difficulty": 1,
+  "response": 4,
+  "descriptionResponse": "Le step dance est connu pour ses mouvements rapides des pieds et son origine irlandaise."
+},
+{
+  "id": 125,
+  "question": "Quel style de danse est souvent associé à la musique de Johann Strauss II ?",
+  "answers": [
+      {
+          "id": 1,
+          "value": "Valse"
+      },
+      {
+          "id": 2,
+          "value": "Samba"
+      },
+      {
+          "id": 3,
+          "value": "Hip-hop"
+      },
+      {
+          "id": 4,
+          "value": "Cha-cha-cha"
+      },
+      {
+          "id": 5,
+          "value": "Rock and roll"
+      },
+      {
+          "id": 6,
+          "value": "Tango"
+      }
+  ],
+  "category": "Danse",
+  "difficulty": 2,
+  "response": 1,
+  "descriptionResponse": "La valse est souvent associée à la musique de Johann Strauss II."
+},
+{
+  "id": 126,
+  "question": "Quel est le nom de la danse traditionnelle japonaise exécutée par des geishas ?",
+  "answers": [
+      {
+          "id": 1,
+          "value": "Flamenco"
+      },
+      {
+          "id": 2,
+          "value": "Bharatanatyam"
+      },
+      {
+          "id": 3,
+          "value": "Odissi"
+      },
+      {
+          "id": 4,
+          "value": "Mai"
+      },
+      {
+          "id": 5,
+          "value": "Tango"
+      },
+      {
+          "id": 6,
+          "value": "Samba"
+      }
+  ],
+  "category": "Danse",
+  "difficulty": 3,
+  "response": 4,
+  "descriptionResponse": "La danse traditionnelle japonaise exécutée par des geishas est appelée 'Mai'."
+},
+{
+  "id": 127,
+  "question": "Quelle danse de salon est caractérisée par des mouvements doux et glissants et est souvent associée à Fred Astaire et Ginger Rogers ?",
+  "answers": [
+      {
+          "id": 1,
+          "value": "Tango"
+      },
+      {
+          "id": 2,
+          "value": "Valse"
+      },
+      {
+          "id": 3,
+          "value": "Foxtrot"
+      },
+      {
+          "id": 4,
+          "value": "Samba"
+      },
+      {
+          "id": 5,
+          "value": "Rumba"
+      },
+      {
+          "id": 6,
           "value": "Cha-cha-cha"
       }
   ],
-  "category": "Culture",
-  "difficulty": 5,
-  "response": 3,
-  "descriptionResponse": "Le flamenco est une danse traditionnelle souvent associée à l'Espagne et implique des mouvements de mains et des claquements de pieds."
-},
-{
-  "id": 89,
-  "question": "Quelle est la fête mexicaine célébrée le 2 novembre en mémoire des défunts ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Cinco de Mayo"
-      },
-      {
-          "id": 2,
-          "value": "Día de los Muertos"
-      },
-      {
-          "id": 3,
-          "value": "La Tomatina"
-      },
-      {
-          "id": 4,
-          "value": "Las Fallas"
-      },
-      {
-          "id": 5,
-          "value": "Carnaval de Veracruz"
-      },
-      {
-          "id": 6,
-          "value": "Semana Santa"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 6,
-  "response": 2,
-  "descriptionResponse": "Día de los Muertos est la fête mexicaine célébrée le 2 novembre en mémoire des défunts."
-},
-{
-  "id": 90,
-  "question": "Quel est le nom de la cérémonie du thé traditionnelle japonaise ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Ikebana"
-      },
-      {
-          "id": 2,
-          "value": "Origami"
-      },
-      {
-          "id": 3,
-          "value": "Sadō"
-      },
-      {
-          "id": 4,
-          "value": "Karaoke"
-      },
-      {
-          "id": 5,
-          "value": "Kabuki"
-      },
-      {
-          "id": 6,
-          "value": "Sumo"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 7,
-  "response": 3,
-  "descriptionResponse": "La cérémonie du thé traditionnelle japonaise s'appelle Sadō."
-},
-{
-  "id": 91,
-  "question": "Quelle langue est principalement parlée au Brésil ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Espagnol"
-      },
-      {
-          "id": 2,
-          "value": "Portugais"
-      },
-      {
-          "id": 3,
-          "value": "Français"
-      },
-      {
-          "id": 4,
-          "value": "Italien"
-      },
-      {
-          "id": 5,
-          "value": "Anglais"
-      },
-      {
-          "id": 6,
-          "value": "Allemand"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 8,
-  "response": 2,
-  "descriptionResponse": "La langue principalement parlée au Brésil est le portugais."
-},
-{
-  "id": 92,
-  "question": "Quel pays célèbre le Nouvel An chinois avec des festivités grandioses, incluant des danses du dragon et des feux d'artifice ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Japon"
-      },
-      {
-          "id": 2,
-          "value": "Inde"
-      },
-      {
-          "id": 3,
-          "value": "Corée du Sud"
-      },
-      {
-          "id": 4,
-          "value": "Thaïlande"
-      },
-      {
-          "id": 5,
-          "value": "Chine"
-      },
-      {
-          "id": 6,
-          "value": "Vietnam"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 9,
-  "response": 5,
-  "descriptionResponse": "La Chine célèbre le Nouvel An chinois avec des festivités grandioses, incluant des danses du dragon et des feux d'artifice."
-},
-{
-  "id": 93,
-  "question": "Quelle est la religion majoritaire en Inde, connue pour ses nombreuses divinités et sa philosophie de la non-violence ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Christianisme"
-      },
-      {
-          "id": 2,
-          "value": "Islam"
-      },
-      {
-          "id": 3,
-          "value": "Bouddhisme"
-      },
-      {
-          "id": 4,
-          "value": "Judaïsme"
-      },
-      {
-          "id": 5,
-          "value": "Hindouisme"
-      },
-      {
-          "id": 6,
-          "value": "Sikhisme"
-      }
-  ],
-  "category": "Culture",
-  "difficulty": 10,
-  "response": 5,
-  "descriptionResponse": "L'hindouisme est la religion majoritaire en Inde, connue pour ses nombreuses divinités et sa philosophie de la non-violence."
-},    {
-  "id": 94,
-  "question": "Quel est le moteur de recherche le plus utilisé dans le monde ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Bing"
-      },
-      {
-          "id": 2,
-          "value": "Yahoo!"
-      },
-      {
-          "id": 3,
-          "value": "DuckDuckGo"
-      },
-      {
-          "id": 4,
-          "value": "Google"
-      },
-      {
-          "id": 5,
-          "value": "Baidu"
-      },
-      {
-          "id": 6,
-          "value": "Ask"
-      }
-  ],
-  "category": "Technologie",
-  "difficulty": 1,
-  "response": 4,
-  "descriptionResponse": "Google est le moteur de recherche le plus utilisé dans le monde."
-},
-{
-  "id": 95,
-  "question": "Quelle entreprise a été fondée par Steve Jobs, Steve Wozniak, et Ronald Wayne ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Microsoft"
-      },
-      {
-          "id": 2,
-          "value": "Apple"
-      },
-      {
-          "id": 3,
-          "value": "IBM"
-      },
-      {
-          "id": 4,
-          "value": "Intel"
-      },
-      {
-          "id": 5,
-          "value": "HP"
-      },
-      {
-          "id": 6,
-          "value": "Dell"
-      }
-  ],
-  "category": "Technologie",
-  "difficulty": 2,
-  "response": 2,
-  "descriptionResponse": "Apple a été fondée par Steve Jobs, Steve Wozniak, et Ronald Wayne."
-},
-{
-  "id": 96,
-  "question": "Quel est le langage de programmation principalement utilisé pour développer des applications Android ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Python"
-      },
-      {
-          "id": 2,
-          "value": "Swift"
-      },
-      {
-          "id": 3,
-          "value": "Java"
-      },
-      {
-          "id": 4,
-          "value": "C#"
-      },
-      {
-          "id": 5,
-          "value": "Ruby"
-      },
-      {
-          "id": 6,
-          "value": "PHP"
-      }
-  ],
-  "category": "Technologie",
-  "difficulty": 3,
-  "response": 3,
-  "descriptionResponse": "Java est le langage de programmation principalement utilisé pour développer des applications Android."
-},
-{
-  "id": 97,
-  "question": "Quelle technologie de stockage de données est basée sur des cellules de mémoire flash et est utilisée dans des dispositifs comme les SSD ?",
-  "answers": [
-      {
-          "id": 1,
-          "value": "Disque dur"
-      },
-      {
-          "id": 2,
-          "value": "Bande magnétique"
-      },
-      {
-          "id": 3,
-          "value": "DVD"
-      },
-      {
-          "id": 4,
-          "value": "Mémoire flash"
-      },
-      {
-          "id": 5,
-          "value": "CD-ROM"
-      },
-      {
-          "id": 6,
-          "value": "Disquette"
-      }
-  ],
-  "category": "Technologie",
+  "category": "Danse",
   "difficulty": 4,
-  "response": 4,
-  "descriptionResponse": "La mémoire flash est la technologie de stockage de données utilisée dans des dispositifs comme les SSD."
+  "response": 3,
+  "descriptionResponse": "Le foxtrot est caractérisé par des mouvements doux et glissants et est souvent associé à Fred Astaire et Ginger Rogers."
 },
 {
-  "id": 98,
-  "question": "Quel est le protocole de communication sans fil principalement utilisé pour les réseaux locaux et connu sous le nom de Wi-Fi ?",
+  "id": 128,
+  "question": "Quel style de danse urbaine est né dans les rues du Bronx à New York dans les années 1970 ?",
   "answers": [
       {
           "id": 1,
-          "value": "Bluetooth"
+          "value": "Hip-hop"
       },
       {
           "id": 2,
-          "value": "Zigbee"
+          "value": "Salsa"
       },
       {
           "id": 3,
-          "value": "WiMAX"
+          "value": "Ballet"
       },
       {
           "id": 4,
-          "value": "IEEE 802.11"
+          "value": "Flamenco"
       },
       {
           "id": 5,
-          "value": "NFC"
+          "value": "Breakdance"
       },
       {
           "id": 6,
-          "value": "RFID"
+          "value": "Tango"
       }
   ],
-  "category": "Technologie",
+  "category": "Danse",
   "difficulty": 5,
-  "response": 4,
-  "descriptionResponse": "Le protocole de communication sans fil principalement utilisé pour les réseaux locaux et connu sous le nom de Wi-Fi est IEEE 802.11."
+  "response": 5,
+  "descriptionResponse": "Le breakdance est un style de danse urbaine né dans les rues du Bronx à New York dans les années 1970."
 },
 {
-  "id": 99,
-  "question": "Quel est le terme pour désigner la technologie permettant de créer des objets tridimensionnels à partir de modèles numériques ?",
+  "id": 129,
+  "question": "Quelle danse latino-américaine est connue pour ses mouvements sensuels et son rythme lent ?",
   "answers": [
       {
           "id": 1,
-          "value": "Impression laser"
+          "value": "Samba"
       },
       {
           "id": 2,
-          "value": "Gravure"
+          "value": "Tango"
       },
       {
           "id": 3,
-          "value": "CNC"
+          "value": "Rumba"
       },
       {
           "id": 4,
-          "value": "Impression 3D"
+          "value": "Cha-cha-cha"
       },
       {
           "id": 5,
-          "value": "Photocopie"
+          "value": "Merengue"
       },
       {
           "id": 6,
-          "value": "Lithographie"
+          "value": "Bachata"
       }
   ],
-  "category": "Technologie",
+  "category": "Danse",
   "difficulty": 6,
-  "response": 4,
-  "descriptionResponse": "La technologie permettant de créer des objets tridimensionnels à partir de modèles numériques est l'impression 3D."
+  "response": 3,
+  "descriptionResponse": "La rumba est une danse latino-américaine connue pour ses mouvements sensuels et son rythme lent."
 },
 {
-  "id": 100,
-  "question": "Quelle société a créé le système d'exploitation Windows ?",
+  "id": 130,
+  "question": "Quel est le nom du célèbre ballet composé par Piotr Ilitch Tchaïkovski, mettant en scène des jouets qui prennent vie la veille de Noël ?",
   "answers": [
       {
           "id": 1,
-          "value": "Apple"
+          "value": "Le Lac des cygnes"
       },
       {
           "id": 2,
-          "value": "Google"
+          "value": "La Belle au bois dormant"
       },
       {
           "id": 3,
-          "value": "Microsoft"
+          "value": "Casse-Noisette"
       },
       {
           "id": 4,
-          "value": "IBM"
+          "value": "Giselle"
       },
       {
           "id": 5,
-          "value": "Intel"
+          "value": "Coppélia"
       },
       {
           "id": 6,
-          "value": "Amazon"
+          "value": "Don Quichotte"
       }
   ],
-  "category": "Technologie",
+  "category": "Danse",
   "difficulty": 7,
   "response": 3,
-  "descriptionResponse": "Microsoft a créé le système d'exploitation Windows."
+  "descriptionResponse": "Casse-Noisette est le célèbre ballet composé par Piotr Ilitch Tchaïkovski, mettant en scène des jouets qui prennent vie la veille de Noël."
 },
 {
-  "id": 101,
-  "question": "Quelle est la différence principale entre les langages de programmation compilés et interprétés ?",
+  "id": 131,
+  "question": "Quel style de danse est souvent associé à la musique reggae et a émergé en Jamaïque dans les années 1960 ?",
   "answers": [
       {
           "id": 1,
-          "value": "Les langages compilés sont plus lents."
+          "value": "Salsa"
       },
       {
           "id": 2,
-          "value": "Les langages interprétés n'ont pas besoin de compilation avant l'exécution."
+          "value": "Dancehall"
       },
       {
           "id": 3,
-          "value": "Les langages interprétés sont plus sécurisés."
+          "value": "Flamenco"
       },
       {
           "id": 4,
-          "value": "Les langages compilés nécessitent un interprète pour l'exécution."
+          "value": "Tango"
       },
       {
           "id": 5,
-          "value": "Les langages interprétés ne peuvent pas être exécutés sur des systèmes d'exploitation."
+          "value": "Hip-hop"
       },
       {
           "id": 6,
-          "value": "Les langages compilés n'ont pas besoin d'un environnement d'exécution."
+          "value": "Breakdance"
       }
   ],
-  "category": "Technologie",
+  "category": "Danse",
   "difficulty": 8,
   "response": 2,
-  "descriptionResponse": "Les langages interprétés n'ont pas besoin de compilation avant l'exécution, contrairement aux langages compilés."
+  "descriptionResponse": "Le dancehall est un style de danse souvent associé à la musique reggae et a émergé en Jamaïque dans les années 1960."
 },
 {
-  "id": 102,
-  "question": "Quel est le nom de la technologie de traitement parallèle des données utilisée dans les superordinateurs et les centres de données pour accélérer les performances ?",
+  "id": 132,
+  "question": "Quel est le nom de la danse traditionnelle indienne qui utilise des gestes de la main pour raconter une histoire ?",
   "answers": [
       {
           "id": 1,
-          "value": "Clustering"
+          "value": "Ballet"
       },
       {
           "id": 2,
-          "value": "Multithreading"
+          "value": "Kathak"
       },
       {
           "id": 3,
-          "value": "Virtualisation"
+          "value": "Odissi"
       },
       {
           "id": 4,
-          "value": "Grid computing"
+          "value": "Bharatanatyam"
       },
       {
           "id": 5,
-          "value": "Deep learning"
+          "value": "Samba"
       },
       {
           "id": 6,
-          "value": "Machine learning"
+          "value": "Flamenco"
       }
   ],
-  "category": "Technologie",
+  "category": "Danse",
   "difficulty": 9,
   "response": 4,
-  "descriptionResponse": "Le Grid computing est la technologie de traitement parallèle des données utilisée dans les superordinateurs et les centres de données pour accélérer les performances."
+  "descriptionResponse": "Le Bharatanatyam est une danse traditionnelle indienne qui utilise des gestes de la main pour raconter une histoire."
 },
 {
-  "id": 103,
-  "question": "Quel est le concept de la blockchain et comment est-il principalement utilisé ?",
+  "id": 133,
+  "question": "Quel est le nom de la danse traditionnelle espagnole caractérisée par des mouvements de pieds rapides et des claquements de mains ?",
   "answers": [
       {
           "id": 1,
-          "value": "Un type de base de données traditionnelle, principalement utilisé pour stocker des fichiers multimédias."
+          "value": "Tango"
       },
       {
           "id": 2,
-          "value": "Une technologie de comptabilité décentralisée, principalement utilisée pour les cryptomonnaies."
+          "value": "Salsa"
       },
       {
           "id": 3,
-          "value": "Une méthode de cryptage des données, principalement utilisée dans la sécurité des réseaux."
+          "value": "Flamenco"
       },
       {
           "id": 4,
-          "value": "Un algorithme d'apprentissage automatique, principalement utilisé dans l'intelligence artificielle."
+          "value": "Rumba"
       },
       {
           "id": 5,
-          "value": "Un protocole de communication réseau, principalement utilisé pour les transmissions de données sans fil."
+          "value": "Samba"
       },
       {
           "id": 6,
-          "value": "Un format de compression de données, principalement utilisé pour les images et les vidéos."
+          "value": "Cha-cha-cha"
       }
   ],
-  "category": "Technologie",
+  "category": "Danse",
   "difficulty": 10,
-  "response": 2,
-  "descriptionResponse": "La blockchain est une technologie de comptabilité décentralisée, principalement utilisée pour les cryptomonnaies."
+  "response": 3,
+  "descriptionResponse": "Le flamenco est une danse traditionnelle espagnole caractérisée par des mouvements de pieds rapides et des claquements de mains."
 }
 ]
