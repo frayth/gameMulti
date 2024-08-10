@@ -7,7 +7,7 @@
       <Theme></Theme>
     </div>
     <question v-else-if="game.phaseGame === 'question'"></question>
-    <div v-else>Ceci est le score de la partie</div>
+    <div v-else><ScorePresentation></ScorePresentation></div>
     <Transition mode="out-in">
       <div id="scoreboard" v-if="scoreGameIsOpen">
         <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>
@@ -17,17 +17,21 @@
         <trophy @click="scoreGameIsOpen = true" :size="50"></trophy>
       </div>
     </Transition>
+
+
   </div>
 </template>
 
 <script setup lang="ts">
-import Question from './QuestionComponent.vue'
-import Theme from './ThemComponent.vue'
+import Question from '@/components/gameLobby/QuestionComponent.vue'
+import Theme from '@/components/gameLobby/ThemComponent.vue'
 import { gameStore } from '@/stores/game'
-import scoreBoard from './TableScore.vue'
+import scoreBoard from '@/components/gameLobby/TableScore.vue'
 import { ref } from 'vue'
 import trophy from '@/assets/SVG/TrophySvg.vue'
 import close from '@/assets/SVG/CloseSvg.vue'
+import ScorePresentation from '@/components/gameLobby/ScorePresentation.vue'
+
 const game = gameStore()
 const scoreGameIsOpen = ref(false)
 </script>
@@ -95,6 +99,21 @@ const scoreGameIsOpen = ref(false)
 }
 .v-leave-to {
   transform: translateX(110%);
+}
+@media (max-width: 1000px) {
+  #scoreboard {
+    width: 100%;
+  }
+  .openScore {
+    top: auto;
+    bottom: 25px !important;
+  }
+  #scoreboard .close{
+    top:20px;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+  }
 }
 </style>
 //

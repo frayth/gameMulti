@@ -63,7 +63,10 @@ const tempoButtonIsDisable = computed(() => game.InfoCurrentQuestion.personnalRe
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap : 20px;
+
 }
+
 .response-container {
   display: flex;
   justify-content: center;
@@ -86,6 +89,8 @@ const tempoButtonIsDisable = computed(() => game.InfoCurrentQuestion.personnalRe
   align-items: center;
   padding: 5px;
   user-select: none;
+  font-size: 2dvw;
+
 }
 .select {
   background-color: blue !important;
@@ -107,16 +112,33 @@ const tempoButtonIsDisable = computed(() => game.InfoCurrentQuestion.personnalRe
 @media (max-width: 600px) {
   .response {
     width: auto;
-    font-size: 18px;
+    font-size: 3dvw;
     min-width: 35%;
     height: 40px;
+    padding: 5px
   }
   .question {
-    font-size: 20px;
+    font-size: 5dvw;
   }
   .pass-response {
-    font-size: 18px;
+    font-size: 3dvw;
     height: 40px;
   }
+}
+@media (min-width:1000px){
+  .response {
+    width: auto;
+    font-size: 20px;
+    min-width: 35%;
+    height: 50px;
+    padding: 5px
+  }
+  .question {
+    font-size: 30px;
+  }
+  .pass-response {
+    font-size: 20px;
+    height: 50px;
+}
 }
 </style>

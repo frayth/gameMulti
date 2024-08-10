@@ -13,7 +13,8 @@ export interface listStatPlayer{
   bonus:{
     type:'faster' | 'correct' | 'incorrect' | 'streak',
     value:number
-  }[]
+  }[],
+  oldScore:number,
   response:{
     response:number | null,
     time:number | null

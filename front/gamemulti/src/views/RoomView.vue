@@ -15,7 +15,7 @@ import { gameStore } from '@/stores/game'
 import {onMounted,reactive } from 'vue'
 import type {GameStatus,TypeRoom} from '@/models/room.model'
 import WaitLobby from '@/components/gameRoom/WaitLobby.vue'
-import GameLobby from '@/components/gameLobby/GameLobby.vue'
+import GameLobby from '@/components/gameRoom/GameLobby.vue'
 const user = userStore()
 const game=gameStore()
 const socket = useSocketStore()

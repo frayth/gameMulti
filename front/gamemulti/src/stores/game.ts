@@ -16,7 +16,7 @@ export const gameStore= defineStore('game', () => {
   const gameStat=reactive({
     players:[] as listStatPlayer[],
     initPlayers(players:Player[]){
-      this.players=players.map(player=>({id:player.id,name:player.name,score:0,streak:0,bonus:[],response:{response:null,time:null}}))
+      this.players=players.map(player=>({oldScore:0,id:player.id,name:player.name,score:0,streak:0,bonus:[],response:{response:null,time:null}}))
     },
     sortedPlayerByScore(){
       console.log('sortedPlayerByScore',this.players)
@@ -28,7 +28,8 @@ export const gameStore= defineStore('game', () => {
     answers: [] as {id:number,value:string}[],
     difficulty: 0 as number,
     category: '' as string,
-    nextEvent: 0 as number
+    nextEvent: 0 as number,
+    correctAnswer: '' as string
   })
   const waitLobbyProperties = reactive({
     lauchGame: false as boolean,
@@ -100,6 +101,7 @@ export const gameStore= defineStore('game', () => {
       name: string,
       score:number,
       streak: number,
+      oldScore:number,
       response:{
         response: number | null,
         time: number | null
@@ -112,6 +114,7 @@ export const gameStore= defineStore('game', () => {
     correctAnswer:string     
   })=>{
     console.log('score:game',data)
+    gameQuestions.correctAnswer=data.correctAnswer
     gameStat.players=data.playersStats
     gameStat.sortedPlayerByScore()
     phaseGame.value='score'

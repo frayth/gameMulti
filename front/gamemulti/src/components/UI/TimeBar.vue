@@ -115,4 +115,10 @@
   justify-self: start;
   border-radius: 0 10px 10px 0;
 }
+@media (max-width: 768px){
+  .timer{
+    font-size: 15px;
+    width: 40px;
+  }
+}
 </style>

@@ -91,6 +91,7 @@ export default class Game {
       console.log("playeSortedByResponseTime", playeSortedByResponseTime);
       this.players.forEach((el) => {
         el.refreshBonus();
+        el.player.oldScore = el.player.score;
       });
       this.players.forEach((el) => {
         if (el.player.response.response === this.question.question.response) {
@@ -201,6 +202,7 @@ class GamePlayer {
     };
     score: number;
     streak: number;
+    oldScore: number;
     bonus: {
       type: "faster" | "correct" | "incorrect" | "streak";
       value: number;
@@ -215,6 +217,7 @@ class GamePlayer {
       score: 0,
       streak: 0,
       bonus: [],
+      oldScore: 0,
       response: {
         response: null,
         time: null,
@@ -229,6 +232,7 @@ class GamePlayer {
       streak: this.player.streak,
       response: this.player.response,
       bonus: this.player.bonus,
+      oldScore: this.player.oldScore,
     };
   }
 
