@@ -1,5 +1,5 @@
 <template>
-  <div class="chat" >
+  <div class="chat">
     <optionModal
       ref="optionChat"
       v-if="optionPanelIsOpen"
@@ -78,7 +78,7 @@ defineProps({
     required: true
   }
 })
-const emit = defineEmits(['focusInput'])
+const emit = defineEmits(['focusInput', 'focusOutInput'])
 const socket = useSocketStore()
 const chatPanel = ref<HTMLElement | null>(null)
 const users=computed(()=>{
@@ -112,10 +112,14 @@ function scrollDown() {
     chatPanel.value?.scrollTo(0, chatPanel.value.scrollHeight)
   })
 }
+function emitScroll() {
+  emit('focusOutInput')
+}
 function sendMessage() {
   if (currentMessage.value.length === 0) return
   socket.emit('message:user', currentMessage.value)
   currentMessage.value = ''
+  emitScroll()
 }
 function startPopUp(message: string) {
   appli.startPopUpTimer(message)

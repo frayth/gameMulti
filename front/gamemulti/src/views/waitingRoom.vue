@@ -1,7 +1,7 @@
 <template>
   <div>
     <div ref="chatRef" class="test">
-      <chat   :user="user.username" @focus-input="handleCenterChat"></chat>
+      <chat   :user="user.username" @focus-input="handleCenterChat" @focus-out-input="handleChatScrollTop"></chat>
     </div>
     <listRooms></listRooms>
     <div class="creation-container">
@@ -19,6 +19,8 @@ import { useSocketStore } from '@/stores/socket';
 const user = userStore()
 const socket = useSocketStore()
 const chatRef=ref<HTMLElement|null>(null)
+
+
 onMounted(()=>{
   handleCenterChat()
 })
@@ -27,6 +29,11 @@ function handleCenterChat(){
 }
 function joinRoom(){
   socket.socket?.emit('create:room')
+}
+function handleChatScrollTop(){
+  if(chatRef.value){
+    chatRef.value.scrollIntoView(true)
+  }
 }
 </script>
 
