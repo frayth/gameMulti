@@ -9,7 +9,10 @@ export default class Game {
   event: NodeJS.Timeout | null;
   askedQuestion: number[];
   nextEvent: number;
-  phaseGame: "intro" | "presentation" | "question" | "score";
+  phaseGame: "intro" | "presentation" | "question" | "score" | 'end';
+  optionsGame:{
+    maxPoint:number
+  }
   constructor(players: Player[]) {
     this.players = players.map((el) => new GamePlayer(el));
     this.question = new Question();
@@ -17,22 +20,31 @@ export default class Game {
     this.nextEvent = Date.now();
     this.askedQuestion = [];
     this.phaseGame = "intro";
+    this.optionsGame={
+      maxPoint:bonus.defautScore
+    }
   }
 
   clearEvent() {
     if (this.event) clearTimeout(this.event);
   }
 
-  private async changePhaseGame() {
+  private async changePhaseGame(){
     switch (this.phaseGame) {
       case "intro":
       case "score":
         this.phaseGame = "presentation";
         await this.getQuestion();
         this.createEvent(() => {
-          this.changePhaseGame();
+            this.changePhaseGame();
         }, 5000);
-        this.sendPresentation();
+
+        if(this.haveAWinner()){
+          this.endGame();
+        }else{
+          this.sendPresentation();
+        }
+        
         break;
       case "presentation":
         this.phaseGame = "question";
@@ -111,7 +123,7 @@ export default class Game {
       });
       resolve(null);
     });
-    this.sendScore();
+    this.sendScore();   
   }
   private sendUpdateResponse() {
     let data = this.players
@@ -132,10 +144,18 @@ export default class Game {
       el.player.socket?.emit("question:game", this.getInfoGame());
     });
   }
-  savePlayerResponse(player: Player, response: { response: number | null }) {
-    
-    if (!this.canResponse(player)) return;
+  private endGame(){
+    this.phaseGame='end';
+    this.clearEvent();
+    this.players.forEach((el) => {
+      el.player.socket?.emit("end:game", {
+        score:this.players.map((el) => el.getStats())
+      });
+    });
+  }
 
+  savePlayerResponse(player: Player, response: { response: number | null }) {
+    if (!this.canResponse(player)) return;
     console.log("ok pour sauvegarder");
     const user = this.players.find((el) => el.player.id === player.id);
     if (user) {
@@ -143,12 +163,11 @@ export default class Game {
       this.sendUpdateResponse();
       if(this.players.find((el)=>!el.hasResponded())===undefined){
         const nexteventinMillisecond = this.nextEvent - Date.now();
-        setTimeout(() => {
+        this.createEvent(()=>{
           this.clearEvent();
           this.changePhaseGame();
-        }, nexteventinMillisecond<=2000?nexteventinMillisecond:2000); 
+        },nexteventinMillisecond<=2000?nexteventinMillisecond:2000)
       }
-
     }
   }
   private canResponse(player: Player) {
@@ -177,6 +196,9 @@ export default class Game {
     if (user) {
       user.player.socket = player.socket;
     }
+  }
+  private haveAWinner() {
+    return this.players.find((el) => el.player.score >= this.optionsGame.maxPoint);
   }
   getInfoGame() {
     return {

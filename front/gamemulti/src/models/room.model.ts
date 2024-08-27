@@ -24,7 +24,7 @@ export interface InfoGameRoom {
     difficulty:number,
     category:string,
     nextEvent:number,
-    phaseGame:'intro'|'presentation' | 'question' |'score',
+    phaseGame:'intro'|'presentation' | 'question' |'score' | 'end',
     gameStats:listStatPlayer[],
     userResponse:number[]
   }|null

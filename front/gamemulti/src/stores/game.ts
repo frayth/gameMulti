@@ -9,7 +9,7 @@ import type { listStatPlayer } from "@/models/player.model";
 export const gameStore= defineStore('game', () => {
   const user = userStore()
   const status:Ref<GameStatus> = ref('waiting')
-  const phaseGame=ref<'intro'|'presentation' | 'question' |'score'>('intro')
+  const phaseGame=ref<'intro'|'presentation' | 'question' |'score' | 'end'>('intro')
   const players=ref<Player[]>([])
   const socket=useSocketStore()
   const owner=ref<number>(0)
@@ -93,6 +93,10 @@ export const gameStore= defineStore('game', () => {
     gameQuestions.category=data.category
     gameQuestions.difficulty=data.difficulty
     InfoCurrentQuestion.refresh()
+  })
+  socket.socket?.on('end:game',()=>{
+    console.log('end:game')
+    phaseGame.value='end'
   })
 
   socket.socket?.on('score:game',(data:{

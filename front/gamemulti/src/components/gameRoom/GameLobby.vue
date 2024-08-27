@@ -7,7 +7,12 @@
       <Theme></Theme>
     </div>
     <question v-else-if="game.phaseGame === 'question'"></question>
-    <div v-else><ScorePresentation></ScorePresentation></div>
+    <div v-else-if="game.phaseGame === 'score'">
+      <ScorePresentation></ScorePresentation>
+    </div>
+    <div v-else>
+      <div>Le jeu est fini</div>
+    </div>
     <Transition mode="out-in">
       <div id="scoreboard" v-if="scoreGameIsOpen">
         <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>
