@@ -133,6 +133,7 @@ export default class Game {
     });
   }
   savePlayerResponse(player: Player, response: { response: number | null }) {
+    
     if (!this.canResponse(player)) return;
 
     console.log("ok pour sauvegarder");
@@ -140,6 +141,14 @@ export default class Game {
     if (user) {
       user.player.response = { response: response.response, time: Date.now() };
       this.sendUpdateResponse();
+      if(this.players.find((el)=>!el.hasResponded())===undefined){
+        const nexteventinMillisecond = this.nextEvent - Date.now();
+        setTimeout(() => {
+          this.clearEvent();
+          this.changePhaseGame();
+        }, nexteventinMillisecond<=2000?nexteventinMillisecond:2000); 
+      }
+
     }
   }
   private canResponse(player: Player) {
@@ -255,6 +264,9 @@ class GamePlayer {
   }
   refreshBonus() {
     this.player.bonus = [];
+  }
+  hasResponded(){
+    return this.player.response.time !== null
   }
 }
 class Question {
