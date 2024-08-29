@@ -10,9 +10,7 @@
     <div v-else-if="game.phaseGame === 'score'">
       <ScorePresentation></ScorePresentation>
     </div>
-    <div v-else>
-      <div>Le jeu est fini</div>
-    </div>
+      <endComponent v-else></endComponent>
     <Transition mode="out-in">
       <div id="scoreboard" v-if="scoreGameIsOpen">
         <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>
@@ -28,6 +26,7 @@
 </template>
 
 <script setup lang="ts">
+import endComponent from '@/components/gameLobby/endComponent.vue'
 import Question from '@/components/gameLobby/QuestionComponent.vue'
 import Theme from '@/components/gameLobby/ThemComponent.vue'
 import { gameStore } from '@/stores/game'
