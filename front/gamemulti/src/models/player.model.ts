@@ -18,6 +18,7 @@ export interface listStatPlayer{
   response:{
     response:number | null,
     time:number | null
-  }
+  },
+  rank:null | number
 }
 export type PlayerStatus = 'connect' | 'disconnect';
