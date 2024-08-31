@@ -2,6 +2,7 @@ import Player from "./player";
 import questions from "../assets/question.json";
 import type { QuestionModel } from "../models/game.model";
 import bonus from "../assets/bonus.json";
+import prand from 'pure-rand';
 const offsetResponseTime = 2000;
 export default class Game {
   players: GamePlayer[];
@@ -310,7 +311,14 @@ class Question {
       .filter((el) => !alreadyUsed.includes(el.id))
       .filter((el) => (category ? el.category === category : true))
       .filter((el) => (difficulty ? el.difficulty === difficulty : true));
-    let randomIndex = Math.floor(Math.random() * questionsFiltered.length);
-    return questionsFiltered[randomIndex];
+     const seed=Date.now() ^ (Math.random() * 0x100000000);
+     const rng = prand.xoroshiro128plus(seed);
+     const rand = (min:number, max:number) => {
+      const out = (rng.unsafeNext() >>> 0) / 0x100000000;
+      return min + Math.floor(out * (max - min + 1));
+    };
+     const randomIndex =rand(0,questionsFiltered.length-1);
+     //let randomIndex = Math.floor(Math.random() * questionsFiltered.length);
+      return questionsFiltered[randomIndex];
   }
 }

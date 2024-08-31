@@ -28,7 +28,6 @@ export const gameStore = defineStore('game', () => {
       }))
     },
     sortedPlayerByScore(): void {
-      console.log('sortedPlayerByScore', this.players)
       this.players = this.players.sort((a, b) => b.score - a.score).map((player) => player)
     },
     affectRankForPlayer(): void {

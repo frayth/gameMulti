@@ -3845,680 +3845,1598 @@
     "id": 114,
     "question": "Quel est l'animal terrestre le plus rapide ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Lion"
-        },
-        {
-            "id": 2,
-            "value": "Guépard"
-        },
-        {
-            "id": 3,
-            "value": "Éléphant"
-        },
-        {
-            "id": 4,
-            "value": "Girafe"
-        },
-        {
-            "id": 5,
-            "value": "Zèbre"
-        },
-        {
-            "id": 6,
-            "value": "Tigre"
-        }
+      {
+        "id": 1,
+        "value": "Lion"
+      },
+      {
+        "id": 2,
+        "value": "Guépard"
+      },
+      {
+        "id": 3,
+        "value": "Éléphant"
+      },
+      {
+        "id": 4,
+        "value": "Girafe"
+      },
+      {
+        "id": 5,
+        "value": "Zèbre"
+      },
+      {
+        "id": 6,
+        "value": "Tigre"
+      }
     ],
     "category": "Animaux",
     "difficulty": 1,
     "response": 2,
     "descriptionResponse": "Le guépard est l'animal terrestre le plus rapide, pouvant atteindre des vitesses de 112 km/h."
-},
-{
+  },
+  {
     "id": 115,
     "question": "Quel est le plus grand mammifère marin ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Dauphin"
-        },
-        {
-            "id": 2,
-            "value": "Orque"
-        },
-        {
-            "id": 3,
-            "value": "Requin"
-        },
-        {
-            "id": 4,
-            "value": "Baleine bleue"
-        },
-        {
-            "id": 5,
-            "value": "Lamantin"
-        },
-        {
-            "id": 6,
-            "value": "Phoque"
-        }
+      {
+        "id": 1,
+        "value": "Dauphin"
+      },
+      {
+        "id": 2,
+        "value": "Orque"
+      },
+      {
+        "id": 3,
+        "value": "Requin"
+      },
+      {
+        "id": 4,
+        "value": "Baleine bleue"
+      },
+      {
+        "id": 5,
+        "value": "Lamantin"
+      },
+      {
+        "id": 6,
+        "value": "Phoque"
+      }
     ],
     "category": "Animaux",
     "difficulty": 2,
     "response": 4,
     "descriptionResponse": "La baleine bleue est le plus grand mammifère marin et aussi le plus grand animal existant."
-},
-{
+  },
+  {
     "id": 116,
     "question": "Quelle est la durée de vie moyenne d'un éléphant d'Afrique ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "20-30 ans"
-        },
-        {
-            "id": 2,
-            "value": "40-50 ans"
-        },
-        {
-            "id": 3,
-            "value": "60-70 ans"
-        },
-        {
-            "id": 4,
-            "value": "80-90 ans"
-        },
-        {
-            "id": 5,
-            "value": "100-110 ans"
-        },
-        {
-            "id": 6,
-            "value": "120-130 ans"
-        }
+      {
+        "id": 1,
+        "value": "20-30 ans"
+      },
+      {
+        "id": 2,
+        "value": "40-50 ans"
+      },
+      {
+        "id": 3,
+        "value": "60-70 ans"
+      },
+      {
+        "id": 4,
+        "value": "80-90 ans"
+      },
+      {
+        "id": 5,
+        "value": "100-110 ans"
+      },
+      {
+        "id": 6,
+        "value": "120-130 ans"
+      }
     ],
     "category": "Animaux",
     "difficulty": 3,
     "response": 3,
     "descriptionResponse": "La durée de vie moyenne d'un éléphant d'Afrique est de 60 à 70 ans."
-},
-{
+  },
+  {
     "id": 117,
     "question": "Quel animal est connu pour ses bandes noires et blanches ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Lion"
-        },
-        {
-            "id": 2,
-            "value": "Tigre"
-        },
-        {
-            "id": 3,
-            "value": "Guépard"
-        },
-        {
-            "id": 4,
-            "value": "Zèbre"
-        },
-        {
-            "id": 5,
-            "value": "Girafe"
-        },
-        {
-            "id": 6,
-            "value": "Panthère"
-        }
+      {
+        "id": 1,
+        "value": "Lion"
+      },
+      {
+        "id": 2,
+        "value": "Tigre"
+      },
+      {
+        "id": 3,
+        "value": "Guépard"
+      },
+      {
+        "id": 4,
+        "value": "Zèbre"
+      },
+      {
+        "id": 5,
+        "value": "Girafe"
+      },
+      {
+        "id": 6,
+        "value": "Panthère"
+      }
     ],
     "category": "Animaux",
     "difficulty": 4,
     "response": 4,
     "descriptionResponse": "Le zèbre est connu pour ses bandes noires et blanches distinctives."
-},
-{
+  },
+  {
     "id": 118,
     "question": "Combien de cœurs possède une pieuvre ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "1"
-        },
-        {
-            "id": 2,
-            "value": "2"
-        },
-        {
-            "id": 3,
-            "value": "3"
-        },
-        {
-            "id": 4,
-            "value": "4"
-        },
-        {
-            "id": 5,
-            "value": "5"
-        },
-        {
-            "id": 6,
-            "value": "6"
-        }
+      {
+        "id": 1,
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "value": "4"
+      },
+      {
+        "id": 5,
+        "value": "5"
+      },
+      {
+        "id": 6,
+        "value": "6"
+      }
     ],
     "category": "Animaux",
     "difficulty": 5,
     "response": 3,
     "descriptionResponse": "Une pieuvre possède trois cœurs : un pour pomper le sang à travers son corps et deux pour pomper le sang à travers ses branchies."
-},
-{
+  },
+  {
     "id": 119,
     "question": "Quel oiseau est connu pour son aptitude à imiter des sons, y compris la parole humaine ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Perroquet"
-        },
-        {
-            "id": 2,
-            "value": "Aigle"
-        },
-        {
-            "id": 3,
-            "value": "Pélican"
-        },
-        {
-            "id": 4,
-            "value": "Hirondelle"
-        },
-        {
-            "id": 5,
-            "value": "Colibri"
-        },
-        {
-            "id": 6,
-            "value": "Flamant rose"
-        }
+      {
+        "id": 1,
+        "value": "Perroquet"
+      },
+      {
+        "id": 2,
+        "value": "Aigle"
+      },
+      {
+        "id": 3,
+        "value": "Pélican"
+      },
+      {
+        "id": 4,
+        "value": "Hirondelle"
+      },
+      {
+        "id": 5,
+        "value": "Colibri"
+      },
+      {
+        "id": 6,
+        "value": "Flamant rose"
+      }
     ],
     "category": "Animaux",
     "difficulty": 6,
     "response": 1,
     "descriptionResponse": "Le perroquet est connu pour sa capacité à imiter des sons, y compris la parole humaine."
-},
-{
+  },
+  {
     "id": 120,
     "question": "Quel est le seul mammifère capable de voler ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Écureuil volant"
-        },
-        {
-            "id": 2,
-            "value": "Chauve-souris"
-        },
-        {
-            "id": 3,
-            "value": "Hérisson"
-        },
-        {
-            "id": 4,
-            "value": "Koala"
-        },
-        {
-            "id": 5,
-            "value": "Rat"
-        },
-        {
-            "id": 6,
-            "value": "Hamster"
-        }
+      {
+        "id": 1,
+        "value": "Écureuil volant"
+      },
+      {
+        "id": 2,
+        "value": "Chauve-souris"
+      },
+      {
+        "id": 3,
+        "value": "Hérisson"
+      },
+      {
+        "id": 4,
+        "value": "Koala"
+      },
+      {
+        "id": 5,
+        "value": "Rat"
+      },
+      {
+        "id": 6,
+        "value": "Hamster"
+      }
     ],
     "category": "Animaux",
     "difficulty": 7,
     "response": 2,
     "descriptionResponse": "La chauve-souris est le seul mammifère capable de voler."
-},
-{
+  },
+  {
     "id": 121,
     "question": "Combien de temps un chameau peut-il survivre sans eau ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "1 jour"
-        },
-        {
-            "id": 2,
-            "value": "3 jours"
-        },
-        {
-            "id": 3,
-            "value": "1 semaine"
-        },
-        {
-            "id": 4,
-            "value": "2 semaines"
-        },
-        {
-            "id": 5,
-            "value": "1 mois"
-        },
-        {
-            "id": 6,
-            "value": "2 mois"
-        }
+      {
+        "id": 1,
+        "value": "1 jour"
+      },
+      {
+        "id": 2,
+        "value": "3 jours"
+      },
+      {
+        "id": 3,
+        "value": "1 semaine"
+      },
+      {
+        "id": 4,
+        "value": "2 semaines"
+      },
+      {
+        "id": 5,
+        "value": "1 mois"
+      },
+      {
+        "id": 6,
+        "value": "2 mois"
+      }
     ],
     "category": "Animaux",
     "difficulty": 8,
     "response": 5,
     "descriptionResponse": "Un chameau peut survivre jusqu'à un mois sans eau, grâce à sa capacité à conserver l'eau."
-},
-{
+  },
+  {
     "id": 122,
     "question": "Quelle est la période de gestation d'un éléphant ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "6 mois"
-        },
-        {
-            "id": 2,
-            "value": "9 mois"
-        },
-        {
-            "id": 3,
-            "value": "12 mois"
-        },
-        {
-            "id": 4,
-            "value": "18 mois"
-        },
-        {
-            "id": 5,
-            "value": "22 mois"
-        },
-        {
-            "id": 6,
-            "value": "24 mois"
-        }
+      {
+        "id": 1,
+        "value": "6 mois"
+      },
+      {
+        "id": 2,
+        "value": "9 mois"
+      },
+      {
+        "id": 3,
+        "value": "12 mois"
+      },
+      {
+        "id": 4,
+        "value": "18 mois"
+      },
+      {
+        "id": 5,
+        "value": "22 mois"
+      },
+      {
+        "id": 6,
+        "value": "24 mois"
+      }
     ],
     "category": "Animaux",
     "difficulty": 9,
     "response": 5,
     "descriptionResponse": "La période de gestation d'un éléphant est d'environ 22 mois, la plus longue de tous les mammifères."
-},
-{
+  },
+  {
     "id": 123,
     "question": "Quel animal est connu pour son cri ressemblant à un rire ?",
     "answers": [
-        {
-            "id": 1,
-            "value": "Hyène"
-        },
-        {
-            "id": 2,
-            "value": "Dauphin"
-        },
-        {
-            "id": 3,
-            "value": "Singe"
-        },
-        {
-            "id": 4,
-            "value": "Perroquet"
-        },
-        {
-            "id": 5,
-            "value": "Chouette"
-        },
-        {
-            "id": 6,
-            "value": "Loup"
-        }
+      {
+        "id": 1,
+        "value": "Hyène"
+      },
+      {
+        "id": 2,
+        "value": "Dauphin"
+      },
+      {
+        "id": 3,
+        "value": "Singe"
+      },
+      {
+        "id": 4,
+        "value": "Perroquet"
+      },
+      {
+        "id": 5,
+        "value": "Chouette"
+      },
+      {
+        "id": 6,
+        "value": "Loup"
+      }
     ],
     "category": "Animaux",
     "difficulty": 10,
     "response": 1,
     "descriptionResponse": "La hyène est connue pour son cri qui ressemble à un rire humain."
-},
-{
-  "id": 124,
-  "question": "Quel type de danse est connu pour ses mouvements rapides des pieds et son origine irlandaise ?",
-  "answers": [
+  },
+  {
+    "id": 124,
+    "question": "Quel type de danse est connu pour ses mouvements rapides des pieds et son origine irlandaise ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Salsa"
+        "id": 1,
+        "value": "Salsa"
       },
       {
-          "id": 2,
-          "value": "Flamenco"
+        "id": 2,
+        "value": "Flamenco"
       },
       {
-          "id": 3,
-          "value": "Tango"
+        "id": 3,
+        "value": "Tango"
       },
       {
-          "id": 4,
-          "value": "Step dance"
+        "id": 4,
+        "value": "Step dance"
       },
       {
-          "id": 5,
-          "value": "Ballet"
+        "id": 5,
+        "value": "Ballet"
       },
       {
-          "id": 6,
-          "value": "Breakdance"
+        "id": 6,
+        "value": "Breakdance"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 1,
-  "response": 4,
-  "descriptionResponse": "Le step dance est connu pour ses mouvements rapides des pieds et son origine irlandaise."
-},
-{
-  "id": 125,
-  "question": "Quel style de danse est souvent associé à la musique de Johann Strauss II ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 1,
+    "response": 4,
+    "descriptionResponse": "Le step dance est connu pour ses mouvements rapides des pieds et son origine irlandaise."
+  },
+  {
+    "id": 125,
+    "question": "Quel style de danse est souvent associé à la musique de Johann Strauss II ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Valse"
+        "id": 1,
+        "value": "Valse"
       },
       {
-          "id": 2,
-          "value": "Samba"
+        "id": 2,
+        "value": "Samba"
       },
       {
-          "id": 3,
-          "value": "Hip-hop"
+        "id": 3,
+        "value": "Hip-hop"
       },
       {
-          "id": 4,
-          "value": "Cha-cha-cha"
+        "id": 4,
+        "value": "Cha-cha-cha"
       },
       {
-          "id": 5,
-          "value": "Rock and roll"
+        "id": 5,
+        "value": "Rock and roll"
       },
       {
-          "id": 6,
-          "value": "Tango"
+        "id": 6,
+        "value": "Tango"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 2,
-  "response": 1,
-  "descriptionResponse": "La valse est souvent associée à la musique de Johann Strauss II."
-},
-{
-  "id": 126,
-  "question": "Quel est le nom de la danse traditionnelle japonaise exécutée par des geishas ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "La valse est souvent associée à la musique de Johann Strauss II."
+  },
+  {
+    "id": 126,
+    "question": "Quel est le nom de la danse traditionnelle japonaise exécutée par des geishas ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Flamenco"
+        "id": 1,
+        "value": "Flamenco"
       },
       {
-          "id": 2,
-          "value": "Bharatanatyam"
+        "id": 2,
+        "value": "Bharatanatyam"
       },
       {
-          "id": 3,
-          "value": "Odissi"
+        "id": 3,
+        "value": "Odissi"
       },
       {
-          "id": 4,
-          "value": "Mai"
+        "id": 4,
+        "value": "Mai"
       },
       {
-          "id": 5,
-          "value": "Tango"
+        "id": 5,
+        "value": "Tango"
       },
       {
-          "id": 6,
-          "value": "Samba"
+        "id": 6,
+        "value": "Samba"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 3,
-  "response": 4,
-  "descriptionResponse": "La danse traditionnelle japonaise exécutée par des geishas est appelée 'Mai'."
-},
-{
-  "id": 127,
-  "question": "Quelle danse de salon est caractérisée par des mouvements doux et glissants et est souvent associée à Fred Astaire et Ginger Rogers ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "La danse traditionnelle japonaise exécutée par des geishas est appelée 'Mai'."
+  },
+  {
+    "id": 127,
+    "question": "Quelle danse de salon est caractérisée par des mouvements doux et glissants et est souvent associée à Fred Astaire et Ginger Rogers ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Tango"
+        "id": 1,
+        "value": "Tango"
       },
       {
-          "id": 2,
-          "value": "Valse"
+        "id": 2,
+        "value": "Valse"
       },
       {
-          "id": 3,
-          "value": "Foxtrot"
+        "id": 3,
+        "value": "Foxtrot"
       },
       {
-          "id": 4,
-          "value": "Samba"
+        "id": 4,
+        "value": "Samba"
       },
       {
-          "id": 5,
-          "value": "Rumba"
+        "id": 5,
+        "value": "Rumba"
       },
       {
-          "id": 6,
-          "value": "Cha-cha-cha"
+        "id": 6,
+        "value": "Cha-cha-cha"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 4,
-  "response": 3,
-  "descriptionResponse": "Le foxtrot est caractérisé par des mouvements doux et glissants et est souvent associé à Fred Astaire et Ginger Rogers."
-},
-{
-  "id": 128,
-  "question": "Quel style de danse urbaine est né dans les rues du Bronx à New York dans les années 1970 ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 4,
+    "response": 3,
+    "descriptionResponse": "Le foxtrot est caractérisé par des mouvements doux et glissants et est souvent associé à Fred Astaire et Ginger Rogers."
+  },
+  {
+    "id": 128,
+    "question": "Quel style de danse urbaine est né dans les rues du Bronx à New York dans les années 1970 ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Hip-hop"
+        "id": 1,
+        "value": "Hip-hop"
       },
       {
-          "id": 2,
-          "value": "Salsa"
+        "id": 2,
+        "value": "Salsa"
       },
       {
-          "id": 3,
-          "value": "Ballet"
+        "id": 3,
+        "value": "Ballet"
       },
       {
-          "id": 4,
-          "value": "Flamenco"
+        "id": 4,
+        "value": "Flamenco"
       },
       {
-          "id": 5,
-          "value": "Breakdance"
+        "id": 5,
+        "value": "Breakdance"
       },
       {
-          "id": 6,
-          "value": "Tango"
+        "id": 6,
+        "value": "Tango"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 5,
-  "response": 5,
-  "descriptionResponse": "Le breakdance est un style de danse urbaine né dans les rues du Bronx à New York dans les années 1970."
-},
-{
-  "id": 129,
-  "question": "Quelle danse latino-américaine est connue pour ses mouvements sensuels et son rythme lent ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 5,
+    "response": 5,
+    "descriptionResponse": "Le breakdance est un style de danse urbaine né dans les rues du Bronx à New York dans les années 1970."
+  },
+  {
+    "id": 129,
+    "question": "Quelle danse latino-américaine est connue pour ses mouvements sensuels et son rythme lent ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Samba"
+        "id": 1,
+        "value": "Samba"
       },
       {
-          "id": 2,
-          "value": "Tango"
+        "id": 2,
+        "value": "Tango"
       },
       {
-          "id": 3,
-          "value": "Rumba"
+        "id": 3,
+        "value": "Rumba"
       },
       {
-          "id": 4,
-          "value": "Cha-cha-cha"
+        "id": 4,
+        "value": "Cha-cha-cha"
       },
       {
-          "id": 5,
-          "value": "Merengue"
+        "id": 5,
+        "value": "Merengue"
       },
       {
-          "id": 6,
-          "value": "Bachata"
+        "id": 6,
+        "value": "Bachata"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 6,
-  "response": 3,
-  "descriptionResponse": "La rumba est une danse latino-américaine connue pour ses mouvements sensuels et son rythme lent."
-},
-{
-  "id": 130,
-  "question": "Quel est le nom du célèbre ballet composé par Piotr Ilitch Tchaïkovski, mettant en scène des jouets qui prennent vie la veille de Noël ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 6,
+    "response": 3,
+    "descriptionResponse": "La rumba est une danse latino-américaine connue pour ses mouvements sensuels et son rythme lent."
+  },
+  {
+    "id": 130,
+    "question": "Quel est le nom du célèbre ballet composé par Piotr Ilitch Tchaïkovski, mettant en scène des jouets qui prennent vie la veille de Noël ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Le Lac des cygnes"
+        "id": 1,
+        "value": "Le Lac des cygnes"
       },
       {
-          "id": 2,
-          "value": "La Belle au bois dormant"
+        "id": 2,
+        "value": "La Belle au bois dormant"
       },
       {
-          "id": 3,
-          "value": "Casse-Noisette"
+        "id": 3,
+        "value": "Casse-Noisette"
       },
       {
-          "id": 4,
-          "value": "Giselle"
+        "id": 4,
+        "value": "Giselle"
       },
       {
-          "id": 5,
-          "value": "Coppélia"
+        "id": 5,
+        "value": "Coppélia"
       },
       {
-          "id": 6,
-          "value": "Don Quichotte"
+        "id": 6,
+        "value": "Don Quichotte"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 7,
-  "response": 3,
-  "descriptionResponse": "Casse-Noisette est le célèbre ballet composé par Piotr Ilitch Tchaïkovski, mettant en scène des jouets qui prennent vie la veille de Noël."
-},
-{
-  "id": 131,
-  "question": "Quel style de danse est souvent associé à la musique reggae et a émergé en Jamaïque dans les années 1960 ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 7,
+    "response": 3,
+    "descriptionResponse": "Casse-Noisette est le célèbre ballet composé par Piotr Ilitch Tchaïkovski, mettant en scène des jouets qui prennent vie la veille de Noël."
+  },
+  {
+    "id": 131,
+    "question": "Quel style de danse est souvent associé à la musique reggae et a émergé en Jamaïque dans les années 1960 ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Salsa"
+        "id": 1,
+        "value": "Salsa"
       },
       {
-          "id": 2,
-          "value": "Dancehall"
+        "id": 2,
+        "value": "Dancehall"
       },
       {
-          "id": 3,
-          "value": "Flamenco"
+        "id": 3,
+        "value": "Flamenco"
       },
       {
-          "id": 4,
-          "value": "Tango"
+        "id": 4,
+        "value": "Tango"
       },
       {
-          "id": 5,
-          "value": "Hip-hop"
+        "id": 5,
+        "value": "Hip-hop"
       },
       {
-          "id": 6,
-          "value": "Breakdance"
+        "id": 6,
+        "value": "Breakdance"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 8,
-  "response": 2,
-  "descriptionResponse": "Le dancehall est un style de danse souvent associé à la musique reggae et a émergé en Jamaïque dans les années 1960."
-},
-{
-  "id": 132,
-  "question": "Quel est le nom de la danse traditionnelle indienne qui utilise des gestes de la main pour raconter une histoire ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 8,
+    "response": 2,
+    "descriptionResponse": "Le dancehall est un style de danse souvent associé à la musique reggae et a émergé en Jamaïque dans les années 1960."
+  },
+  {
+    "id": 132,
+    "question": "Quel est le nom de la danse traditionnelle indienne qui utilise des gestes de la main pour raconter une histoire ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Ballet"
+        "id": 1,
+        "value": "Ballet"
       },
       {
-          "id": 2,
-          "value": "Kathak"
+        "id": 2,
+        "value": "Kathak"
       },
       {
-          "id": 3,
-          "value": "Odissi"
+        "id": 3,
+        "value": "Odissi"
       },
       {
-          "id": 4,
-          "value": "Bharatanatyam"
+        "id": 4,
+        "value": "Bharatanatyam"
       },
       {
-          "id": 5,
-          "value": "Samba"
+        "id": 5,
+        "value": "Samba"
       },
       {
-          "id": 6,
-          "value": "Flamenco"
+        "id": 6,
+        "value": "Flamenco"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 9,
-  "response": 4,
-  "descriptionResponse": "Le Bharatanatyam est une danse traditionnelle indienne qui utilise des gestes de la main pour raconter une histoire."
-},
-{
-  "id": 133,
-  "question": "Quel est le nom de la danse traditionnelle espagnole caractérisée par des mouvements de pieds rapides et des claquements de mains ?",
-  "answers": [
+    ],
+    "category": "Danse",
+    "difficulty": 9,
+    "response": 4,
+    "descriptionResponse": "Le Bharatanatyam est une danse traditionnelle indienne qui utilise des gestes de la main pour raconter une histoire."
+  },
+  {
+    "id": 133,
+    "question": "Quel est le nom de la danse traditionnelle espagnole caractérisée par des mouvements de pieds rapides et des claquements de mains ?",
+    "answers": [
       {
-          "id": 1,
-          "value": "Tango"
+        "id": 1,
+        "value": "Tango"
       },
       {
-          "id": 2,
-          "value": "Salsa"
+        "id": 2,
+        "value": "Salsa"
       },
       {
-          "id": 3,
-          "value": "Flamenco"
+        "id": 3,
+        "value": "Flamenco"
       },
       {
-          "id": 4,
-          "value": "Rumba"
+        "id": 4,
+        "value": "Rumba"
       },
       {
-          "id": 5,
-          "value": "Samba"
+        "id": 5,
+        "value": "Samba"
       },
       {
-          "id": 6,
-          "value": "Cha-cha-cha"
+        "id": 6,
+        "value": "Cha-cha-cha"
       }
-  ],
-  "category": "Danse",
-  "difficulty": 10,
-  "response": 3,
-  "descriptionResponse": "Le flamenco est une danse traditionnelle espagnole caractérisée par des mouvements de pieds rapides et des claquements de mains."
-}
+    ],
+    "category": "Danse",
+    "difficulty": 10,
+    "response": 3,
+    "descriptionResponse": "Le flamenco est une danse traditionnelle espagnole caractérisée par des mouvements de pieds rapides et des claquements de mains."
+  },
+  {
+    "id": 134,
+    "question": "Quelle est la monnaie officielle du Canada ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le Mark Canadien"
+      },
+      {
+        "id": 2,
+        "value": "La Livre Canadienne"
+      },
+      {
+        "id": 3,
+        "value": "Le Dollar Canadien"
+      },
+      {
+        "id": 4,
+        "value": "La courrone Canadienne"
+      },
+      {
+        "id": 5,
+        "value": "Le Franc Canadien"
+      },
+      {
+        "id": 6,
+        "value": "Le Yen Canadien"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 1,
+    "response": 3,
+    "descriptionResponse": "Le Dollar Canadien est la monnaie officielle du Canada."
+  },
+  {
+    "id": 135,
+    "question": "À quel instrument de musique, un ukulélé s’apparente-t-il ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Guitare"
+      },
+      {
+        "id": 2,
+        "value": "Violon"
+      },
+      {
+        "id": 3,
+        "value": "Piano"
+      },
+      {
+        "id": 4,
+        "value": "Trompette"
+      },
+      {
+        "id": 5,
+        "value": "Flûte"
+      },
+      {
+        "id": 6,
+        "value": "Harpe"
+      }
+    ],
+    "category": "Musique",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Un ukulélé s'apparente à une guitare en termes de forme et de sonorité."
+  },
+  {
+    "id": 136,
+    "question": "De quel pays était originaire le pape Jean-Paul II ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "France"
+      },
+      {
+        "id": 2,
+        "value": "Italie"
+      },
+      {
+        "id": 3,
+        "value": "Espagne"
+      },
+      {
+        "id": 4,
+        "value": "Pologne"
+      },
+      {
+        "id": 5,
+        "value": "Allemagne"
+      },
+      {
+        "id": 6,
+        "value": "Portugal"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 4,
+    "response": 4,
+    "descriptionResponse": "Le pape Jean-Paul II était originaire de Pologne."
+  },
+  {
+    "id": 137,
+    "question": "En géométrie, comment se nomme un triangle possédant trois côtés égaux ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Triangle obtusangle"
+      },
+      {
+        "id": 2,
+        "value": "Triangle équilatéral"
+      },
+      {
+        "id": 3,
+        "value": "Triangle rectangle"
+      },
+      {
+        "id": 4,
+        "value": "Triangle scalène"
+      },
+      {
+        "id": 5,
+        "value": "Triangle isocèle"
+      },
+      {
+        "id": 6,
+        "value": "Triangle acutangle"
+      }
+    ],
+    "category": "Mathématiques",
+    "difficulty": 1,
+    "response": 2,
+    "descriptionResponse": "Un triangle possédant trois côtés égaux est appelé triangle équilatéral."
+  },
+  {
+    "id": 138,
+    "question": "Quel ministère occupait Gabriel Attal avant de remplacer Elisabeth Borne au poste de Premier Ministre de la France en janvier 2024 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Ministre de la Santé"
+      },
+      {
+        "id": 2,
+        "value": "Ministre de la Transition écologique"
+      },
+      {
+        "id": 3,
+        "value": "Ministre de la Culture"
+      },
+      {
+        "id": 4,
+        "value": "Ministre de l'Intérieur"
+      },
+      {
+        "id": 5,
+        "value": "Ministre des Affaires étrangères"
+      },
+      {
+        "id": 6,
+        "value": "Ministre de l'Éducation nationale"
+      }
+    ],
+    "category": "Politique",
+    "difficulty": 8,
+    "response": 6,
+    "descriptionResponse": "Gabriel Attal était Ministre de l'Éducation nationale avant de remplacer Elisabeth Borne au poste de Premier Ministre de la France en janvier 2024."
+  },
+  {
+    "id": 139,
+    "question": "Dans quel organe du corps humain trouve-t-on le vestibule ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le cerveau"
+      },
+      {
+        "id": 2,
+        "value": "Les poumons"
+      },
+      {
+        "id": 3,
+        "value": "Le cœur"
+      },
+      {
+        "id": 4,
+        "value": "Le foie"
+      },
+      {
+        "id": 5,
+        "value": "L'oreille"
+      },
+      {
+        "id": 6,
+        "value": "Les reins"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 7,
+    "response": 5,
+    "descriptionResponse": "Le vestibule est une partie de l'oreille interne."
+  },
+  {
+    "id": 140,
+    "question": "De quel État antique, Alexandre le Grand était-il le roi ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Royaume de Macédoine"
+      },
+      {
+        "id": 2,
+        "value": "Empire romain"
+      },
+      {
+        "id": 3,
+        "value": "Empire perse"
+      },
+      {
+        "id": 4,
+        "value": "Empire byzantin"
+      },
+      {
+        "id": 5,
+        "value": "Empire ottoman"
+      },
+      {
+        "id": 6,
+        "value": "Empire carolingien"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "Alexandre le Grand était le roi du Royaume de Macédoine."
+  },
+  {
+    "id": 141,
+    "question": "Combien de pourcentage d’eau une bière contient-elle ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "50%"
+      },
+      {
+        "id": 2,
+        "value": "60%"
+      },
+      {
+        "id": 3,
+        "value": "70%"
+      },
+      {
+        "id": 4,
+        "value": "80%"
+      },
+      {
+        "id": 5,
+        "value": "90%"
+      },
+      {
+        "id": 6,
+        "value": "95%"
+      }
+    ],
+    "category": "Boisson",
+    "difficulty": 5,
+    "response": 5,
+    "descriptionResponse": "Une bière contient environ 90% d'eau."
+  },
+  {
+    "id": 142,
+    "question": "Quelle ville française était la capitale de la province historique qu'on appelle le Berry ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Bourges"
+      },
+      {
+        "id": 2,
+        "value": "Châteauroux"
+      },
+      {
+        "id": 3,
+        "value": "Vierzon"
+      },
+      {
+        "id": 4,
+        "value": "Issoudun"
+      },
+      {
+        "id": 5,
+        "value": "Saint-Amand-Montrond"
+      },
+      {
+        "id": 6,
+        "value": "La Châtre"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 9,
+    "response": 1,
+    "descriptionResponse": "Bourges était la capitale de la province historique du Berry."
+  },
+  {
+    "id": 143,
+    "question": "En quelle année, le Tournoi des Cinq Nations de Rugby a-t-il intégré l'Italie comme la 6ᵉ nation ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "1999"
+      },
+      {
+        "id": 2,
+        "value": "2000"
+      },
+      {
+        "id": 3,
+        "value": "2001"
+      },
+      {
+        "id": 4,
+        "value": "2002"
+      },
+      {
+        "id": 5,
+        "value": "2003"
+      },
+      {
+        "id": 6,
+        "value": "2004"
+      }
+    ],
+    "category": "Sport",
+    "difficulty": 10,
+    "response": 2,
+    "descriptionResponse": "Bourges était la capitale de la province historique du Berry."
+  },
+  {
+    "id": 144,
+    "question": "Quelle maladie est traitée dans un sanatorium ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La grippe"
+      },
+      {
+        "id": 2,
+        "value": "Le cancer"
+      },
+      {
+        "id": 3,
+        "value": "Le diabète"
+      },
+      {
+        "id": 4,
+        "value": "La tuberculose"
+      },
+      {
+        "id": 5,
+        "value": "La pneumonie"
+      },
+      {
+        "id": 6,
+        "value": "La varicelle"
+      }
+    ],
+    "category": "Santé",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "La tuberculose est traitée dans un sanatorium."
+  },
+  {
+    "id": 145,
+    "question": "Quel est le synonyme du mot pusillanime ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Craintif"
+      },
+      {
+        "id": 2,
+        "value": "Audacieux"
+      },
+      {
+        "id": 3,
+        "value": "Courageux"
+      },
+      {
+        "id": 4,
+        "value": "Vaillant"
+      },
+      {
+        "id": 5,
+        "value": "Intrépide"
+      },
+      {
+        "id": 6,
+        "value": "Téméraire"
+      }
+    ],
+    "category": "Langue française",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Le synonyme du mot pusillanime est craintif."
+  },
+  {
+    "id": 146,
+    "question": "De quelle île, l'oiseau aujourd'hui disparu nommé le dodo, était-il endémique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Madagascar"
+      },
+      {
+        "id": 2,
+        "value": "La Réunion"
+      },
+      {
+        "id": 3,
+        "value": "Maurice"
+      },
+      {
+        "id": 4,
+        "value": "Mayotte"
+      },
+      {
+        "id": 5,
+        "value": "Les Seychelles"
+      },
+      {
+        "id": 6,
+        "value": "Comores"
+      }
+    ],
+    "category": "Animaux",
+    "difficulty": 8,
+    "response": 3,
+    "descriptionResponse": "Le dodo était endémique de l'île Maurice."
+  },
+  {
+    "id": 147,
+    "question": "Dans quelle langue “Bonjour” se dit-il 'Günaydın' ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Arabe"
+      },
+      {
+        "id": 2,
+        "value": "Espagnol"
+      },
+      {
+        "id": 3,
+        "value": "Turc"
+      },
+      {
+        "id": 4,
+        "value": "Italien"
+      },
+      {
+        "id": 5,
+        "value": "Allemand"
+      },
+      {
+        "id": 6,
+        "value": "Russe"
+      }
+    ],
+    "category": "Langues",
+    "difficulty": 3,
+    "response": 3,
+    "descriptionResponse": "En turc, 'Bonjour' se dit 'Günaydın'."
+  },
+  {
+    "id": 148,
+    "question": "Sur quelle œuvre ancienne, l’histoire du film le Roi Lion de Disney est-elle basée ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le Marchand de Venise"
+      },
+      {
+        "id": 2,
+        "value": "Macbeth"
+      },
+      {
+        "id": 3,
+        "value": "Othello"
+      },
+      {
+        "id": 4,
+        "value": "Roméo et Juliette"
+      },
+      {
+        "id": 5,
+        "value": "Le Songe d'une nuit d'été"
+      },
+      {
+        "id": 6,
+        "value": "Hamlet"
+      }
+    ],
+    "category": "Cinéma",
+    "difficulty": 6,
+    "response": 6,
+    "descriptionResponse": "L'histoire du film le Roi Lion de Disney est basée sur l'œuvre ancienne 'Hamlet'."
+  },
+  {
+    "id": 149,
+    "question": "Quel était l'âge d'Elisabeth II lorsqu'elle accède au trône britannique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "13 ans"
+      },
+      {
+        "id": 2,
+        "value": "15 ans"
+      },
+      {
+        "id": 3,
+        "value": "18 ans"
+      },
+      {
+        "id": 4,
+        "value": "22 ans"
+      },
+      {
+        "id": 5,
+        "value": "25 ans"
+      },
+      {
+        "id": 6,
+        "value": "27 ans"
+      }
+    ],
+    "category": "Cinéma",
+    "difficulty": 8,
+    "response": 5,
+    "descriptionResponse": "Elisabeth II avait 25 ans lorsqu'elle accède au trône britannique."
+  },
+  {
+    "id": 150,
+    "question": "Quel pays d'Asie du Sud-Est est le premier à légaliser en 2024 un mariage pour les couples homosexuels ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Philippines"
+      },
+      {
+        "id": 2,
+        "value": "Vietnam"
+      },
+      {
+        "id": 3,
+        "value": "Indonésie"
+      },
+      {
+        "id": 4,
+        "value": "Thaïlande"
+      },
+      {
+        "id": 5,
+        "value": "Malaisie"
+      },
+      {
+        "id": 6,
+        "value": "Singapour"
+      }
+    ],
+    "category": "Politique",
+    "difficulty": 8,
+    "response": 4,
+    "descriptionResponse": "La Thaïlande est le premier pays d'Asie du Sud-Est à légaliser en 2024 un mariage pour les couples homosexuels."
+  },
+  {
+    "id": 151,
+    "question": "À la suite de quel conflit l’État d’Autriche-Hongrie a-t-il disparu ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La Première Guerre mondiale"
+      },
+      {
+        "id": 2,
+        "value": "La Seconde Guerre mondiale"
+      },
+      {
+        "id": 3,
+        "value": "La Guerre froide"
+      },
+      {
+        "id": 4,
+        "value": "La Guerre de Crimée"
+      },
+      {
+        "id": 5,
+        "value": "La Guerre des Six Jours"
+      },
+      {
+        "id": 6,
+        "value": "La Guerre de Corée"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "L'État d'Autriche-Hongrie a disparu à la suite de la Première Guerre mondiale."
+  },
+  {
+    "id": 152,
+    "question": "Sous quel nom était connu l’Empire romain d’orient jusqu’à la chute de Constantinople en 1453 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Empire romain"
+      },
+      {
+        "id": 2,
+        "value": "Empire perse"
+      },
+      {
+        "id": 3,
+        "value": "Empire ottoman"
+      },
+      {
+        "id": 4,
+        "value": "Empire carolingien"
+      },
+      {
+        "id": 5,
+        "value": "Empire byzantin"
+      },
+      {
+        "id": 6,
+        "value": "Empire germanique"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 3,
+    "response": 5,
+    "descriptionResponse": "L'Empire romain d'Orient était connu sous le nom d'Empire byzantin jusqu'à la chute de Constantinople en 1453."
+  },
+  {
+    "id": 153,
+    "question": "Quels sont les deux États actuels nés de la dissolution de la Tchécoslovaquie en 1992 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Slovaquie et Croatie"
+      },
+      {
+        "id": 2,
+        "value": "Slovaquie et Hongrie"
+      },
+      {
+        "id": 3,
+        "value": "Slovaquie et Autriche"
+      },
+      {
+        "id": 4,
+        "value": "Slovaquie et Tchéquie"
+      },
+      {
+        "id": 5,
+        "value": "Slovaquie et Pologne"
+      },
+      {
+        "id": 6,
+        "value": "Slovaquie et République tchèque"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 5,
+    "response": 4,
+    "descriptionResponse": "La Slovaquie et la République tchèque sont les deux États actuels nés de la dissolution de la Tchécoslovaquie en 1992."
+  },
+  {
+    "id": 154,
+    "question": "Quel empire a disparu en raison des conquêtes espagnoles, notamment via la prise de Tenochtitlan par Hernán Cortés en 1521 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Empire inca"
+      },
+      {
+        "id": 2,
+        "value": "Empire aztèque"
+      },
+      {
+        "id": 3,
+        "value": "Empire maya"
+      },
+      {
+        "id": 4,
+        "value": "Empire romain"
+      },
+      {
+        "id": 5,
+        "value": "Empire Toltèque"
+      },
+      {
+        "id": 6,
+        "value": "Empire byzantin"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 3,
+    "response": 2,
+    "descriptionResponse": "L'Empire aztèque a disparu en raison des conquêtes espagnoles, notamment via la prise de Tenochtitlan par Hernán Cortés en 1521."
+  },
+  {
+    "id": 155,
+    "question": "Quel pays actuel était précédemment nommé le Ceylan ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Inde"
+      },
+      {
+        "id": 2,
+        "value": "Bangladesh"
+      },
+      {
+        "id": 3,
+        "value": "Pakistan"
+      },
+      {
+        "id": 4,
+        "value": "Birmanie"
+      },
+      {
+        "id": 5,
+        "value": "Sri Lanka"
+      },
+      {
+        "id": 6,
+        "value": "Népal"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 8,
+    "response": 5,
+    "descriptionResponse": "Le Ceylan est l'ancien nom du Sri Lanka."
+  },
+  {
+    "id": 156,
+    "question": "Quel ancien État aujourd’hui disparu, s’est formé en Europe le 1er décembre 1918 avec pour capitale Belgrade ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Yougoslavie"
+      },
+      {
+        "id": 2,
+        "value": "Tchécoslovaquie"
+      },
+      {
+        "id": 3,
+        "value": "URSS"
+      },
+      {
+        "id": 4,
+        "value": "Empire austro-hongrois"
+      },
+      {
+        "id": 5,
+        "value": "Empire ottoman"
+      },
+      {
+        "id": 6,
+        "value": "Empire byzantin"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "La Yougoslavie s'est formée en Europe le 1er décembre 1918 avec pour capitale Belgrade."
+  },
+  {
+    "id": 157,
+    "question": "Quelle était la capitale de l’Empire Inca disparu en 1533 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Malinalco"
+      },
+      {
+        "id": 2,
+        "value": "Lima"
+      },
+      {
+        "id": 3,
+        "value": "Texcoco"
+      },
+      {
+        "id": 4,
+        "value": "Quito"
+      },
+      {
+        "id": 5,
+        "value": "La Paz"
+      },
+      {
+        "id": 6,
+        "value": "Cuzco"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 7,
+    "response": 6,
+    "descriptionResponse": "La capitale de l'Empire Inca disparu en 1533 était Cuzco."
+  },
+  {
+    "id": 158,
+    "question": "Quel était le nom du royaume formé par l’unification du royaume de Sicile et du royaume de Naples à partir de 1816 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Royaume des Deux-Siciles"
+      },
+      {
+        "id": 2,
+        "value": "Royaume de Sardaigne"
+      },
+      {
+        "id": 3,
+        "value": "Royaume de Lombardie-Vénétie"
+      },
+      {
+        "id": 4,
+        "value": "Royaume de Naples"
+      },
+      {
+        "id": 5,
+        "value": "Royaume de Sicile"
+      },
+      {
+        "id": 6,
+        "value": "Royaume d'Etrutie"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Le royaume formé par l'unification du royaume de Sicile et du royaume de Naples à partir de 1816 était le Royaume des Deux-Siciles."
+  },
+  {
+    "id": 159,
+    "question": "Quel chef d’État rattache la ville de Dantzig au IIIe Reich en 1939 alors que celle-ci avait été proclamée cité-État indépendante sous la protection de la Société des Nations dès 1919 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Otto Von Bismarck"
+      },
+      {
+        "id": 2,
+        "value": "Heinrich Himmler"
+      },
+      {
+        "id": 3,
+        "value": "Adolf Hitler"
+      },
+      {
+        "id": 4,
+        "value": "Hermann Göring"
+      },
+      {
+        "id": 5,
+        "value": "Joseph Goebbels"
+      },
+      {
+        "id": 6,
+        "value": "Erwin Rommel"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 9,
+    "response": 3,
+    "descriptionResponse": "Adolf Hitler rattache la ville de Dantzig au IIIe Reich en 1939 alors que celle-ci avait été proclamée cité-État indépendante sous la protection de la Société des Nations dès 1919."
+  },
+  {
+    "id": 160,
+    "question": "Quelle cité-État de la Grèce antique aurait été engloutie en une nuit par un cataclysme et aurait inspiré l’Atlantide ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Sparte"
+      },
+      {
+        "id": 2,
+        "value": "Corinthe"
+      },
+      {
+        "id": 3,
+        "value": "Athènes"
+      },
+      {
+        "id": 4,
+        "value": "Thèbes"
+      },
+      {
+        "id": 5,
+        "value": "Argos"
+      },
+      {
+        "id": 6,
+        "value": "Hélikè"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 10,
+    "response": 6,
+    "descriptionResponse": "Hélikè est une cité-État de la Grèce antique qui aurait été engloutie en une nuit par un cataclysme et aurait inspiré l'Atlantide."
+  }
 ]

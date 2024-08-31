@@ -23,13 +23,13 @@
         <span :class="{ isUser: isUser(player.id) }">{{ player.name }}</span>
       </div>
     </div>
-    <div class="second" :style="{ height: `${podium.second.height}%` }">
+    <div class="second marble" :style="{ height: `${podium.second.height}%` }">
       <div class="bg bg2" v-if="podium.second.showMedal"></div>
     </div>
-    <div class="first" :style="{ height: `${podium.first.height}%` }">
+    <div class="first marble" :style="{ height: `${podium.first.height}%` }">
       <div class="bg bg1" v-if="podium.first.showMedal"></div>
     </div>
-    <div class="third" :style="{ height: `${podium.third.height}%` }" >
+    <div class="third marble" :style="{ height: `${podium.third.height}%` }" >
       <div class="bg bg3" v-if="podium.third.showMedal"></div>
     </div>
   </div>
@@ -87,7 +87,7 @@ const lauchPodium = async () => {
   await new Promise((resolve) => {
     interval.value = setInterval(() => {
       if (podium.value.first.height < podium.value.first.maxHeight) {
-        podium.value.first.height += 1
+        podium.value.first.height += 2
       } else {
         clearInterval(interval.value as NodeJS.Timeout)
         podium.value.first.showMedal = true
@@ -101,7 +101,7 @@ const lauchPodium = async () => {
   await new Promise((resolve) => {
     interval.value = setInterval(() => {
       if (podium.value.second.height < podium.value.second.maxHeight) {
-        podium.value.second.height += 1
+        podium.value.second.height += 2
       } else {
         clearInterval(interval.value as NodeJS.Timeout)
         podium.value.second.showMedal = true
@@ -115,7 +115,7 @@ const lauchPodium = async () => {
   await new Promise((resolve) => {
     interval.value = setInterval(() => {
       if (podium.value.third.height < podium.value.third.maxHeight) {
-        podium.value.third.height += 1
+        podium.value.third.height += 2
       } else {
         clearInterval(interval.value as NodeJS.Timeout)
         podium.value.third.showMedal = true
@@ -130,10 +130,17 @@ const lauchPodium = async () => {
 </script>
 
 <style scoped>
+.marble{
+  background-image: url(../../../assets/Images/marble.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
 .main-podium {
   height: v-bind(height);
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(2, 1fr) / repeat(3, 200px);
   max-width: 700px
 }
 
@@ -202,10 +209,32 @@ const lauchPodium = async () => {
   font-size:clamp(10px, 5vw, 15px);
   color: white;
   flex-shrink: 1;
-  animation: name 0.5s linear;
+  animation: name 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   overflow: hidden;
   text-overflow: ellipsis;
-  
+  padding: 2px;
+}
+.namePodium > div{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px white;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.namePodium div:nth-child(1){
+  background-color: rgba(255, 217, 0, 0.7);
+}
+.namePodium div:nth-child(2){
+  background-color: rgba(192, 192, 192, .7);
+}
+.namePodium div:nth-child(3){
+  background-color: rgba(205, 127, 50,.7);
 }
 .secondName {
   grid-column: 1;
@@ -225,12 +254,15 @@ const lauchPodium = async () => {
   font-size: clamp(10px, 5vw, 15px);
 }
 @keyframes name {
-  from {
-    transform: translateY(-25%);
+  0%{
+    transform: translateY(10%);
     opacity: 0;
   }
-  to {
+  75% {
     opacity: 1;
+    transform: translateY(-10%);
+  }
+  100% {
     transform: translateY(0);
   }
 }
@@ -250,6 +282,24 @@ const lauchPodium = async () => {
   }
   .isUser {
     font-size: 10px;
+  }
+  .main-podium {
+
+    grid-template: repeat(2, 1fr) / repeat(3, 150px);
+
+  }
+}
+@media (max-width: 450px) {
+  .namePodium {
+    font-size: 10px;
+  }
+  .isUser {
+    font-size: 10px;
+  }
+  .main-podium {
+
+    grid-template: repeat(2, 1fr) / repeat(3, 115px);
+
   }
 }
 </style>
