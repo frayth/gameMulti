@@ -51,7 +51,7 @@ onBeforeUnmount(() => {
   background-color: grey;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.521) inset;
   label{
-    color: white;
+    color: var(--normalTextColor);
     user-select: none;
   }
 }

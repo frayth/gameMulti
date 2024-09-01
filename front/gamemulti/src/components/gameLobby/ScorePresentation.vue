@@ -39,7 +39,7 @@
 <style scoped>
 .pres-description{
   font-size: 1.5em;
-  color: white;
+  color: var(--normalTextColor);
   text-align: center;
   margin-bottom: 10px;
 }
@@ -51,7 +51,7 @@
 .separator{
   width: 75%;
   height: 1px;
-  background-color: white;
+  background-color: var(--separatorColor);
   margin-bottom: 10px;
 }
 .presentation{

@@ -38,7 +38,7 @@ th, td {
   border: 1px solid black;
   padding: 8px;
   text-align: center;
-  color: white;
+  color: var(--normalTextColor);
 }
 .user{
   background-color: #4CAF50;

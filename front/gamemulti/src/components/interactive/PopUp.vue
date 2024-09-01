@@ -18,7 +18,7 @@
     background-color: rgba(117, 117, 116, 0.767);
     text-align: center;
     padding: 2px;
-    color: white;
+    color:var(--normalTextColor);
     position: absolute;
     top: calc(v-bind(mousePositiony) + 12px);
     left:calc(v-bind(mousePositionx) + 12px );

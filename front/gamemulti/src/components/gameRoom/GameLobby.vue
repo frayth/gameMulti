@@ -51,7 +51,7 @@ const scoreGameIsOpen = ref(false)
   z-index: 20;
   padding: 20px;
   animation: slideInFromRight 0.5s ease-in-out;
-  border-left:1px solid white;
+  border-left:1px solid var(--normalTextColor);
 }
 #scoreboard .close {
   position: absolute;
@@ -60,14 +60,14 @@ const scoreGameIsOpen = ref(false)
   transform: translateX(-50%);
   z-index: 20;
   border: none;
-  color: white;
+  color: var(--normalTextColor);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0px 0px 5px 1px white;
+  box-shadow: 0px 0px 5px 1px var(--normalTextColor);
   background-color: var(--color-background);
 
 }
@@ -82,7 +82,7 @@ const scoreGameIsOpen = ref(false)
   right: 5px;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0px 0px 5px 1px white;
+  box-shadow: 0px 0px 5px 1px var(--normalTextColor);
   width: 50px;
   height: 50px;
 }

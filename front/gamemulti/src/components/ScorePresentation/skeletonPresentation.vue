@@ -59,7 +59,7 @@ const tempBonus =ref( props.bonus.map((el) => {
 }))
 const tempScore= reactive({
   value: props.score,
-  color: 'white',
+  color: 'var(--normalTextColor)',
   changeValue(value:number){
     this.value+=value
     if(value>0){
@@ -67,7 +67,7 @@ const tempScore= reactive({
     }else if(value<0){
       this.color='red'
     }else{
-      this.color='white'
+      this.color='var(--normalTextColor)'
     }
   }  
 })
@@ -130,18 +130,18 @@ const animateScore=async (value:number)=>{
   width: 100%;
   height: 100px;
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid var(--normalTextColor);
 }
 .name-pres {
   font-size: 20px;
-  color: white;
+  color: var(--normalTextColor);
   text-align: center;
   grid-column: 1;
   grid-row: 1;
 }
 .score-pres {
   font-size: 20px;
-
+  color:var(--normalTextColor);
   text-align: center;
   grid-column: 3;
   grid-row: 1;
@@ -167,7 +167,7 @@ const animateScore=async (value:number)=>{
   top: 50%;
   transform: translateY(-100%);
   font-size: 20px;
-  color: white;
+  color: var(--normalTextColor);
   font-weight: bold;
   z-index: 10;
   animation: slideDowntoUp 0.5s ease-in-out;

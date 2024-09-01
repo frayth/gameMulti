@@ -84,7 +84,7 @@ button{
 width: 100%;
 height: 100%;
 background-color: rgb(65, 65, 66);
-color: white;
+color: var(--normalTextColor);
 border: none;
 cursor: pointer;
 padding: 10px;
@@ -111,7 +111,7 @@ th{
   padding: 5px;
   text-align: center;
   background-color: blue;
-  color: white;
+  color: var(--normalTextColor);
 }
 
 </style>

@@ -38,7 +38,7 @@ onUnmounted(()=>{
   align-items: center;
   flex-direction: column;
   font-size: 1.5rem;
-  color: white;
+  color: var(--normalTextColor);
   margin-top: 2rem;
 }
 .main-countdown p{

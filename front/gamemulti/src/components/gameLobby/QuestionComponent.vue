@@ -68,28 +68,37 @@ const tempoButtonIsDisable = computed(() => game.InfoCurrentQuestion.personnalRe
 }
 
 .response-container {
-  display: flex;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3,max-content);
+  gap: 20px;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-items: center;
+  padding: 5px;
+  user-select: none;
+  max-width: 700px;
+
 }
 .response {
-  width: fit-content;
+  width: 100%;
   min-width: 45%;
-  height: 50px;
+  height: 100%;
   color: black;
   background-color: #f1f1f1;
   border: none;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
-  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
   user-select: none;
   font-size: 2dvw;
+  border: 2px solid black;
+  text-wrap: wrap;
 
 }
 .select {
@@ -106,15 +115,14 @@ const tempoButtonIsDisable = computed(() => game.InfoCurrentQuestion.personnalRe
   text-align: center;
   font-size: 30px;
   margin: 20px;
-  color: white;
+  color: var(--normalTextColor);
   user-select: none;
 }
 @media (max-width: 600px) {
   .response {
-    width: auto;
     font-size: 3dvw;
     min-width: 35%;
-    height: 40px;
+    height: 100%;
     padding: 5px
   }
   .question {
@@ -127,10 +135,9 @@ const tempoButtonIsDisable = computed(() => game.InfoCurrentQuestion.personnalRe
 }
 @media (min-width:1000px){
   .response {
-    width: auto;
     font-size: 20px;
     min-width: 35%;
-    height: 50px;
+    height: 100%;
     padding: 5px
   }
   .question {

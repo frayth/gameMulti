@@ -127,6 +127,9 @@ function lauchGame() {
 </script>
 
 <style scoped>
+.countDown{
+  color: var(--normalTextColor);
+}
 .kick:hover {
   background-color: #ff00009c !important;
 }
@@ -173,7 +176,7 @@ function lauchGame() {
   border-radius: 5px;
   width: 200px;
   height: 130px;
-  color: white;
+  color: var(--normalTextColor);
   gap: 10px;
   transition: all 0.5s ease;
 }
@@ -248,7 +251,7 @@ button {
 }
 .panel-error-wait {
   background-color: #ff00009c;
-  color: white;
+  color: var(--normalTextColor);
   border-radius: 5px;
   padding: 5px;
   width: 200px;

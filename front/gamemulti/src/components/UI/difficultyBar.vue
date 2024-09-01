@@ -91,12 +91,12 @@ setTimeout(() => {
   width: 75%;
   border-radius: 20px;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.288);
+  border: 2px solid rgba(14, 13, 13, 0.288);
 }
 .glow {
   opacity: 1;
   transition: opacity 0.5s;
-  box-shadow: 1px 0 10px 2px rgba(255, 255, 255, 0.5);
+  box-shadow: var(--boxShadowGlow);
 }
 .number {
   position: absolute;
@@ -105,5 +105,10 @@ setTimeout(() => {
   font-size: 14px;
   font-weight: bold;
   z-index: 1;
+}
+@media (prefers-color-scheme: dark) {
+  .difficulty {
+    border: 2px solid rgba(255, 255, 255, 0.288);
+  }
 }
 </style>

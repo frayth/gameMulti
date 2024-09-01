@@ -19,7 +19,7 @@
           :style="{ textAlign: 'justify' }"
           :class="message.user === 'Serveur' ? 'adminText' : ''"
         >
-          {{ message.message }}
+         <p :style="{whiteSpace:'pre-line'}"> {{ message.message }}</p>
         </div>
       </div>
     </div>
@@ -180,7 +180,7 @@ function cancelPopUp() {
 .main-panel {
   background-color: white;
   position: relative;
-  color: black;
+  color: var(--normalTextColor);
   height: 100%;
   overflow-y: auto;
   display: flex;
@@ -194,7 +194,7 @@ function cancelPopUp() {
   width: auto;
   overflow-y: auto;
   background-color: white;
-  color: black;
+  color: var(--normalTextColor);
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.521) inset;
@@ -223,7 +223,7 @@ function cancelPopUp() {
   width: 100px;
   cursor: pointer;
   background-color: blue;
-  color: white;
+  color: var(--normalTextColor);
   border: none;
   outline: none;
   height: 100%;

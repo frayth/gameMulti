@@ -109,7 +109,11 @@ export const RoomStore = defineStore('room', () => {
   )
   socket.socket?.on('message:room', (data: { user: string; message: string }) => {
     data.message =JSON.parse(data.message)
-    messages.value.push(data)
+    if(data.user===messages.value[messages.value.length-1].user){
+      messages.value[messages.value.length-1].message+=`\n${data.message}`
+    }else{
+      messages.value.push(data)
+    }
   })
   return {messages}
 })

@@ -30,12 +30,12 @@ justify-items: center;
 }
 h1{
   text-align:center;
-  color:white;
+  color:var(--normalTextColor);
 
 }
 p{
   text-align:center;
-  color:white;
+  color:(--normalTextColor);
 }
 .important{
   font-size: 30px;
