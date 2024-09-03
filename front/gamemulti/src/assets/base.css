@@ -3,6 +3,7 @@
   --main-green:#347456;
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
+  --backgroundWhite:##f6f3f352;
   --vt-c-white-mute: #f2f2f2;
   --normalTextColor:black;
   --separatorColor:black;
@@ -38,8 +39,9 @@
   --section-gap: 160px;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
+  --backgroundWhite:white;
     --boxShadowGlow:1px 0 10px 2px rgba(255, 255, 255, 0.5);
     --normalTextColor:white;
     --main-green:#347456;
@@ -53,7 +55,7 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
   }
-} */
+}
 
 *,
 *::before,

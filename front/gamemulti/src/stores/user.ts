@@ -109,9 +109,11 @@ export const RoomStore = defineStore('room', () => {
   )
   socket.socket?.on('message:room', (data: { user: string; message: string }) => {
     data.message =JSON.parse(data.message)
-    if(data.user===messages.value[messages.value.length-1].user){
+    if(data.user===messages.value[messages.value.length-1]?.user){
+      console.log('add to last message')
       messages.value[messages.value.length-1].message+=`\n${data.message}`
     }else{
+      console.log('add new message')
       messages.value.push(data)
     }
   })

@@ -110,7 +110,7 @@ th{
   border: 1px solid black;
   padding: 5px;
   text-align: center;
-  background-color: blue;
+  background-color: var(--main-green);
   color: var(--normalTextColor);
 }
 

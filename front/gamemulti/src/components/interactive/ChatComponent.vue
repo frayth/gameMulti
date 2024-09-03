@@ -153,7 +153,8 @@ function cancelPopUp() {
   height: 700px;
   position: relative;
   width: 100%;
-  font-size:12px
+  font-size:12px;
+  border-radius: 10px;
 
 }
 
@@ -178,14 +179,15 @@ function cancelPopUp() {
   color: grey;
 }
 .main-panel {
-  background-color: white;
+  background-color: var(--backgroundWhite);
   position: relative;
-  color: var(--normalTextColor);
+  color: black;
   height: 100%;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  border-radius: 10px 0 0 0;
   gap: 10px;
   box-shadow: 0px -2px 1px rgba(0, 0, 0, 0.3) inset;
 }
@@ -193,8 +195,8 @@ function cancelPopUp() {
   padding: 0 10px;
   width: auto;
   overflow-y: auto;
-  background-color: white;
-  color: var(--normalTextColor);
+  background-color: var(--backgroundWhite);
+  color: black;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.521) inset;
@@ -206,7 +208,7 @@ function cancelPopUp() {
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: white;
+  background-color: var(--backgroundWhite);
   justify-content: center;
   align-items: center;
   min-height: 40px;
@@ -216,6 +218,7 @@ function cancelPopUp() {
   width: 100%;
   outline: none;
   height: 100%;
+  background-color: var(--backgroundWhite);
   border: none;
   padding: 0 5px;
 }

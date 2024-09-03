@@ -2,9 +2,9 @@
   <div>
     <button @click="leaveRoom" v-if="!(game.status==='playing')">Quitter la room</button>
     <WaitLobby v-if="game.status==='waiting'"></WaitLobby>
-    <GameLobby v-else-if="game.status==='playing'">
+    <GameLobby v-else>
     </GameLobby>
-    <div v-else> JAI FINI</div>
+    
   </div>
 </template>
 

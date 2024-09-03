@@ -7,7 +7,7 @@ import {
 
 import { rooms } from "../rooms";
 import Game from "./game";
-
+import { waitingRoom } from "./waitingRoom";
 export class GameRoom extends Room {
   public type: TypeRoom;
   public status: GameStatus;
@@ -81,8 +81,8 @@ export class GameRoom extends Room {
   }
   startGame() {
     try {
-      this.game = new Game(this.players);
-      this.status = "playing";
+      this.game = new Game(this.players,this);
+      this.changeStatus("playing");
       this.game.LauchIntro();
       this.sendInfoGame();
     } catch (e) {
@@ -94,5 +94,10 @@ export class GameRoom extends Room {
     if (this.game !== null && this.game.event !== null) {
       this.game.clearEvent();
     }
+  }
+  changeStatus(status: GameStatus) {
+    this.status = status;
+    waitingRoom.emitToAll("list:room", rooms.getAllParsedRooms());
+    this.sendInfoGame();
   }
 }

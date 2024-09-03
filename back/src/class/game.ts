@@ -3,8 +3,10 @@ import questions from "../assets/question.json";
 import type { QuestionModel } from "../models/game.model";
 import bonus from "../assets/bonus.json";
 import prand from 'pure-rand';
+import { GameRoom } from "./GameRoom";
 const offsetResponseTime = 2000;
 export default class Game {
+  parent:GameRoom;
   players: GamePlayer[];
   question: Question;
   event: NodeJS.Timeout | null;
@@ -14,7 +16,8 @@ export default class Game {
   optionsGame:{
     maxPoint:number
   }
-  constructor(players: Player[]) {
+  constructor(players: Player[],gameRoom:GameRoom) {
+    this.parent=gameRoom;
     this.players = players.map((el) => new GamePlayer(el));
     this.question = new Question();
     this.event = null;
@@ -147,6 +150,7 @@ export default class Game {
   }
   private endGame(){
     this.phaseGame='end';
+    this.parent.changeStatus('end')
     this.clearEvent();
     this.players.forEach((el) => {
       el.player.socket?.emit("end:game", {

@@ -42,11 +42,14 @@ function handleChatScrollTop(){
   width: 100%;
   display: flex;
   justify-content: center;
+ 
 }
+
 .creation-container button{
+  margin: 20px 0 ;
   width: 200px;
   height: 50px;
-  background-color: #f1f1f1;
+  background-color: var(--main-green);
   border: none;
   border-radius: 10px;
   font-size: 20px;
