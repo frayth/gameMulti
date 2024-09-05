@@ -63,7 +63,7 @@ import {RoomStore} from '@/stores/user'
 import { useSocketStore } from '../../stores/socket'
 import statut from '../UI/ConnexionStatut.vue'
 import gear from '../../assets/SVG/GearSvg.vue'
-import { appliStore } from '@/stores/appli'
+import { usePopup } from '@/stores/popUp'
 import optionModal from '../interactive/OptionChat.vue'
 import {userStore} from '@/stores/user'
 const roomStore=RoomStore()
@@ -71,7 +71,7 @@ const currentUser=userStore()
 export interface OptionChat {
   server: boolean
 }
-const appli = appliStore()
+const appli = usePopup()
 defineProps({
   user: {
     type: String,

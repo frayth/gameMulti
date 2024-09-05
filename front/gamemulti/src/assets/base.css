@@ -1,9 +1,12 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --main-green:#347456;
+  --main-red:#be3e3e;
+  --color-background: var(--vt-c-white);
   --vt-c-white: #ffffff;
+  --colorNormalText:black;
   --vt-c-white-soft: #f8f8f8;
-  --backgroundWhite:##f6f3f352;
+  --backgroundWhite:#f6f3f352;
   --vt-c-white-mute: #f2f2f2;
   --normalTextColor:black;
   --separatorColor:black;
@@ -41,7 +44,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --backgroundWhite:white;
+    --colorNormalText:white;
+    --main-red:#be3e3e;
+    --backgroundWhite:white;
     --boxShadowGlow:1px 0 10px 2px rgba(255, 255, 255, 0.5);
     --normalTextColor:white;
     --main-green:#347456;

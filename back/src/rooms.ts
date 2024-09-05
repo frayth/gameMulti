@@ -40,6 +40,6 @@ interface Room{
           })
         }
       })
-      // .filter((room) => room.name !== 'waitingRoom');
+      .filter((room) => room.name !== 'waitingRoom');
     }
  }

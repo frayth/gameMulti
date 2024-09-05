@@ -11,6 +11,7 @@
       <ScorePresentation></ScorePresentation>
     </div>
       <endComponent v-else></endComponent>
+    <Teleport to="#screenNotif">
     <Transition mode="out-in">
       <div id="scoreboard" v-if="scoreGameIsOpen">
         <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>
@@ -20,6 +21,7 @@
         <trophy @click="scoreGameIsOpen = true" :size="50"></trophy>
       </div>
     </Transition>
+    </Teleport>
 
 
   </div>
@@ -48,10 +50,11 @@ const scoreGameIsOpen = ref(false)
   top: -10px;
   right: 0;
   background-color: var(--color-background);
-  z-index: 20;
+  z-index: 50;
   padding: 20px;
   animation: slideInFromRight 0.5s ease-in-out;
   border-left:1px solid var(--normalTextColor);
+  pointer-events: all;
 }
 #scoreboard .close {
   position: absolute;
@@ -69,11 +72,10 @@ const scoreGameIsOpen = ref(false)
   border-radius: 50%;
   box-shadow: 0px 0px 5px 1px var(--normalTextColor);
   background-color: var(--color-background);
-
+  pointer-events: all;
 }
 .gameLobby {
   position: relative;
-  min-height: calc(100dvh - 126px);
   overflow-x: hidden;
 }
 .openScore {
@@ -85,6 +87,7 @@ const scoreGameIsOpen = ref(false)
   box-shadow: 0px 0px 5px 1px var(--normalTextColor);
   width: 50px;
   height: 50px;
+  pointer-events: all;
 }
 .v-enter-active {
   transition: all ease 1s;

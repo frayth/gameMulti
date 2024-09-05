@@ -9,7 +9,7 @@
         <th>Rejoindre</th>
       </tr>
     </thead>
-      <tbody>
+      <tbody v-if="list.length!==0">
         <tr v-for="room in list" :key="room.name">
           <td>{{room.name}}</td>
           <td><div class="player-room-number">
@@ -17,7 +17,12 @@
             <peopleSvg :size="18" color="white" />
           </div></td>
           <td>{{ShowStatus(room.status)}}</td>
-          <td ><button @click="joinRoom(room.id)" :style="{background:`${room.joinable?'':'red'}`}">Rejoindre</button></td>
+          <td ><button @click="joinRoom(room.id)" v-if="room.joinable">Rejoindre</button></td>
+        </tr>
+      </tbody>
+      <tbody v-else>
+        <tr>
+          <td colspan="4">Aucune partie en cours</td>
         </tr>
       </tbody>
     </table>

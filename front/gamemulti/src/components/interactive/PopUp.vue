@@ -6,8 +6,8 @@
 
 <script setup lang="ts">
   import { computed } from 'vue';
-  import {appliStore} from '../../stores/appli'
-  const appli = appliStore()
+  import {usePopup} from '../../stores/popUp'
+  const appli = usePopup()
   const mousePositionx=computed(()=>appli.mousePosition.x+'px')
   const mousePositiony=computed(()=>appli.mousePosition.y+'px')
 </script>

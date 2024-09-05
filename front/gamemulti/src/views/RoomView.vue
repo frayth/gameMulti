@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button @click="leaveRoom" v-if="!(game.status==='playing')">Quitter la room</button>
+  <div :style="{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',width:'100%'}">
+    <button class="leaveButton" @click="leaveRoom" v-if="!(game.status==='playing')">Quitter la room</button>
     <WaitLobby v-if="game.status==='waiting'"></WaitLobby>
     <GameLobby v-else>
     </GameLobby>
@@ -40,4 +40,16 @@ onMounted(()=>{
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.leaveButton{
+  width: fit-content;
+  padding: 5px 10px;
+  height: fit-content;
+  background-color: var(--main-red);
+  margin: 20px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>

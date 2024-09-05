@@ -12,11 +12,11 @@
 
 <script setup lang="ts">
 
-import { appliStore } from '@/stores/appli';
+import { usePopup } from '@/stores/popUp';
 import type { OptionChat } from './ChatComponent.vue'
 import { defineModel, nextTick, onBeforeUnmount } from 'vue'
 const optionsChat=defineModel<OptionChat>() as unknown as OptionChat
-const appli = appliStore()
+const appli = usePopup()
 const emit=defineEmits({
   close:null
 })

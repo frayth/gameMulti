@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="action-div-wait">
-      <div v-if="isOwner(user.id)">
+      <div v-if="isOwner(user.id) && !game.waitLobbyProperties.lauchGame">
         <button :class="`${gameIsReady ? 'isActive' : ''}`" @click="handleStartGame">
           Lancer la partie
         </button>
@@ -45,7 +45,7 @@
           </div>
         </Transition>
       </div>
-      <div v-else><p>En attente du propiétaire pour lancer la partie...</p></div>
+      <div v-else-if="!game.waitLobbyProperties.lauchGame"><p>En attente du propiétaire pour lancer la partie...</p></div>
       <div v-if="game.waitLobbyProperties.lauchGame">
         <countDown :countDown="game.waitLobbyProperties.countDown" @ready="lauchGame" />
       </div>

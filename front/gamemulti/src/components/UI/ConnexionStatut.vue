@@ -6,8 +6,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { appliStore } from '@/stores/appli';
-const appli = appliStore()
+import { usePopup } from '@/stores/popUp';
+const appli = usePopup()
  const props= defineProps({
     statusConnection:{
       type:Boolean,

@@ -38,6 +38,17 @@ function handleChatScrollTop(){
 </script>
 
 <style scoped>
+@media (prefers-color-scheme: dark) {
+  .creation-container button{
+    background-color: var(--backgroundWhite);
+    border-bottom: 4px solid var(--main-green);
+  }
+  .creation-container button:hover{
+    background-color: var(--main-green);
+    color: white;
+    border-bottom: 4px solid var(--backgroundWhite);
+  }
+}
 .creation-container{
   width: 100%;
   display: flex;
@@ -54,5 +65,13 @@ function handleChatScrollTop(){
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
+  border-bottom: 4px solid black;
+  transition: 0.3s;
+}
+.creation-container button:hover{
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.521);
+  border-bottom: 4px solid black;
+  color: black;
 }
 </style>

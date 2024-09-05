@@ -2,6 +2,8 @@ import { defineStore } from 'pinia'
 import { reactive, ref, type Ref } from 'vue'
 import { useSocketStore } from './socket'
 import { useRouter } from 'vue-router'
+import {usePopup} from './popUp'
+import PopUp from '@/components/interactive/PopUp.vue'
 interface User {
   id: number
   name: string
@@ -10,6 +12,7 @@ interface User {
 
 export const userStore = defineStore('user', () => {
   const socketStore = useSocketStore()
+  const popupStore = usePopup()
   const router = useRouter()
   const isConnect = ref(false)
   const username = ref('')
@@ -71,6 +74,7 @@ export const userStore = defineStore('user', () => {
     localStorage.removeItem('token')
     localStorage.removeItem('username')
     router.push('/login')
+    popupStore.cancelPopUpTimer()
   }
   
   function setRoom(newRoom: { id: number; name: string }): void {
