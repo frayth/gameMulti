@@ -34,7 +34,7 @@ watch(responseVision, (newVal, oldValue) => {
       : elementsPresent.value.push(
           new FloatingName(
             gameStore().players.find((el) => el.id === element)?.name,
-            Math.random() * 100,
+            (Math.random() * 60)+20,
             0,
             element
           )

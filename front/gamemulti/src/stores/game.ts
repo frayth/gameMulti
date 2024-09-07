@@ -91,6 +91,7 @@ export const gameStore = defineStore('game', () => {
     gameQuestions.nextEvent = data.game?.nextEvent || Date.now()
     ;(phaseGame.value = data.game?.phaseGame || 'intro'),
       (InfoCurrentQuestion.currentResponse = data.game?.userResponse || [])
+      gameStat.affectRankForPlayer()
   })
 
   socket.socket?.on('startCount:timer', () => {

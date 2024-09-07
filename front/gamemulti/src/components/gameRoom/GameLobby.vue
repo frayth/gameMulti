@@ -1,7 +1,7 @@
 <template>
   <div class="gameLobby">
     <div v-if="game.phaseGame === 'intro'">
-      <div>Salut le questionnaire va bientot commencer</div>
+      <regle></regle>
     </div>
     <div v-else-if="game.phaseGame === 'presentation'">
       <Theme></Theme>
@@ -37,6 +37,7 @@ import { ref } from 'vue'
 import trophy from '@/assets/SVG/TrophySvg.vue'
 import close from '@/assets/SVG/CloseSvg.vue'
 import ScorePresentation from '@/components/gameLobby/ScorePresentation.vue'
+import regle from '@/components/gameLobby/RegleComp.vue'
 
 const game = gameStore()
 const scoreGameIsOpen = ref(false)

@@ -7,10 +7,10 @@
         <div class="bonus" v-for="el in bonusToShow" :key="el.name">
           <div class="bonus-cont">
             <div>
-              <HAPPY :size="40" v-if="el.name==='correct'"/>
-              <SAD :size="40" v-else-if="el.name==='incorrect'"/>
-              <FAST :size="40" v-else-if="el.name==='faster'"/>
-              <bulleye :size="40" v-else-if="el.name==='streak'"/>
+              <HAPPY :size="40" v-if="el.name==='correct'" @mouseenter="startTimer('Bonne réponse')" @mouseleave="cancelTimer" />
+              <SAD :size="40" v-else-if="el.name==='incorrect'" @mouseenter="startTimer('Mauvaise réponse')" @mouseleave="cancelTimer"/>
+              <FAST :size="40" v-else-if="el.name==='faster'" @mouseenter="startTimer('Le plus rapide')" @mouseleave="cancelTimer"/>
+              <bulleye :size="40" v-else-if="el.name==='streak'" @mouseenter="startTimer('Streak')" @mouseleave="cancelTimer"/>
               <div v-else>{{el.name}}</div>
             </div>
             <div :class="{value:true,positif:el.value>0,negatif:el.value<0}" v-if="el.posY>= 0" :style="{top:`${el.posY}%`,opacity:`${el.posY>=30?'100':el.posY}%`}">
@@ -25,11 +25,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref,reactive } from 'vue'
+import { ref,reactive, onUnmounted } from 'vue'
 import SAD from '@/assets/SVG/SadSvg.vue'
 import HAPPY from '@/assets/SVG/HappySvg.vue'
 import FAST from '@/assets/SVG/FastSvg.vue'
 import bulleye from '@/assets/SVG/BullEyes.vue'
+import { usePopup } from '@store/popUp'
+onUnmounted(() => {
+  cancelTimer()
+})
+const popup=usePopup()
 interface Bonus{
   type: string;
   value: number;
@@ -49,7 +54,12 @@ const props = defineProps({
   }
   
 })
-
+function startTimer(value:string){
+  popup.startPopUpTimer(value)
+}
+function cancelTimer(){
+  popup.cancelPopUpTimer()
+}
 const tempBonus =ref( props.bonus.map((el) => {
   return {
     name: el.type,

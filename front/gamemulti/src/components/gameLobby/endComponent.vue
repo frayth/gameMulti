@@ -2,9 +2,10 @@
   <div class="end">
     <div class="cont-podium">
       <p>Résultat</p>
-    <KeepAlive>
-      <component :is="podium" class="podium" :height="200" ></component>
-    </KeepAlive>
+      <div>
+        <podium  class="podium" :height="200" ></podium>
+      </div>
+      
   </div>
   </div>
 </template>

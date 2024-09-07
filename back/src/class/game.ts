@@ -68,7 +68,7 @@ export default class Game {
   LauchIntro() {
     this.createEvent(() => {
       this.changePhaseGame();
-    }, 5000);
+    }, 30000);
   }
   private sendScore() {
     console.log(

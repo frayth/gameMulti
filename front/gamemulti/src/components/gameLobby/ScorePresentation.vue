@@ -42,6 +42,8 @@
   color: var(--normalTextColor);
   text-align: center;
   margin-bottom: 10px;
+  width: 100%;
+  height: fit-content;
 }
 .pres-description span{
   color:#347456;

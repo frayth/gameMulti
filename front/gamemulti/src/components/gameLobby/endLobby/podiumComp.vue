@@ -1,26 +1,26 @@
 <template>
   <div class="main-podium" :style="{ height: `${height}px` }">
     <div
-      class="SecondName namePodium"
+      class="SecondName namePodium np1"
       :style="{ transform: `translateY(25%)` }"
       v-if="podium.second.showName "
     >
-      <div v-for="player in getNameByRank(2)" :key="player.id">
-        <span :class="{ isUser: isUser(player.id) }">{{ player.name }}</span>
+      <div v-for="player in secondRank" :key="player.id"  :class="{ isUser: isUser(player.id) }">
+        <span>{{ player.name }}</span>
       </div>
     </div>
-    <div class="firstName namePodium" v-if="podium.first.showName">
-      <div v-for="player in getNameByRank(1)" :key="player.id">
-        <span :class="{ isUser: isUser(player.id) }">{{ player.name }}</span>
+    <div class="firstName namePodium np2" v-if="podium.first.showName">
+      <div v-for="player in firstRank" :key="player.id"  :class="{ isUser: isUser(player.id) }">
+        <span>{{ player.name }}</span>
       </div>
     </div>
     <div
-      class="thirdName namePodium"
+      class="thirdName namePodium np3"
       :style="{ transform: `translateY(50%)` }"
       v-if="podium.third.showName "
     >
-      <div v-for="player in getNameByRank(3)" :key="player.id">
-        <span :class="{ isUser: isUser(player.id) }">{{ player.name }}</span>
+      <div v-for="player in thirdRank" :key="player.id" :class="{ isUser: isUser(player.id) }">
+        <span>{{ player.name }}</span>
       </div>
     </div>
     <div class="second marble" :style="{ height: `${podium.second.height}%` }">
@@ -37,8 +37,9 @@
 
 <script setup lang="ts">
 import { gameStore } from '@/stores/game'
-import {defineProps, onActivated, ref } from 'vue'
+import {defineProps, onMounted, ref,computed } from 'vue'
 import { userStore } from '@/stores/user'
+
 
 const game = gameStore()
 const user = userStore()
@@ -70,18 +71,21 @@ defineProps({
     default: 300
   }
 })
-function getNameByRank(rank: number) {
-  return game.gameStat.players.filter((el) => el.rank === rank)
-}
+
+const firstRank = computed(()=>game.gameStat.players.filter((el) => el.rank === 1))
+const secondRank = computed(()=>game.gameStat.players.filter((el) => el.rank === 2))
+const thirdRank = computed(()=>game.gameStat.players.filter((el) => el.rank === 3))
+
 function isUser(playerId: number) {
   return playerId === user.id
 }
-onActivated(() => {
+onMounted(() => {
   game.gameStat.affectRankForPlayer()
   setTimeout(() => {
     lauchPodium()
   }, 1000)
 })
+
 const lauchPodium = async () => {
   const interval = ref<null | NodeJS.Timeout>(null)
   await new Promise((resolve) => {
@@ -213,6 +217,7 @@ const lauchPodium = async () => {
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 2px;
+  transition: all 0.5s ease;
 }
 .namePodium > div{
   overflow: hidden;
@@ -227,13 +232,13 @@ const lauchPodium = async () => {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.namePodium div:nth-child(1){
+.np1 div{
+  background-color:rgba(192, 192, 192, .7); 
+}
+.np2 div{
   background-color: rgba(255, 217, 0, 0.7);
 }
-.namePodium div:nth-child(2){
-  background-color: rgba(192, 192, 192, .7);
-}
-.namePodium div:nth-child(3){
+.np3 div{
   background-color: rgba(205, 127, 50,.7);
 }
 .secondName {
@@ -252,6 +257,7 @@ const lauchPodium = async () => {
   color: var(--main-green);
   font-weight: bold;
   font-size: clamp(10px, 5vw, 15px);
+  box-shadow: 0px 0px 4px 2px var(--main-green) !important;
 }
 @keyframes name {
   0%{
