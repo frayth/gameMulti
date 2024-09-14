@@ -2,15 +2,16 @@
   <div class="presentation">
       <div class="pres-description"><p>{{firstPart}}<span>{{correctSpan.value}}</span> {{secondPart}}</p></div>
       <div class="separator"></div>
-      <scorePresentation v-for="(game,i) in gameStat.players" :key="i" :score="game.oldScore" :name="game.name" :bonus="game.bonus"></scorePresentation>
+      <scorePresentation v-for="(game,i) in gameStat.players" :key="i" :score="game.oldScore" :name="game.name" :bonus="game.bonus" :activeSound="game.id===user.id"></scorePresentation>
   </div>
 </template>
 
 <script setup lang="ts">
   import {gameStore} from '@/stores/game'
+  import { userStore } from '@store/user';
   import {computed} from 'vue'
   import scorePresentation from '@/components/ScorePresentation/skeletonPresentation.vue'
-
+  const user=userStore()
   const game = gameStore()
   const gameStat=computed(()=>game.gameStat)
   const correctSpan=  computed(()=>{

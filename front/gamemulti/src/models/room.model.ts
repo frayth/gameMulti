@@ -19,6 +19,7 @@ export interface InfoGameRoom {
   status:GameStatus,
   owner:number,
   game:{
+    skipRule:number[],
     question:string,
     answers:{id:number,value:string}[],
     difficulty:number,

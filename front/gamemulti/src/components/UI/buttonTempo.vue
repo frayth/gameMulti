@@ -1,5 +1,5 @@
 <template>
-  <div class="mainTempoButton" @mousedown="app.isMobile?'':lauchCount()" @mouseup="app.isMobile?'':cancelCount()" @touchstart="app.isMobile?lauchCount():null" @touchend="app.isMobile?cancelCount():null">
+  <div :class="{mainTempoButton:true,triggered:trigger}" @mousedown="app.isMobile?'':lauchCount()" @mouseup="app.isMobile?'':cancelCount()" @touchstart="app.isMobile?lauchCount():null" @touchend="app.isMobile?cancelCount():null">
     <div class="backgroundButton" v-if="showMovingBackground"></div>
     <div class="slotTempo"><slot ></slot></div>
 
@@ -10,10 +10,17 @@
 import { appliStore } from '@store/appli';
 import { ref, defineProps, computed } from 'vue'
 const emit=defineEmits(['trigger'])
+const trigger=ref(false)
 const showMovingBackground=ref(true)
 const app=appliStore()
 let interval=ref<NodeJS.Timeout|null>(null)
+const transitionTime=200
+const cssTransition=`all ${transitionTime}ms`
 const props=defineProps({
+  textColor:{
+    type: String,
+    default: "black"
+  },
   primaryColor:{
     type: String,
     default: "#f1f1f1"
@@ -22,12 +29,20 @@ const props=defineProps({
     type: String,
     default: "#ec141473"
   },
+  triggerColor:{
+    type: String,
+    default: "#f1f1f1"
+  },
   timer:{
     type: Number,
     default: 1000
   },disable:{
     type: Boolean,
     default: false
+  },
+  triggerTextColor:{
+    type: String,
+    default: "black"
   }
 })
 const currentTimer= ref(props.timer)
@@ -37,9 +52,14 @@ function lauchCount(){
   interval.value=setInterval(()=>{
     currentTimer.value-=10
     if(currentTimer.value<=0){
+      currentTimer.value=0
       emit('trigger')
+
       clearInterval(interval.value as NodeJS.Timeout)
-      showMovingBackground.value=false
+      setTimeout(()=>{
+        showMovingBackground.value=false
+        trigger.value=true
+      },transitionTime)
     }
   },10)
 }
@@ -55,11 +75,12 @@ const widthBackground=computed(()=>(1-(currentTimer.value/props.timer))*100+'%')
 <style scoped>
   .mainTempoButton{
     display: flex;
+    color:v-bind(textColor) !important; ;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: #f1f1f1;
+    background-color: v-bind(primaryColor)!important;
     border: none;
     border-radius: 10px;
     font-size: 20px;
@@ -75,10 +96,10 @@ const widthBackground=computed(()=>(1-(currentTimer.value/props.timer))*100+'%')
     position: absolute;
     width: v-bind(widthBackground);
     height: 100%;
-    background-color: #ec141473;
+    background-color: v-bind(secondaryColor);
     border: none;
     border-radius: 10px;
-    transition:all 0.2s
+    transition:v-bind(cssTransition);
   }
   .slotTempo{
     z-index: 10;
@@ -87,5 +108,9 @@ const widthBackground=computed(()=>(1-(currentTimer.value/props.timer))*100+'%')
     justify-content: center;
     align-items: center;
     height: 100%;
+  }
+  .triggered{
+    background-color:v-bind(triggerColor) !important;
+    color:v-bind(triggerTextColor) !important;
   }
 </style>

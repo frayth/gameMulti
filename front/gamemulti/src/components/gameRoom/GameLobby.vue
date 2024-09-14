@@ -11,7 +11,7 @@
       <ScorePresentation></ScorePresentation>
     </div>
       <endComponent v-else></endComponent>
-    <Teleport to="#screenNotif">
+    <Teleport to="#screenNotif" v-if="game.phaseGame !== 'intro'">
     <Transition mode="out-in">
       <div id="scoreboard" v-if="scoreGameIsOpen">
         <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>

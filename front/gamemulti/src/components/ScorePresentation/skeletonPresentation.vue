@@ -31,6 +31,8 @@ import HAPPY from '@/assets/SVG/HappySvg.vue'
 import FAST from '@/assets/SVG/FastSvg.vue'
 import bulleye from '@/assets/SVG/BullEyes.vue'
 import { usePopup } from '@store/popUp'
+import {audioStore} from '@/stores/audio'
+const audio=audioStore()
 onUnmounted(() => {
   cancelTimer()
 })
@@ -40,6 +42,10 @@ interface Bonus{
   value: number;
 }
 const props = defineProps({
+  activeSound: {
+    type: Boolean,
+    default:false
+  },
   score:{
     type: Number,
     required: true
@@ -115,6 +121,7 @@ const animateScore=async (value:number)=>{
 
   await new Promise((resolve) => {
     event.value=setInterval(() => {
+      if(props.activeSound) audio.playSound('pop')
      if(value>0){
       tempScore.changeValue(1)
       value-=1

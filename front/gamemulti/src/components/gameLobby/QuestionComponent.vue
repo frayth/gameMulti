@@ -16,7 +16,7 @@
           v-for="answer in game.gameQuestions.answers"
           :key="`${answer}`"
           :class="`response ${game.InfoCurrentQuestion.personnalResponse === answer.id ? 'select' : game.InfoCurrentQuestion.personnalResponse !== null ? 'notSelect' : ''}`"
-          @click="game.sendResponse(answer.id)"
+          @click="handleResponse(answer.id)"
         >
           <p>{{ answer.value }}</p>
         </div>
@@ -32,13 +32,18 @@ import { gameStore } from '@/stores/game'
 import timerBar from '@/components/UI/TimeBar.vue'
 import tempoButton from '@/components/UI/buttonTempo.vue'
 import responseVision from '@/components/gameLobby/responseVision.vue'
+import { audioStore } from '@store/audio'
 const game = gameStore()
-
+const audio= audioStore()
 const timerLeftInSecond = computed(() => {
   const timeInMillisecond = game.gameQuestions.nextEvent - Date.now()
   return timeInMillisecond / 1000
 })
 const tempoButtonIsDisable = computed(() => game.InfoCurrentQuestion.personnalResponse !== null)
+function handleResponse(id: number) {
+  audio.playSound('pop')
+  game.sendResponse(id)
+}
 </script>
 
 <style scoped>

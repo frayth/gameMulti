@@ -9,6 +9,7 @@ export default class Game {
   parent:GameRoom;
   players: GamePlayer[];
   question: Question;
+  skippedRulePlayers: Player[];
   event: NodeJS.Timeout | null;
   askedQuestion: number[];
   nextEvent: number;
@@ -21,6 +22,7 @@ export default class Game {
     this.players = players.map((el) => new GamePlayer(el));
     this.question = new Question();
     this.event = null;
+    this.skippedRulePlayers = [];
     this.nextEvent = Date.now();
     this.askedQuestion = [];
     this.phaseGame = "intro";
@@ -158,7 +160,20 @@ export default class Game {
       });
     });
   }
+  skipRegle(player: Player) {
+    if (this.phaseGame === "intro") {
+      const playerHasAlreadySkipped = this.skippedRulePlayers.find( (el) => el.id === player.id);
+      if (!playerHasAlreadySkipped) {
+        this.skippedRulePlayers.push(player);
 
+        if (this.skippedRulePlayers.length === this.players.length) {
+          this.clearEvent();
+          this.changePhaseGame();
+        }
+        this.parent.sendInfoGame();
+      }
+    }
+  }
   savePlayerResponse(player: Player, response: { response: number | null }) {
     if (!this.canResponse(player)) return;
     console.log("ok pour sauvegarder");
@@ -207,6 +222,7 @@ export default class Game {
   }
   getInfoGame() {
     return {
+      skipRule: this.skippedRulePlayers.map((el) => el.id),
       question: this.question.question.question,
       answers: this.question.question.answers,
       difficulty: this.question.question.difficulty,

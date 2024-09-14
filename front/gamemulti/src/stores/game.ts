@@ -13,6 +13,7 @@ export const gameStore = defineStore('game', () => {
   const players = ref<Player[]>([])
   const socket = useSocketStore()
   const owner = ref<number>(0)
+  const playersHasSkipRule = ref<number[]>([])
   const gameStat = reactive({
     players: [] as listStatPlayer[],
     initPlayers(players: Player[]): void {
@@ -78,20 +79,24 @@ export const gameStore = defineStore('game', () => {
     }
   })
   socket.socket?.on('infoGameRoom:room', (data: InfoGameRoom) => {
-    console.log('infoGameRoom:room', data)
-
-    gameStat.players = data.game?.gameStats || []
-    status.value = data.status
-    players.value = data.players
-    owner.value = data.owner
-    gameQuestions.question = data.game?.question || ''
-    gameQuestions.answers = data.game?.answers || []
-    gameQuestions.difficulty = data.game?.difficulty || 0
-    gameQuestions.category = data.game?.category || ''
-    gameQuestions.nextEvent = data.game?.nextEvent || Date.now()
-    ;(phaseGame.value = data.game?.phaseGame || 'intro'),
-      (InfoCurrentQuestion.currentResponse = data.game?.userResponse || [])
-      gameStat.affectRankForPlayer()
+    
+    setTimeout(() => {
+      console.log( data)
+      
+      status.value = data.status;
+    },10)
+    gameQuestions.nextEvent = data.game?.nextEvent || Date.now();
+    phaseGame.value = data.game?.phaseGame || 'intro';
+    gameStat.players = data.game?.gameStats || [];
+    playersHasSkipRule.value= data.game?.skipRule || [];
+    players.value = data.players;
+    owner.value = data.owner;
+    gameQuestions.question = data.game?.question || '';
+    gameQuestions.answers = data.game?.answers || [];
+    gameQuestions.difficulty = data.game?.difficulty || 0;
+    gameQuestions.category = data.game?.category || '';
+    InfoCurrentQuestion.currentResponse = data.game?.userResponse || [];
+    gameStat.affectRankForPlayer()
   })
 
   socket.socket?.on('startCount:timer', () => {
@@ -163,7 +168,9 @@ export const gameStore = defineStore('game', () => {
     console.log('update:response', data)
     InfoCurrentQuestion.currentResponse = data
   })
-
+  function skipRegle(){
+    socket.socket?.emit('skipRegle:game')
+  }
   function getInfogame() {
     socket.socket?.emit('getInfoGame:room')
   }
@@ -184,6 +191,8 @@ export const gameStore = defineStore('game', () => {
     phaseGame,
     InfoCurrentQuestion,
     sendResponse,
-    gameStat
+    gameStat,
+    skipRegle,
+    playersHasSkipRule
   }
 })

@@ -119,6 +119,13 @@ io.on("connect", (socket: Socket) => {
       user.room.room?.startGame();
     }
   });
+  socket.on('skipRegle:game',()=>{
+    console.log('[socket.ts]',"skipRegle:game");
+    const user = usersList.getUser(socket);
+    if (user && user.room.room instanceof GameRoom) {
+      user.room.room.game?.skipRegle(user);
+    }
+  })
   socket.on('response:game', (data: {response:number | null}) => {
     console.log('[socket.ts]',"response:game",data);
     const user = usersList.getUser(socket);

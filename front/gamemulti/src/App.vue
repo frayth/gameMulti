@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import { RouterView } from 'vue-router'
 import { onBeforeMount } from 'vue'
 import { userStore } from './stores/user'
@@ -42,7 +43,6 @@ function cancelTimer(){
       <logOut  size="40" v-if="user.isConnect" @mouseenter="startTimer" @mouseleave="cancelTimer" @click="user.logout"/>
     </div>
   </header>
-
   <RouterView class="view" />
 </template>
 
@@ -81,4 +81,5 @@ header{
   top: 10px;
   cursor: pointer;
 }
+
 </style>
