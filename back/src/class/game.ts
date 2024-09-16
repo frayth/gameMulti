@@ -4,6 +4,7 @@ import type { QuestionModel } from "../models/game.model";
 import bonus from "../assets/bonus.json";
 import prand from 'pure-rand';
 import { GameRoom } from "./GameRoom";
+import options from "../assets/options"
 const offsetResponseTime = 2000;
 export default class Game {
   parent:GameRoom;
@@ -70,7 +71,7 @@ export default class Game {
   LauchIntro() {
     this.createEvent(() => {
       this.changePhaseGame();
-    }, 30000);
+    }, options.timeForRule);
   }
   private sendScore() {
     console.log(

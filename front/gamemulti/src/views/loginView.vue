@@ -12,7 +12,6 @@
 <script setup lang="ts">
 import { userStore } from '@/stores/user';
 import { ref } from 'vue';
-
 const userStorage= userStore();
 const speudo = ref('');
 const maxSpeudoLength = 20;

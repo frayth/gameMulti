@@ -62,6 +62,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 @media (max-width: 600px) {
   .pres-description{

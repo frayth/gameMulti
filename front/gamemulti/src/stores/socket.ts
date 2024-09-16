@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, watch, type Ref } from 'vue'
-const URL = 'http://109.24.163.36:5003'
+const URL = 'quizz.api.laurisceresoli.fr' //http://109.24.163.36:5003
 import { Socket, io } from 'socket.io-client'
 import type { DefaultEventsMap } from 'node_modules/socket.io/dist/typed-events'
 import type Room from '@/models/room.model'
@@ -92,11 +92,16 @@ export const useSocketStore = defineStore('socket', () => {
       socket.value?.on(
         'info:room',
         (data: {
-          info: { status: 'connect' | 'disconnect'; name: string,type:'waitingRoom'|'gameRoom'; gameStatus?: 'waiting' | 'playing' | 'end'}
+          info: {
+            status: 'connect' | 'disconnect'
+            name: string
+            type: 'waitingRoom' | 'gameRoom'
+            gameStatus?: 'waiting' | 'playing' | 'end'
+          }
           users: { id: number; name: string; connected: boolean }[]
         }) => {
           console.log('info room', data)
-          user.room.userList=data.users
+          user.room.userList = data.users
         }
       )
 

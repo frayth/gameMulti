@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { reactive, ref, type Ref } from 'vue'
 import { useSocketStore } from './socket'
 import { useRouter } from 'vue-router'
-import {usePopup} from './popUp'
+import { usePopup } from './popUp'
 import PopUp from '@/components/interactive/PopUp.vue'
 interface User {
   id: number
@@ -29,7 +29,8 @@ export const userStore = defineStore('user', () => {
     localStorage.setItem('token', newToken)
   }
   async function login(speudo: string, userToken: string) {
-    const response = await fetch('http://109.24.163.36:5003/user/login', {
+    const response = await fetch('http://quizz.api.laurisceresoli.fr/user/login', {
+      //http://109.24.163.36:5003/user/login
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +77,7 @@ export const userStore = defineStore('user', () => {
     router.push('/login')
     popupStore.cancelPopUpTimer()
   }
-  
+
   function setRoom(newRoom: { id: number; name: string }): void {
     room.id = newRoom.id
     room.name = newRoom.name
@@ -112,14 +113,14 @@ export const RoomStore = defineStore('room', () => {
     }
   )
   socket.socket?.on('message:room', (data: { user: string; message: string }) => {
-    data.message =JSON.parse(data.message)
-    if(data.user===messages.value[messages.value.length-1]?.user){
+    data.message = JSON.parse(data.message)
+    if (data.user === messages.value[messages.value.length - 1]?.user) {
       console.log('add to last message')
-      messages.value[messages.value.length-1].message+=`\n${data.message}`
-    }else{
+      messages.value[messages.value.length - 1].message += `\n${data.message}`
+    } else {
       console.log('add new message')
       messages.value.push(data)
     }
   })
-  return {messages}
+  return { messages }
 })

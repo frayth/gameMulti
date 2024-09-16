@@ -7,8 +7,8 @@
       <Theme></Theme>
     </div>
     <question v-else-if="game.phaseGame === 'question'"></question>
-    <div v-else-if="game.phaseGame === 'score'">
-      <ScorePresentation></ScorePresentation>
+    <div v-else-if="game.phaseGame === 'score'" :style="{width:'100%'}">
+      <ScorePresentation :style="{width:'100%'}"></ScorePresentation>
     </div>
       <endComponent v-else></endComponent>
     <Teleport to="#screenNotif" v-if="game.phaseGame !== 'intro'">
@@ -78,6 +78,7 @@ const scoreGameIsOpen = ref(false)
 .gameLobby {
   position: relative;
   overflow-x: hidden;
+  width: 100%;
 }
 .openScore {
   position: absolute;

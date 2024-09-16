@@ -108,6 +108,7 @@ const widthBackground=computed(()=>(1-(currentTimer.value/props.timer))*100+'%')
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding: 5px;
   }
   .triggered{
     background-color:v-bind(triggerColor) !important;

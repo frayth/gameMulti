@@ -93,6 +93,15 @@ h1{
   text-align: center;
   
 }
+.skip{
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  justify-self: end;
+}
 @media (max-width: 700px){
   div{
     padding: 0 10px;
@@ -103,14 +112,14 @@ h1{
   .section-title{
     font-size: 1.2em;
   }
+  .skip{
+    gap: 2px;
+    padding: 0;
+  }
+  .timer{
+    padding: 0;
+  }
   
 }
-.skip{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  justify-self: end;
-}
+
 </style>
