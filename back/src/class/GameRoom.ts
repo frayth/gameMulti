@@ -82,11 +82,9 @@ export class GameRoom extends Room {
   startGame() {
     try {
       this.game = new Game(this.players,this);
-      this.changeStatus("playing");
       this.game.LauchIntro();
-      setTimeout(() => {    
-      this.sendInfoGame();
-      }, 10);
+      this.changeStatus("playing");
+      
     } catch (e) {
       console.log(e);
     }
