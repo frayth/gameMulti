@@ -1,6 +1,6 @@
 <template>
   <div class="gameLobby">
-    <div v-if="game.phaseGame === 'intro'">
+    <div v-if="game.phaseGame === 'intro'" :style="{margin:'auto'}">
       <regle></regle>
     </div>
     <div v-else-if="game.phaseGame === 'presentation'">

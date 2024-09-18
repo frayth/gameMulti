@@ -66,6 +66,7 @@ div{
   display: grid;
   grid-template: auto 1fr / auto;
   justify-items: center;
+  margin: auto;
 }
 .timer{
   justify-self: end;

@@ -239,7 +239,8 @@ io.on("connect", (socket: Socket) => {
     if (
       reason === "ping timeout" ||
       reason === "client namespace disconnect" ||
-      reason === "transport close"
+      reason === "transport close"||
+      reason === "transport error"
     ) {
       console.log("[disconnect]", "ping timeout", socket.id);
       const user = usersList.getUser(socket);
