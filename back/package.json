@@ -4,7 +4,8 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/index.js\""
+    "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/index.js\"",
+    "prod":"sudo nohup node /home/ubuntu/projets/gameMulti/back/dist/index.js > /home/ubuntu/projets/gameMulti/back/server.log 2>&1 &"
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, watch, type Ref } from 'vue'
-const URL = 'http://109.24.163.36:5003' //http://109.24.163.36:5003 http://quizz.api.laurisceresoli.fr
+//const URL = 'http://109.24.163.36:5003' //http://109.24.163.36:5003 http://quizz.api.laurisceresoli.fr
+const URL='http://quizz.api.laurisceresoli.fr'
 import { Socket, io } from 'socket.io-client'
 import type { DefaultEventsMap } from 'node_modules/socket.io/dist/typed-events'
 import type Room from '@/models/room.model'
