@@ -1,16 +1,16 @@
 <template>
   <div class="gameLobby">
-    <div v-if="game.phaseGame === 'intro'" :style="{margin:'auto'}">
+    <div v-if="game.phaseGame === 'intro'" class="container-lobby">
       <regle></regle>
     </div>
-    <div v-else-if="game.phaseGame === 'presentation'">
+    <div v-else-if="game.phaseGame === 'presentation'" class="container-lobby">
       <Theme></Theme>
     </div>
     <question v-else-if="game.phaseGame === 'question'"></question>
-    <div v-else-if="game.phaseGame === 'score'" :style="{width:'100%'}">
+    <div v-else-if="game.phaseGame === 'score'" :style="{width:'100%'}" class="container-lobby">
       <ScorePresentation :style="{width:'100%'}"></ScorePresentation>
     </div>
-      <endComponent v-else></endComponent>
+      <endComponent v-else class="container-lobby"></endComponent>
     <Teleport to="#screenNotif" v-if="game.phaseGame !== 'intro'">
     <Transition mode="out-in">
       <div id="scoreboard" v-if="scoreGameIsOpen">
@@ -56,6 +56,12 @@ const scoreGameIsOpen = ref(false)
   animation: slideInFromRight 0.5s ease-in-out;
   border-left:1px solid var(--normalTextColor);
   pointer-events: all;
+}
+.container-lobby{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 #scoreboard .close {
   position: absolute;
