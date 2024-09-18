@@ -29,7 +29,7 @@ export const userStore = defineStore('user', () => {
     localStorage.setItem('token', newToken)
   }
   async function login(speudo: string, userToken: string) {
-    const response = await fetch('ttp://quizz.api.laurisceresoli.fr/user/login', {
+    const response = await fetch('http://quizz.api.laurisceresoli.fr/user/login', {
       //http://109.24.163.36:5003/user/login
       //http://quizz.api.laurisceresoli.fr/user/login
       method: 'POST',
