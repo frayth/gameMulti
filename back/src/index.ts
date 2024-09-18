@@ -4,7 +4,9 @@ import dotenv from "dotenv";
 import { usersList } from "./class/usersList";
 export const dotenvConfig=dotenv.config();
 console.log('index',process.env.SECRET_KEY)
-httpServer.listen(process.env.PORT, ()=>process.env.URL);// 3000 ,'192.168.1.62'  4001 '127.0.0.1'
+httpServer.listen(process.env.PORT, ()=>{
+    console.log(`server is running on port ${process.env.PORT}`);
+});// 3000 ,'192.168.1.62'  4001 '127.0.0.1'
 
 
 setInterval(() => {

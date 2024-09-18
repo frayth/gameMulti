@@ -49,7 +49,7 @@ import skipRegle from './regle/skipRegle.vue';
 const game=gameStore()
 const nextEvent=ref(game.gameQuestions.nextEvent)
 onMounted(()=>{
-  console.log('nextEvent,reglecomp',nextEvent,Math.floor(Date.now()-nextEvent.value))
+  console.log('nextEvent,reglecomp',nextEvent.value,Math.floor(Date.now()-nextEvent.value))
 })
 
 </script>
