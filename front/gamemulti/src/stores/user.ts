@@ -24,7 +24,6 @@ export const userStore = defineStore('user', () => {
     userList: ref<User[]>([])
   })
   async function setToken(newToken: string): Promise<void> {
-    console.log('set token', newToken)
     token.value = newToken
     localStorage.setItem('token', newToken)
   }
@@ -43,12 +42,11 @@ export const userStore = defineStore('user', () => {
     isConnect.value = data.response
     if (data.response) {
       username.value = speudo
-      console.log('enregistrement du speudo local storager', speudo)
       localStorage.setItem('username', speudo)
-      console.log('first connect', userToken)
       socketStore.firstconnect(userToken)
+      return true
     } else {
-      alert('Ce speudo est déja utilisé par une personne connectée')
+      return false
     }
   }
   function init() {
@@ -82,7 +80,6 @@ export const userStore = defineStore('user', () => {
   function setRoom(newRoom: { id: number; name: string }): void {
     room.id = newRoom.id
     room.name = newRoom.name
-    console.log('set room', room)
     if (room.name === 'waitingRoom') {
       router.push({ name: 'waitingRoom' })
     } else {
@@ -116,10 +113,8 @@ export const RoomStore = defineStore('room', () => {
   socket.socket?.on('message:room', (data: { user: string; message: string }) => {
     data.message = JSON.parse(data.message)
     if (data.user === messages.value[messages.value.length - 1]?.user) {
-      console.log('add to last message')
       messages.value[messages.value.length - 1].message += `\n${data.message}`
     } else {
-      console.log('add new message')
       messages.value.push(data)
     }
   })

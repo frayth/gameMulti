@@ -22,7 +22,6 @@ const router = createRouter({
       name: 'waitingRoom',
       component: waitingRoom,
       beforeEnter: (to, from, next) => {
-        console.log('waitingRoom')
         next()
       }
     },

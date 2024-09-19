@@ -51,7 +51,6 @@ import peopleSvg from '../../assets/SVG/peopleSvg.vue'
     }
   }
   onMounted(()=>{
-    console.log('getRooms')
     socket.socket?.emit('getRooms:rooms')
   })
   function joinRoom(id:number){

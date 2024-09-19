@@ -58,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, nextTick, computed, reactive, watch} from 'vue'
+import { ref, nextTick, computed, watch} from 'vue'
 import {RoomStore} from '@/stores/user'
 import { useSocketStore } from '../../stores/socket'
 import statut from '../UI/ConnexionStatut.vue'
@@ -88,14 +88,14 @@ const users=computed(()=>{
 const currentMessage = ref('')
 
 const messagesToShow = computed(() => {
-  if (!optionsChat.server) return roomStore.messages.filter((message) => message.user !== 'Serveur')
+  if (!optionsChat.value.server) return roomStore.messages.filter((message) => message.user !== 'Serveur')
   return roomStore.messages
 })
 const sendIsPossible = computed(() => currentMessage.value.length > 0)
 
 const optionPanelIsOpen = ref(false)
 
-const optionsChat = reactive({
+const optionsChat = ref({
   server: true
 })
 watch(messagesToShow,()=>{

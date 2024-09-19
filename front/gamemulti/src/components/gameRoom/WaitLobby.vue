@@ -106,7 +106,6 @@ function sendReady(id: number) {
   socket.socket?.emit('ready:player', !game.players.find((player) => player.id === id)?.ready)
 }
 function kickPlayer(id: number) {
-  console.log('kick')
   socket.socket?.emit('kick:player', id)
 }
 function handleStartGame() {
