@@ -7172,5 +7172,583 @@
     "difficulty": 4,
     "response": 1,
     "descriptionResponse": "La construction de la pyramide du Louvre a été commandée par François Mitterrand."
+  },
+  {
+    "id": 212,
+    "question": "De quelle fleur, la vanille est-elle le fruit ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Orchidée"
+      },
+      {
+        "id": 2,
+        "value": "Rose"
+      },
+      {
+        "id": 3,
+        "value": "Lys"
+      },
+      {
+        "id": 4,
+        "value": "Tulipe"
+      },
+      {
+        "id": 5,
+        "value": "Pivoine"
+      },
+      {
+        "id": 6,
+        "value": "Dahlia"
+      }
+    ],
+    "category": "Cuisine",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "La vanille est le fruit de l'orchidée."
+  },
+  {
+    "id": 213,
+    "question": "Sous quel prénom était plus connue la danseuse de ballet française Renée Marcelle Jeanmaire ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Mimi"
+      },
+      {
+        "id": 2,
+        "value": "Lulu"
+      },
+      {
+        "id": 3,
+        "value": "Coco"
+      },
+      {
+        "id": 4,
+        "value": "Fifi"
+      },
+      {
+        "id": 5,
+        "value": "Zizi"
+      },
+      {
+        "id": 6,
+        "value": "Nini"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 7,
+    "response": 5,
+    "descriptionResponse": "La danseuse de ballet française Renée Marcelle Jeanmaire était plus connue sous le prénom de Zizi."
+  },
+  {
+    "id": 214,
+    "question": "Quelle épidémie a décimé entre 30 et 50% de la population d'Europe au Moyen Âge ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La varicelle"
+      },
+      {
+        "id": 2,
+        "value": "Xeroderma pigmentosum"
+      },
+      {
+        "id": 3,
+        "value": "La gale"
+      },
+      {
+        "id": 4,
+        "value": "La peste noire"
+      },
+      {
+        "id": 5,
+        "value": "La grippe espagnole"
+      },
+      {
+        "id": 6,
+        "value": "La tuberculose"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "La peste noire a décimé entre 30 et 50% de la population d'Europe au Moyen Âge."
+  },
+  {
+    "id": 215,
+    "question": "Quel symbole est représenté sur le drapeau du Québec ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La rose des vents"
+      },
+      {
+        "id": 2,
+        "value": "Un castor"
+      },
+      {
+        "id": 3,
+        "value": "Une feuille d'érable"
+      },
+      {
+        "id": 4,
+        "value": "La courrone de lauriers"
+      },
+      {
+        "id": 5,
+        "value": "La fleur de lys"
+      },
+      {
+        "id": 6,
+        "value": "Un Caribou"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 3,
+    "response": 5,
+    "descriptionResponse": "La fleur de lys est représentée sur le drapeau du Québec."
+  },
+  {
+    "id": 216,
+    "question": "Dans quel célèbre conte, une rose est au cœur de l’histoire ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La Belle et la Bête"
+      },
+      {
+        "id": 2,
+        "value": "Le Petit Chaperon rouge"
+      },
+      {
+        "id": 3,
+        "value": "Cendrillon"
+      },
+      {
+        "id": 4,
+        "value": "Blanche-Neige"
+      },
+      {
+        "id": 5,
+        "value": "Le Petit Poucet"
+      },
+      {
+        "id": 6,
+        "value": "Le Chat botté"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Dans le célèbre conte La Belle et la Bête, une rose est au cœur de l'histoire."
+  },
+  {
+    "id": 217,
+    "question": "Lequel de ces aliments a été ramené en Europe suite à la découverte des Amériques ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le riz"
+      },
+      {
+        "id": 2,
+        "value": "Le blé"
+      },
+      {
+        "id": 3,
+        "value": "La pomme de terre"
+      },
+      {
+        "id": 4,
+        "value": "Le maïs"
+      },
+      {
+        "id": 5,
+        "value": "Le soja"
+      },
+      {
+        "id": 6,
+        "value": "Le cacao"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 3,
+    "response": 3,
+    "descriptionResponse": "La pomme de terre a été ramenée en Europe suite à la découverte des Amériques."
+  },
+  {
+    "id": 218,
+    "question": "De quel groupe comique Jean Dujardin était-il membre dans les années 1990 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Les Inconnus"
+      },
+      {
+        "id": 2,
+        "value": "Les Nuls"
+      },
+      {
+        "id": 3,
+        "value": "Les Robins des Bois"
+      },
+      {
+        "id": 4,
+        "value": "Nous ç Nous"
+      },
+      {
+        "id": 5,
+        "value": "Les Lascars"
+      },
+      {
+        "id": 6,
+        "value": "Les Deschiens"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 4,
+    "response": 4,
+    "descriptionResponse": "Dans les années 1990, Jean Dujardin était membre du groupe comique Nous ç Nous."
+  },
+  {
+    "id": 219,
+    "question": "Quel est le nom des habitants du Berry, l'ancienne province française ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Les Berrigourdins"
+      },
+      {
+        "id": 2,
+        "value": "Les Bernisanders"
+      },
+      {
+        "id": 3,
+        "value": "Les Berricochins"
+      },
+      {
+        "id": 4,
+        "value": "Les Bourguignons"
+      },
+      {
+        "id": 5,
+        "value": "Les Béarnais"
+      },
+      {
+        "id": 6,
+        "value": "Les Berrichons"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 8,
+    "response": 6,
+    "descriptionResponse": "Les habitants du Berry, l'ancienne province française, sont les Berrichons."
+  },
+  {
+    "id": 220,
+    "question": "Qui est l'auteur du roman de science-fiction Jurassic Park publié en 1990 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Michael Crichton"
+      },
+      {
+        "id": 2,
+        "value": "Stephen King"
+      },
+      {
+        "id": 3,
+        "value": "Isaac Asimov"
+      },
+      {
+        "id": 4,
+        "value": "Dan Simmons"
+      },
+      {
+        "id": 5,
+        "value": "Michael Bishop"
+      },
+      {
+        "id": 6,
+        "value": "Greg Egan"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Le roman de science-fiction Jurassic Park publié en 1990 est écrit par Michael Crichton."
+  },
+  {
+    "id": 221,
+    "question": "Quelle est la définition du concept de Greenwashing qui existe depuis quelques années ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Utiliser des produits verts pour laver les voitures"
+      },
+      {
+        "id": 2,
+        "value": "Produire des vêtements sans produits chimiques"
+      },
+      {
+        "id": 3,
+        "value": "Réutiliser des matériaux écologiques pour construire des maisons"
+      },
+      {
+        "id": 4,
+        "value": "Utiliser des arguments écologiques pour se donner une bonne image"
+      },
+      {
+        "id": 5,
+        "value": "Trier les vétements issues de la récupération"
+      },
+      {
+        "id": 6,
+        "value": "Nettoyer les rivières et les lacs"
+      }
+    ],
+    "category": "Société",
+    "difficulty": 1,
+    "response": 4,
+    "descriptionResponse": "Le greenwashing consiste à utiliser des arguments écologiques dans la communication, alors que dans les faits les mesures prises sont inexistantes ou presque."
+  },
+  {
+    "id": 222,
+    "question": "Quel film de 1996 met en scène Patrick Bruel et Jean Réno ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le Jaguar"
+      },
+      {
+        "id": 2,
+        "value": "Le Dîner de cons"
+      },
+      {
+        "id": 3,
+        "value": "Le Cœur des hommes"
+      },
+      {
+        "id": 4,
+        "value": "Le Prénom"
+      },
+      {
+        "id": 5,
+        "value": "Le Placard"
+      },
+      {
+        "id": 6,
+        "value": "Le Pari"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "Le film de 1996 mettant en scène Patrick Bruel et Jean Réno est Le Jaguar."
+  },
+  {
+    "id": 223,
+    "question": "Quelle est l’amplitude de l’échelle de pH, permettant de mesurer l’acidité d’une solution aqueuse ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "De 0 à 7"
+      },
+      {
+        "id": 2,
+        "value": "De 0 à 10"
+      },
+      {
+        "id": 3,
+        "value": "De 0 à 14"
+      },
+      {
+        "id": 4,
+        "value": "De 0 à 20"
+      },
+      {
+        "id": 5,
+        "value": "De 0 à 100"
+      },
+      {
+        "id": 6,
+        "value": "De 0 à 1000"
+      }
+    ],
+    "category": "Biologie",
+    "difficulty": 6,
+    "response": 3,
+    "descriptionResponse": "L'échelle de pH permettant de mesurer l'acidité d'une solution aqueuse va de 0 à 14."
+  },
+  {
+    "id": 224,
+    "question": "Quelle maladie se caractérise par un rythme cardiaque inférieur à la normale ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Tachycardie"
+      },
+      {
+        "id": 2,
+        "value": "Bradycardie"
+      },
+      {
+        "id": 3,
+        "value": "Hypertension"
+      },
+      {
+        "id": 4,
+        "value": "Hypotension"
+      },
+      {
+        "id": 5,
+        "value": "Tachypnée"
+      },
+      {
+        "id": 6,
+        "value": "Bradypnée"
+      }
+    ],
+    "category": "Biologie",
+    "difficulty": 5,
+    "response": 2,
+    "descriptionResponse": "La bradycardie se caractérise par un rythme cardiaque inférieur à la normale."
+  },
+  {
+    "id": 225,
+    "question": "Qui a écrit et chanté le titre \"Toi mon toit\" en 1986 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Corynne Charby"
+      },
+      {
+        "id": 2,
+        "value": "Michel Berger"
+      },
+      {
+        "id": 3,
+        "value": "Daniel Balavoine"
+      },
+      {
+        "id": 4,
+        "value": "Lio"
+      },
+      {
+        "id": 5,
+        "value": "Elli Medeiros"
+      },
+      {
+        "id": 6,
+        "value": "Sabine Paturel"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 6,
+    "response": 5,
+    "descriptionResponse": "Le titre \"Toi mon toit\" en 1986 a été écrit et chanté par Elli Medeiros."
+  },
+  {
+    "id": 226,
+    "question": "Quelle est la nature de l'œuvre d'art de 1950 nommée : \"Le baiser de l'hôtel de ville\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Un tableau"
+      },
+      {
+        "id": 2,
+        "value": "Une sculpture"
+      },
+      {
+        "id": 3,
+        "value": "Une photographie"
+      },
+      {
+        "id": 4,
+        "value": "Un film"
+      },
+      {
+        "id": 5,
+        "value": "Une chanson"
+      },
+      {
+        "id": 6,
+        "value": "Un poème"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 8,
+    "response": 3,
+    "descriptionResponse": "L'œuvre d'art de 1950 nommée \"Le baiser de l'hôtel de ville\" est une photographie."
+  },
+  {
+    "id": 227,
+    "question": "Quel acteur a interprété Cordell Walker dans la série Walker Texas ranger ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Chuck Norris"
+      },
+      {
+        "id": 2,
+        "value": "Steven Seagal"
+      },
+      {
+        "id": 3,
+        "value": "Jean-Claude Van Damme"
+      },
+      {
+        "id": 4,
+        "value": "Arnold Schwarzenegger"
+      },
+      {
+        "id": 5,
+        "value": "Sylvester Stallone"
+      },
+      {
+        "id": 6,
+        "value": "Bruce Willis"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Chuck Norris a interprété Cordell Walker dans la série Walker Texas ranger."
+  },
+  {
+    "id": 228,
+    "question": "Quel mot correspond précisément à la définition suivante : \"hostile par principe aux étrangers et à ce qui vient de l'étranger\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Xénophobe"
+      },
+      {
+        "id": 2,
+        "value": "Raciste"
+      },
+      {
+        "id": 3,
+        "value": "Homophobe"
+      },
+      {
+        "id": 4,
+        "value": "Misogyne"
+      },
+      {
+        "id": 5,
+        "value": "Antisémite"
+      },
+      {
+        "id": 6,
+        "value": "Islamophobe"
+      }
+    ],
+    "category": "Langues",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Le mot correspondant précisément à la définition \"hostile par principe aux étrangers et à ce qui vient de l'étranger\" est xénophobe."
   }
 ]

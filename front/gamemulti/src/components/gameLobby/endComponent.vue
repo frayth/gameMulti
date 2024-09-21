@@ -5,14 +5,21 @@
       <div>
         <podium  class="podium" :height="200" ></podium>
       </div>
-      
   </div>
+  <history-comp :history="historyToShow"></history-comp>
   </div>
 </template>
 
 <script setup lang="ts">
 import podium from '@/components/gameLobby/endLobby/podiumComp.vue';
-
+import { gameStore } from '@/stores/game'
+import { computed, onMounted } from 'vue';
+import HistoryComp from './endLobby/HistoryComp.vue';
+const historyToShow=computed(()=>game.gameHistory.value)
+const game = gameStore()
+onMounted(()=>{
+  game.gameHistory.getHistory()
+})
 
 </script>
 

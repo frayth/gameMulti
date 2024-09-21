@@ -37,3 +37,12 @@ export interface panelErrorInfoRoom{
     event: null | number,
     setError: ( message: string,error: boolean) => void
 }
+
+export interface History{
+  question:string,
+  usersInfo:{
+    userResponse:string,
+    answerIsCorrect:boolean,
+    user:number,
+  }[]
+}

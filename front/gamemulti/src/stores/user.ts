@@ -3,7 +3,7 @@ import { reactive, ref, type Ref } from 'vue'
 import { useSocketStore } from './socket'
 import { useRouter } from 'vue-router'
 import { usePopup } from './popUp'
-import PopUp from '@/components/interactive/PopUp.vue'
+import useFecth from '@/modules/fetch'
 interface User {
   id: number
   name: string
@@ -28,9 +28,7 @@ export const userStore = defineStore('user', () => {
     localStorage.setItem('token', newToken)
   }
   async function login(speudo: string, userToken: string) {
-    const response = await fetch('https://quizz.api.laurisceresoli.fr/user/login', {
-      //http://109.24.163.36:5003/user/login
-      //https://quizz.api.laurisceresoli.fr/user/login
+    const data = await useFecth('/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,7 +36,7 @@ export const userStore = defineStore('user', () => {
       },
       body: JSON.stringify({ username: speudo })
     })
-    const data = await response.json()
+
     isConnect.value = data.response
     if (data.response) {
       username.value = speudo
