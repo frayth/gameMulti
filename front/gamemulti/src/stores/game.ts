@@ -5,6 +5,8 @@ import { useSocketStore } from './socket'
 import type Player from '@/models/player.model'
 import { userStore } from './user'
 import type { listStatPlayer } from '@/models/player.model'
+import useFecth from '@/modules/fetch'
+import shuffle from '@/modules/shuffle'
 
 export const gameStore = defineStore('game', () => {
   const user = userStore()
@@ -14,6 +16,15 @@ export const gameStore = defineStore('game', () => {
   const socket = useSocketStore()
   const owner = ref<number>(0)
   const playersHasSkipRule = ref<number[]>([])
+  const gameHistory = ref({
+    value: [],
+    async getHistory() {
+      const data = await useFecth(`/user/history?room=${user.room.id}`, {
+        method: 'GET' 
+      })
+      this.value = data.response
+    }
+  })
   const gameStat = reactive({
     players: [] as listStatPlayer[],
     initPlayers(players: Player[]): void {
@@ -35,9 +46,9 @@ export const gameStore = defineStore('game', () => {
       let rank = 1
       this.sortedPlayerByScore()
       this.players.forEach((player) => {
-        const otherPlayerWithSameScore = this.players.filter(
-          (el) =>el.id!==player.id
-        ).filter((el)=>el.score===player.score)
+        const otherPlayerWithSameScore = this.players
+          .filter((el) => el.id !== player.id)
+          .filter((el) => el.score === player.score)
         player.rank = rank
         if (otherPlayerWithSameScore.length === 0) rank++
       })
@@ -79,23 +90,22 @@ export const gameStore = defineStore('game', () => {
     }
   })
   socket.socket?.on('infoGameRoom:room', (data: InfoGameRoom) => {
-    
     setTimeout(() => {
-      console.log( data)
-      
-      status.value = data.status;
-    },10)
-    gameQuestions.nextEvent = data.game?.nextEvent || Date.now();
-    phaseGame.value = data.game?.phaseGame || 'intro';
-    gameStat.players = data.game?.gameStats || [];
-    playersHasSkipRule.value= data.game?.skipRule || [];
-    players.value = data.players;
-    owner.value = data.owner;
-    gameQuestions.question = data.game?.question || '';
-    gameQuestions.answers = data.game?.answers || [];
-    gameQuestions.difficulty = data.game?.difficulty || 0;
-    gameQuestions.category = data.game?.category || '';
-    InfoCurrentQuestion.currentResponse = data.game?.userResponse || [];
+      console.log(data)
+
+      status.value = data.status
+    }, 10)
+    gameQuestions.nextEvent = data.game?.nextEvent || Date.now()
+    phaseGame.value = data.game?.phaseGame || 'intro'
+    gameStat.players = data.game?.gameStats || []
+    playersHasSkipRule.value = data.game?.skipRule || []
+    players.value = data.players
+    owner.value = data.owner
+    gameQuestions.question = data.game?.question || ''
+    gameQuestions.answers = data.game?.answers || []
+    gameQuestions.difficulty = data.game?.difficulty || 0
+    gameQuestions.category = data.game?.category || ''
+    InfoCurrentQuestion.currentResponse = data.game?.userResponse || []
     gameStat.affectRankForPlayer()
   })
 
@@ -111,7 +121,7 @@ export const gameStore = defineStore('game', () => {
       console.log('question:game', data)
       phaseGame.value = 'question'
       gameQuestions.question = data.question
-      gameQuestions.answers = data.answers
+      gameQuestions.answers = shuffle(data.answers)
       gameQuestions.nextEvent = data.nextEvent
     }
   )
@@ -168,7 +178,7 @@ export const gameStore = defineStore('game', () => {
     console.log('update:response', data)
     InfoCurrentQuestion.currentResponse = data
   })
-  function skipRegle(){
+  function skipRegle() {
     socket.socket?.emit('skipRegle:game')
   }
   function getInfogame() {
@@ -193,6 +203,7 @@ export const gameStore = defineStore('game', () => {
     sendResponse,
     gameStat,
     skipRegle,
-    playersHasSkipRule
+    playersHasSkipRule,
+    gameHistory
   }
 })

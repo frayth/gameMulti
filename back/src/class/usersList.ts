@@ -54,7 +54,7 @@ class UsersList {
     return this.users.find((user) => user.socket === socket) || null;
   }
   checkName(name: string): boolean {
-    return this.users.some((user) => user.name === name);
+    return this.users.some((user) => user.name.toLowerCase() === name.toLowerCase());
   }
   public bonjour(player: Player): void {
     if (!player) return;

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, watch, type Ref } from 'vue'
 //const URL = 'http://109.24.163.36:5003' //http://109.24.163.36:5003 https://quizz.api.laurisceresoli.fr
-const URL='https://quizz.api.laurisceresoli.fr'
+const URL='http://109.24.163.36:5003'
 import { Socket, io } from 'socket.io-client'
 import type { DefaultEventsMap } from 'node_modules/socket.io/dist/typed-events'
 import type Room from '@/models/room.model'
@@ -71,12 +71,13 @@ export const useSocketStore = defineStore('socket', () => {
           user.setID(data.id)
         }
       )
-      // socket.value?.on(
-      //   'list:user',
-      //   (userList: { id: number; name: string; connected: boolean }[]) => {
-      //     console.log('list user', userList)
-      //   }
-      // )
+      socket.value?.on(
+        'list:user',
+        (userList: { id: number; name: string; connected: boolean }[]) => {
+          console.log('list user', userList)
+          user.room.userList = userList
+        }
+      )
 
       socket.value?.on('list:room', (roomList: Room[]) => {
         rooms.setListRooms(roomList)

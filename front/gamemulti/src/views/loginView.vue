@@ -80,6 +80,7 @@ button{
   color: red;
   display: none;
 }
+
 #pseudo{
   width: 100%;
   font-size: 20px;
@@ -88,7 +89,7 @@ button{
   border-radius: 10px;
   background-color: var(--color-background);
   padding: 10px;
-  color: white;
+  color: var(--normalTextColor);
   text-align: center;
 }
 #pseudo:focus{

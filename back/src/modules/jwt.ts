@@ -12,5 +12,9 @@ export const generateToken = ( key: string): string => {
 };
 
 export const verifyToken = (token: string): Decoded => {
-  return jwt.verify(token, SECRET_KEY) as Decoded;
+  try {
+    return jwt.verify(token, SECRET_KEY) as Decoded;
+  } catch (e) {
+    return false as unknown as Decoded;
+  }
 };

@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 import { gameStore } from '@store/game';
-import { computed, onMounted} from 'vue';
+import { computed} from 'vue';
 import timerCircle from '@/components/gameRoom/divers/timerCircle.vue';
 import skipRegle from './regle/skipRegle.vue';
 const game=gameStore()

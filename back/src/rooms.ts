@@ -21,7 +21,11 @@ interface Room{
       }
     },
     getRoom(id: number) {
-      const room = this.listOfRooms.find((room) => room.id === id);
+      console.log('getRoom',id,typeof id)
+      const room = this.listOfRooms.find((room) =>{
+        return room.id === id
+        });
+        console.log('try to get room',room)
       return room ? room : null;
     },
     getAllParsedRooms() {

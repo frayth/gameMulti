@@ -1,6 +1,6 @@
 import Player from "./player";
 import questions from "../assets/question.json";
-import type { QuestionModel } from "../models/game.model";
+import type { QuestionModel,historyModel } from "../models/game.model";
 import bonus from "../assets/bonus.json";
 import prand from 'pure-rand';
 import { GameRoom } from "./GameRoom";
@@ -10,10 +10,12 @@ export default class Game {
   parent:GameRoom;
   players: GamePlayer[];
   question: Question;
+  history:historyModel[];
   skippedRulePlayers: Player[];
   event: NodeJS.Timeout | null;
   askedQuestion: number[];
   nextEvent: number;
+  questionAskedAt: number|null;
   phaseGame: "intro" | "presentation" | "question" | "score" | 'end';
   optionsGame:{
     maxPoint:number
@@ -27,6 +29,8 @@ export default class Game {
     this.nextEvent = Date.now();
     this.askedQuestion = [];
     this.phaseGame = "intro";
+    this.questionAskedAt=null;
+    this.history=[];
     this.optionsGame={
       maxPoint:bonus.defautScore
     }
@@ -102,7 +106,20 @@ export default class Game {
       };
     });
   }
+  private saveHistory(){
+    this.history.push({
+      id:this.question.question.id,
+      historyUser:this.players.map((el)=>({
+        id:el.player.id!,
+        bonus:el.player.bonus,
+        response:el.player.response.response,
+        timer:el.player.response.time?this.questionAskedAt!-el.player.response.time:null
+      }))
+    })
+    console.log('history',this.history.map((el)=>el.historyUser))
+  }
   private async calculateScore() {
+    
     await new Promise((resolve) => {
       const playeSortedByResponseTime = this.players
         .filter((el) => el.player.response.time !== null)
@@ -126,8 +143,8 @@ export default class Game {
         }else{
           el.addBonus("incorrect", bonus.noResponse);
         }
-
       });
+      this.saveHistory();
       resolve(null);
     });
     this.sendScore();   
@@ -150,6 +167,7 @@ export default class Game {
     this.players.forEach((el) => {
       el.player.socket?.emit("question:game", this.getInfoGame());
     });
+    this.questionAskedAt=Date.now();
   }
   private endGame(){
     this.phaseGame='end';
@@ -318,7 +336,7 @@ class Question {
   constructor(
     category: string | null = null,
     difficulty: number | null = null,
-    alreadyUsed: number[] = []
+    alreadyUsed: number[] = [],
   ) {
     this.question = this.getQuestion(category, difficulty, alreadyUsed);
   }

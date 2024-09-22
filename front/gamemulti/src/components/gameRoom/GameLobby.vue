@@ -17,7 +17,12 @@
         <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>
         <scoreBoard></scoreBoard>
       </div>
-      <div v-else class="openScore">
+      <div v-else 
+      :class="{
+        openScore:true,
+        normalPosition:game.phaseGame!=='end',
+        endPosition:game.phaseGame==='end'
+      }" >
         <trophy @click="scoreGameIsOpen = true" :size="50"></trophy>
       </div>
     </Transition>
@@ -57,11 +62,20 @@ const scoreGameIsOpen = ref(false)
   border-left:1px solid var(--normalTextColor);
   pointer-events: all;
 }
+.normalPosition{
+  top: 50%;
+  right: 5px;
+}
+.endPosition{
+  top: 90px;
+  right: 10px;
+}
 .container-lobby{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap:30px
 }
 #scoreboard .close {
   position: absolute;
@@ -88,8 +102,6 @@ const scoreGameIsOpen = ref(false)
 }
 .openScore {
   position: absolute;
-  top: 50%;
-  right: 5px;
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0px 0px 5px 1px var(--normalTextColor);
@@ -119,7 +131,7 @@ const scoreGameIsOpen = ref(false)
   #scoreboard {
     width: 100%;
   }
-  .openScore {
+  .normalPosition {
     top: auto;
     bottom: 25px !important;
   }
