@@ -22,6 +22,7 @@
           </div>
           <div class="wrapper-bonus">
             <div class="bonus-element" v-for="(bonus,k) in question.response?.bonus" :key="`bon${k}`">
+              <p>{{bonus.type}}</p>
               <bonus v-if="bonus.value!==0" :bonus="bonus.type"/>
               <p class="bonus-value" v-if="bonus.value!==0">{{bonus.value}}</p>
             </div>

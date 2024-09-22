@@ -23,7 +23,6 @@ import Fast from '@/assets/SVG/FastSvg.vue'
 import Sad from '@/assets/SVG/SadSvg.vue'
 import Happy from '@/assets/SVG/HappySvg.vue'
 import { onMounted } from 'vue';
-import { on } from 'events';
 const props=defineProps({
     bonus: {
       type:String as ()=>'faster' | 'correct' | 'incorrect' | 'streak',
