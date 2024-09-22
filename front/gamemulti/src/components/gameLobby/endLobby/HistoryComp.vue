@@ -21,10 +21,24 @@
                 </div>
           </div>
           <div class="wrapper-bonus">
-            <div class="bonus-element" v-for="(bonus,k) in question.response?.bonus" :key="`bon${k}`">
-              <p>{{bonus.type}}</p>
-              <bonus v-if="bonus.value!==0" :bonus="bonus.type"/>
-              <p class="bonus-value" v-if="bonus.value!==0">{{bonus.value}}</p>
+            <div class="bonus-element" v-for="(bonus,k) in question.response?.bonus.filter(el=>el.value!==0)" :key="`bon${k}`">
+              <div>
+                <div v-if="bonus.type==='faster'">
+                  <Fast fill="var(--main-green)" :size="30" />
+                </div>
+                <div v-else-if="bonus.type==='correct'">
+                  <Happy fill="var(--main-green)" :size="30" />
+                </div>
+                <div v-else-if="bonus.type==='incorrect'">
+                  <Sad fill="var(--main-red)" :size="30" />
+                </div>
+                <div v-else-if="bonus.type==='streak'">
+                  <BullEyes fill="var(--main-green)" :size="30"/>
+                </div>
+                <div v-else>unknow</div>
+            
+              </div>
+              <p class="bonus-value">{{bonus.value}}</p>
             </div>
           </div>
           </div>
@@ -38,16 +52,21 @@
 </template>
 
 <script setup lang="ts">
+import BullEyes from '@/assets/SVG/BullEyes.vue'
+import Fast from '@/assets/SVG/FastSvg.vue'
+import Sad from '@/assets/SVG/SadSvg.vue'
+import Happy from '@/assets/SVG/HappySvg.vue'
 import type {History} from '@/models/room.model';
 import { userStore } from '@store/user';
 import {computed, defineProps,ref, useTemplateRef} from 'vue';
-import bonus from '../../UI/bonusShow.vue'
+
   const props=defineProps({
     history: {
       type:Object as ()=>History[],
       required:true
     }
   })
+
   const title=useTemplateRef('title')
   const user=userStore()
   const userList=ref([user.room.userList.find(u=>u.id===user.id),...user.room.userList.filter(u=>u.id!==user.id)])

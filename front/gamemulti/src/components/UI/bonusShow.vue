@@ -22,20 +22,17 @@ import BullEyes from '@/assets/SVG/BullEyes.vue'
 import Fast from '@/assets/SVG/FastSvg.vue'
 import Sad from '@/assets/SVG/SadSvg.vue'
 import Happy from '@/assets/SVG/HappySvg.vue'
-import { onMounted } from 'vue';
-const props=defineProps({
+defineProps({
     bonus: {
       type:String as ()=>'faster' | 'correct' | 'incorrect' | 'streak',
-      required:true
+      default:'faster'
     },
     size:{
       type:Number,
       default:30
     }
   })
-onMounted(()=>{
-  console.log(props.bonus)
-})
+
 </script>
 
 <style scoped>
