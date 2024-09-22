@@ -12,6 +12,7 @@
     <div v-else-if="bonus==='streak'">
       <BullEyes fill="var(--main-green)" :size/>
     </div>
+    <div v-else>unknow</div>
 
   </div>
 </template>
@@ -21,7 +22,9 @@ import BullEyes from '@/assets/SVG/BullEyes.vue'
 import Fast from '@/assets/SVG/FastSvg.vue'
 import Sad from '@/assets/SVG/SadSvg.vue'
 import Happy from '@/assets/SVG/HappySvg.vue'
-  defineProps({
+import { onMounted } from 'vue';
+import { on } from 'events';
+const props=defineProps({
     bonus: {
       type:String as ()=>'faster' | 'correct' | 'incorrect' | 'streak',
       required:true
@@ -31,6 +34,9 @@ import Happy from '@/assets/SVG/HappySvg.vue'
       default:30
     }
   })
+onMounted(()=>{
+  console.log(props.bonus)
+})
 </script>
 
 <style scoped>

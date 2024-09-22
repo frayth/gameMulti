@@ -62,14 +62,15 @@ import bonus from '../../UI/bonusShow.vue'
  const currentIndex=ref(0)
  function changeIndex(value=true){
     if(value){
+      if(currentIndex.value===userList.value.length-1) return
       title.value?.classList.remove('animateRight')
       title.value?.classList.add('animateleft')
-
-      currentIndex.value=currentIndex.value===userList.value.length-1?currentIndex.value:currentIndex.value+=1
+      currentIndex.value+=1
     }else{
+      if(currentIndex.value===0) return
       title.value?.classList.remove('animateleft')
       title.value?.classList.add('animateRight')
-      currentIndex.value=currentIndex.value===0?currentIndex.value:currentIndex.value-=1
+      currentIndex.value-=1
     }
  }
 </script>
