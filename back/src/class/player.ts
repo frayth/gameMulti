@@ -34,6 +34,13 @@ export default class Player {
       console.log('[setRoom]','same room')
       if (this.room.room instanceof GameRoom && this.room.room?.game !== null) {
         this.room.room?.game.changeSockectPlayer(this);
+        this.socket.emit("list:user",this.room.room.players.map((el) => {
+          return {
+            id: el.id,
+            name: el.name,
+            connected: el.socket.connected,
+          }
+        }));
       }else{
         room.sendInfo({status:'connect',name:this.name});
       }

@@ -65,8 +65,9 @@ router.get('/history',historyRequestValidation, function(req:Request<{},{},{},Qu
         question:question.question,
         usersInfo:turn.historyUser.map((user)=>{
           return {
-            userResponse:question.answers.find((a)=>a.id===user.response)?.value || "Answer not found",
+            userResponse:question.answers.find((a)=>a.id===user.response)?.value || "Passe",
             answerIsCorrect:user.response===question.response,
+            bonus:user.bonus,
             user:user.id
           }
         })

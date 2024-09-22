@@ -17,5 +17,9 @@ export interface historyModel{
     id:number,
     response:number|null,
     timer:number|null,
+    bonus:{
+      type: "faster" | "correct" | "incorrect" | "streak";
+      value: number;
+  }[]
   }[]
 }

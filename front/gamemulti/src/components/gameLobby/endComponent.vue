@@ -31,6 +31,7 @@ onMounted(()=>{
   justify-content: center;
   align-items: center;
   padding: 5px;
+  flex-direction: column;
 }
 .podium{
   width: fit-content;

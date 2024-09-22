@@ -111,6 +111,7 @@ export default class Game {
       id:this.question.question.id,
       historyUser:this.players.map((el)=>({
         id:el.player.id!,
+        bonus:el.player.bonus,
         response:el.player.response.response,
         timer:el.player.response.time?this.questionAskedAt!-el.player.response.time:null
       }))
@@ -118,7 +119,7 @@ export default class Game {
     console.log('history',this.history.map((el)=>el.historyUser))
   }
   private async calculateScore() {
-    this.saveHistory();
+    
     await new Promise((resolve) => {
       const playeSortedByResponseTime = this.players
         .filter((el) => el.player.response.time !== null)
@@ -142,8 +143,8 @@ export default class Game {
         }else{
           el.addBonus("incorrect", bonus.noResponse);
         }
-
       });
+      this.saveHistory();
       resolve(null);
     });
     this.sendScore();   
