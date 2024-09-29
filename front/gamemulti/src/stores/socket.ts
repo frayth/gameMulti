@@ -1,20 +1,20 @@
 import { defineStore } from 'pinia'
 import { ref, watch, type Ref } from 'vue'
 //const URL = 'http://109.24.163.36:5003' //http://109.24.163.36:5003 https://quizz.api.laurisceresoli.fr
-const URL='https://quizz.api.laurisceresoli.fr'
+const URL = 'http://109.24.163.36:5003'
 import { Socket, io } from 'socket.io-client'
 import type { DefaultEventsMap } from 'node_modules/socket.io/dist/typed-events'
 import { gameStore } from './game'
 import type Room from '@/models/room.model'
 import { userStore } from './user'
 import { listRooms } from './Rooms'
-import type {InfoGameRoom } from '@/models/room.model'
+import type { InfoGameRoom } from '@/models/room.model'
 import router from '@/router'
 export const useSocketStore = defineStore('socket', () => {
   const connected = ref(false)
   const firstConnectDone = ref(false)
   const user = userStore()
-  const game=gameStore()
+  const game = gameStore()
   const rooms = listRooms()
   const socket: Ref<Socket<DefaultEventsMap, DefaultEventsMap> | null> = ref(null)
   watch(firstConnectDone, (newValue) => {
@@ -36,9 +36,9 @@ export const useSocketStore = defineStore('socket', () => {
     socket.value.on('connect', () => {
       connected.value = true
       socket.value?.on('token', (token): void => {
-       // console.log('token', token)
+        // console.log('token', token)
         user.setToken(token)
-       // console.log('token user after save', user.token)
+        // console.log('token user after save', user.token)
         firstConnectDone.value = true
       })
 
@@ -87,11 +87,12 @@ export const useSocketStore = defineStore('socket', () => {
       })
 
       socket.value?.on('error', (error: { message: string }): void => {
-        console.error(error.message)
+        //console.error(error.message)
         user.logout()
         socket.value?.disconnect()
       })
-      socket.value?.on('infoGameRoom:room', (data: InfoGameRoom) =>{
+
+      socket.value?.on('infoGameRoom:room', (data: InfoGameRoom) => {
         game.setInfoRoom(data)
       })
       socket.value?.on(
@@ -108,7 +109,63 @@ export const useSocketStore = defineStore('socket', () => {
           user.room.userList = data.users
         }
       )
-
+      socket.value?.on(
+        'question:game',
+        (data: {
+          question: string
+          answers: { id: number; value: string }[]
+          nextEvent: number
+        }) => {
+          console.log('question:game', data)
+          game.setQuestion(data)
+        }
+      )
+      socket.value?.on(
+        'presentation:game',
+        (data: {
+          phaseGame: 'intro' | 'presentation' | 'question' | 'score'
+          category: string
+          difficulty: number
+        }) => {
+          console.log('presentation:game', data)
+          game.setPresentation(data)
+        }
+      )
+      socket.value?.on(
+        'score:game',
+        (data: {
+          playersStats: {
+            rank: null | number
+            id: number
+            name: string
+            score: number
+            streak: number
+            oldScore: number
+            response: {
+              response: number | null
+              time: number | null
+            }
+            bonus: {
+              type: 'faster' | 'correct' | 'incorrect' | 'streak'
+              value: number
+            }[]
+          }[]
+          correctAnswer: string
+        }) => {
+          console.log('score:game', data)
+          game.setScore(data)
+        }
+      )
+      socket.value?.on('cancelCount:timer', () => {
+        game.lauchGame(false)
+      })
+      socket.value?.on('startCount:timer', () => {
+        game.lauchGame(true)
+      })
+      socket.value?.on('update:response', (data: number[]) => {
+        console.log('update:response', data)
+        game.updateResponse(data)
+      })
       socket.value?.on('disconnect', (reason): void => {
         if (!(reason === 'ping timeout') && !(reason === 'io client disconnect')) {
           //console.log('disconnect', reason)
