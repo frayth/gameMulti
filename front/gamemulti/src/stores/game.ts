@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { reactive, ref, type Ref } from 'vue'
+import { ref, type Ref } from 'vue'
 import type { GameStatus, InfoGameRoom } from '@/models/room.model'
 import { useSocketStore } from './socket'
 import type Player from '@/models/player.model'
@@ -25,7 +25,7 @@ export const gameStore = defineStore('game', () => {
       this.value = data.response
     }
   })
-  const gameStat = reactive({
+  const gameStat = ref({
     players: [] as listStatPlayer[],
     initPlayers(players: Player[]): void {
       this.players = players.map((player) => ({
@@ -55,7 +55,7 @@ export const gameStore = defineStore('game', () => {
     }
   })
 
-  const gameQuestions = reactive({
+  const gameQuestions = ref({
     question: '' as string,
     answers: [] as { id: number; value: string }[],
     difficulty: 0 as number,
@@ -63,7 +63,7 @@ export const gameStore = defineStore('game', () => {
     nextEvent: 0 as number,
     correctAnswer: '' as string
   })
-  const waitLobbyProperties = reactive({
+  const waitLobbyProperties = ref({
     lauchGame: false as boolean,
     countDown: 5 as number,
     startCount() {
@@ -78,7 +78,7 @@ export const gameStore = defineStore('game', () => {
       this.lauchGame = false
     }
   })
-  const InfoCurrentQuestion = reactive({
+  const InfoCurrentQuestion = ref({
     currentResponse: [] as number[],
     personnalResponse: null as number | null,
     userHaveRespond() {
@@ -89,40 +89,51 @@ export const gameStore = defineStore('game', () => {
       this.personnalResponse = null
     }
   })
-  socket.socket?.on('infoGameRoom:room', (data: InfoGameRoom) => {
+
+  function setInfoRoom (data: InfoGameRoom){
     setTimeout(() => {
       console.log(data)
-
       status.value = data.status
     }, 10)
-    gameQuestions.nextEvent = data.game?.nextEvent || Date.now()
     phaseGame.value = data.game?.phaseGame || 'intro'
-    gameStat.players = data.game?.gameStats || []
+    gameStat.value.players = data.game?.gameStats || []
     playersHasSkipRule.value = data.game?.skipRule || []
     players.value = data.players
     owner.value = data.owner
-    gameQuestions.question = data.game?.question || ''
-    gameQuestions.answers = data.game?.answers || []
-    gameQuestions.difficulty = data.game?.difficulty || 0
-    gameQuestions.category = data.game?.category || ''
-    InfoCurrentQuestion.currentResponse = data.game?.userResponse || []
-    gameStat.affectRankForPlayer()
-  })
+    gameQuestions.value.question = data.game?.question || ''
+    gameQuestions.value.answers = data.game?.answers || []
+    gameQuestions.value.difficulty = data.game?.difficulty || 0
+    gameQuestions.value.category = data.game?.category || ''
+    InfoCurrentQuestion.value.currentResponse = data.game?.userResponse || []
+    gameStat.value.affectRankForPlayer()
+  }
 
+  function resetGame() {
+    status.value = 'waiting'
+    gameQuestions.value.question = ''
+    gameQuestions.value.answers = []
+    gameQuestions.value.difficulty = 0
+    gameQuestions.value.category = ''
+    gameQuestions.value.nextEvent = 0
+    gameQuestions.value.correctAnswer = ''
+    phaseGame.value = 'intro'
+    InfoCurrentQuestion.value.refresh()
+    waitLobbyProperties.value.init()
+  }
   socket.socket?.on('startCount:timer', () => {
-    waitLobbyProperties.lauchGame = true
+    waitLobbyProperties.value.lauchGame = true
   })
   socket.socket?.on('cancelCount:timer', () => {
-    waitLobbyProperties.lauchGame = false
+    waitLobbyProperties.value.lauchGame = false
   })
   socket.socket?.on(
     'question:game',
     (data: { question: string; answers: { id: number; value: string }[]; nextEvent: number }) => {
       console.log('question:game', data)
       phaseGame.value = 'question'
-      gameQuestions.question = data.question
-      gameQuestions.answers = shuffle(data.answers)
-      gameQuestions.nextEvent = data.nextEvent
+      gameQuestions.value.question = data.question
+      gameQuestions.value.answers = shuffle(data.answers)
+      gameQuestions.value.nextEvent = data.nextEvent
     }
   )
   socket.socket?.on(
@@ -134,15 +145,15 @@ export const gameStore = defineStore('game', () => {
     }) => {
       console.log('presentation:game', data)
       phaseGame.value = data.phaseGame
-      gameQuestions.category = data.category
-      gameQuestions.difficulty = data.difficulty
-      InfoCurrentQuestion.refresh()
+      gameQuestions.value.category = data.category
+      gameQuestions.value.difficulty = data.difficulty
+      InfoCurrentQuestion.value.refresh()
     }
   )
   socket.socket?.on('end:game', () => {
     console.log('end:game')
     phaseGame.value = 'end'
-    gameStat.affectRankForPlayer()
+    gameStat.value.affectRankForPlayer()
   })
 
   socket.socket?.on(
@@ -167,16 +178,16 @@ export const gameStore = defineStore('game', () => {
       correctAnswer: string
     }) => {
       console.log('score:game', data)
-      gameQuestions.correctAnswer = data.correctAnswer
-      gameStat.players = data.playersStats
-      gameStat.sortedPlayerByScore()
+      gameQuestions.value.correctAnswer = data.correctAnswer
+      gameStat.value.players = data.playersStats
+      gameStat.value.sortedPlayerByScore()
       phaseGame.value = 'score'
     }
   )
 
   socket.socket?.on('update:response', (data: number[]) => {
     console.log('update:response', data)
-    InfoCurrentQuestion.currentResponse = data
+    InfoCurrentQuestion.value.currentResponse = data
   })
   function skipRegle() {
     socket.socket?.emit('skipRegle:game')
@@ -185,9 +196,9 @@ export const gameStore = defineStore('game', () => {
     socket.socket?.emit('getInfoGame:room')
   }
   function sendResponse(response: number) {
-    if (InfoCurrentQuestion.userHaveRespond()) return
+    if (InfoCurrentQuestion.value.userHaveRespond()) return
 
-    InfoCurrentQuestion.personnalResponse = response
+    InfoCurrentQuestion.value.personnalResponse = response
     socket.socket?.emit('response:game', { response: response === -1 ? null : response })
   }
 
@@ -204,6 +215,8 @@ export const gameStore = defineStore('game', () => {
     gameStat,
     skipRegle,
     playersHasSkipRule,
-    gameHistory
+    gameHistory,
+    setInfoRoom,
+    resetGame
   }
 })

@@ -76,9 +76,10 @@ export const userStore = defineStore('user', () => {
   }
 
   function setRoom(newRoom: { id: number; name: string }): void {
+    console.log('setRoom', newRoom)
     room.id = newRoom.id
     room.name = newRoom.name
-    if (room.name === 'waitingRoom') {
+    if (room.name === 'waitingRoom' || room.name === '') {
       router.push({ name: 'waitingRoom' })
     } else {
       router.push({ name: 'room', params: { room: newRoom.name } })

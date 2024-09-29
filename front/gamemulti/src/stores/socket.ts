@@ -4,14 +4,17 @@ import { ref, watch, type Ref } from 'vue'
 const URL='https://quizz.api.laurisceresoli.fr'
 import { Socket, io } from 'socket.io-client'
 import type { DefaultEventsMap } from 'node_modules/socket.io/dist/typed-events'
+import { gameStore } from './game'
 import type Room from '@/models/room.model'
 import { userStore } from './user'
 import { listRooms } from './Rooms'
+import type {InfoGameRoom } from '@/models/room.model'
 import router from '@/router'
 export const useSocketStore = defineStore('socket', () => {
   const connected = ref(false)
   const firstConnectDone = ref(false)
   const user = userStore()
+  const game=gameStore()
   const rooms = listRooms()
   const socket: Ref<Socket<DefaultEventsMap, DefaultEventsMap> | null> = ref(null)
   watch(firstConnectDone, (newValue) => {
@@ -19,7 +22,7 @@ export const useSocketStore = defineStore('socket', () => {
       //console.log('connect')
       socket.value?.disconnect()
       connect()
-      router.push('/')
+      router.push({ name: 'waitingRoom' })
     }
   })
 
@@ -88,7 +91,9 @@ export const useSocketStore = defineStore('socket', () => {
         user.logout()
         socket.value?.disconnect()
       })
-
+      socket.value?.on('infoGameRoom:room', (data: InfoGameRoom) =>{
+        game.setInfoRoom(data)
+      })
       socket.value?.on(
         'info:room',
         (data: {

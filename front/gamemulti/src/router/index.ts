@@ -21,9 +21,6 @@ const router = createRouter({
       path: '/room/waitingRoom',
       name: 'waitingRoom',
       component: waitingRoom,
-      beforeEnter: (to, from, next) => {
-        next()
-      }
     },
     {
       path: '/room/:room',

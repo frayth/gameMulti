@@ -18,6 +18,9 @@
 <script setup lang="ts">
 import { userStore } from '@/stores/user';
 import { ref } from 'vue';
+import { gameStore } from '@store/game';
+const game = gameStore();
+game.resetGame();
 const userStorage= userStore();
 const speudo = ref('');
 const error=ref(false)
@@ -30,7 +33,6 @@ function testLength(){
 }
 async function login(){
   const response= await userStorage.login(speudo.value,userStorage.token)
-  console.log(response,'response')
   if(!response){
     error.value=true
   }
