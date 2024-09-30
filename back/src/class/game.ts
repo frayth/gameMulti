@@ -72,10 +72,14 @@ export default class Game {
     }
   }
 
-  LauchIntro() {
-    this.createEvent(() => {
-      this.changePhaseGame();
-    }, options.timeForRule);
+   async LauchIntro() {
+    return new Promise((resolve) => {
+      console.log("LauchIntro",options.timeForRule);
+      this.createEvent(() => {
+        this.changePhaseGame();
+      }, options.timeForRule);
+      resolve(null);
+    });
   }
   private sendScore() {
     console.log(
@@ -259,7 +263,7 @@ export default class Game {
 
   createEvent(callback: () => void, time: number) {
     this.clearEvent();
-    console.log("createEvent", this.nextEvent);
+    console.log("createEvent", time,Date.now(),time+Date.now(),new Date());
     this.nextEvent = Date.now() + time;
     this.event = setTimeout(callback, time);
   }

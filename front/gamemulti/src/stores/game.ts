@@ -103,7 +103,8 @@ export const gameStore = defineStore('game', () => {
     gameQuestions.value.question = data.game?.question || ''
     gameQuestions.value.answers = data.game?.answers || []
     gameQuestions.value.difficulty = data.game?.difficulty || 0
-    gameQuestions.value.category = data.game?.category || ''
+    gameQuestions.value.category = data.game?.category || '',
+    gameQuestions.value.nextEvent = data.game?.nextEvent || 0
     InfoCurrentQuestion.value.currentResponse = data.game?.userResponse || []
     gameStat.value.affectRankForPlayer()
   }

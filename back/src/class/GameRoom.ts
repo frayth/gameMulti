@@ -79,10 +79,10 @@ export class GameRoom extends Room {
       game: this.game ? this.game.getInfoGame() : null,
     });
   }
-  startGame() {
+  async startGame() {
     try {
       this.game = new Game(this.players,this);
-      this.game.LauchIntro();
+      await this.game.LauchIntro();
       this.changeStatus("playing");
       
     } catch (e) {
