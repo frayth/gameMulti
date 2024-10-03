@@ -43,7 +43,7 @@ export interface History {
   usersInfo: {
     userResponse: string
     bonus: {
-      type: 'faster' | 'correct' | 'incorrect' | 'streak'
+      type: 'faster' | 'correct' | 'incorrect' | 'streak' |'fasterBad'
       value: number
     }[]
     answerIsCorrect: boolean

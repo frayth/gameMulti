@@ -3,6 +3,9 @@
     <div v-if="bonus==='faster'">
       <Fast fill="var(--main-green)" :size />
     </div>
+    <div v-else-if="bonus==='fasterBad'">
+      <Fast fill="var(--main-red)" :size />
+    </div>
     <div v-else-if="bonus==='correct'">
       <Happy fill="var(--main-green)" :size />
     </div>
@@ -24,7 +27,7 @@ import Sad from '@/assets/SVG/SadSvg.vue'
 import Happy from '@/assets/SVG/HappySvg.vue'
 defineProps({
     bonus: {
-      type:String as ()=>'faster' | 'correct' | 'incorrect' | 'streak',
+      type:String as ()=>'faster' | 'correct' | 'incorrect' | 'streak' |'fasterBad',
       default:'faster'
     },
     size:{

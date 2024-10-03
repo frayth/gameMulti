@@ -11,6 +11,7 @@
               <SAD :size="40" v-else-if="el.name==='incorrect'" @mouseenter="startTimer('Mauvaise réponse')" @mouseleave="cancelTimer"/>
               <FAST :size="40" v-else-if="el.name==='faster'" @mouseenter="startTimer('Le plus rapide')" @mouseleave="cancelTimer"/>
               <bulleye :size="40" v-else-if="el.name==='streak'" @mouseenter="startTimer('Streak')" @mouseleave="cancelTimer"/>
+              <FAST :size="40" v-else-if="el.name==='fasterBad'" fill="var(--main-red)" @mouseenter="startTimer('Le plus rapide mais faux')" @mouseleave="cancelTimer"/>
               <div v-else>{{el.name}}</div>
             </div>
             <div :class="{value:true,positif:el.value>0,negatif:el.value<0}" v-if="el.posY>= 0" :style="{top:`${el.posY}%`,opacity:`${el.posY>=30?'100':el.posY}%`}">

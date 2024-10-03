@@ -26,6 +26,9 @@
                 <div v-if="bonus.type==='faster'">
                   <Fast fill="var(--main-green)" :size="30" />
                 </div>
+                <div v-else-if="bonus.type==='fasterBad'">
+                  <Fast fill="var(--main-red)" :size="30" />
+                </div>
                 <div v-else-if="bonus.type==='correct'">
                   <Happy fill="var(--main-green)" :size="30" />
                 </div>

@@ -12,7 +12,7 @@ defineProps({
   },
   fill:{
     type: String,
-    default: 'red'
+    default: 'var(--main-red)'
   }
 })
 </script>

@@ -1,3 +1,4 @@
+
 import { defineStore } from 'pinia'
 import {ref } from 'vue'
 
@@ -6,7 +7,11 @@ import {ref } from 'vue'
 export const appliStore = defineStore('appli', () => {
   const isOnline = ref(true)
   const isMobile = ref()
-
+  const body=ref(document.querySelector('body'))
+  function getBodyWidth(){
+    if(body.value)return body.value.clientWidth
+    else return 0
+  }
   function checkIfMobile() {
     const userAgent = navigator.userAgent || navigator.vendor
 
@@ -33,6 +38,10 @@ export const appliStore = defineStore('appli', () => {
   window.addEventListener('online', () => {
     isOnline.value = true
   })
+  window.addEventListener('resize', () => {
+    body.value=document.querySelector('body')
+  })
 
-  return { isOnline,  isMobile,checkIfMobile }
+
+  return { isOnline,  isMobile,checkIfMobile,body,getBodyWidth }
 })

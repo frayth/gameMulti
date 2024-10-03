@@ -3,6 +3,7 @@
   "fasterResponse":2,
   "badResponse":-2,
   "numberOfStreakForBonus":3,
+  "fasterBadResponse":-2,
   "noResponse":0,
   "defautScore":100
 }

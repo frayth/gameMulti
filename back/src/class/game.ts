@@ -125,29 +125,48 @@ export default class Game {
   private async calculateScore() {
     
     await new Promise((resolve) => {
-      const playeSortedByResponseTime = this.players
+      let quickerPlayerFound=false;
+      let quickerPlayerWiyhFalseResponseFound=false;
+      const playerSortedByResponseTime = this.players
         .filter((el) => el.player.response.time !== null)
         .sort((a, b) => a.player.response.time! - b.player.response.time!);
-      console.log("playeSortedByResponseTime", playeSortedByResponseTime);
+      console.log("playeSortedByResponseTime", playerSortedByResponseTime);
       this.players.forEach((el) => {
         el.refreshBonus();
         el.player.oldScore = el.player.score;
       });
-      this.players.forEach((el) => {
-        if (el.player.response.response === this.question.question.response) {
-          
-          if (playeSortedByResponseTime[0].player.id === el.player.id) {
-            console.log("fasterResponse", el.player.name);
+      playerSortedByResponseTime.forEach((el) => {
+        if (el.player.response.response === this.question.question.response){
+          if(!quickerPlayerFound){
             el.addBonus("faster", bonus.fasterResponse);
+            quickerPlayerFound=true;
+            quickerPlayerWiyhFalseResponseFound=true;
           }
           el.addBonus("correct", bonus.goodResponse);
           el.addBonus("streak", Math.floor(el.player.streak / 3));
-        } else if (el.player.response.response !== null) {
-          el.addBonus("incorrect", bonus.badResponse);
         }else{
-          el.addBonus("incorrect", bonus.noResponse);
+          if(!quickerPlayerWiyhFalseResponseFound){
+            el.addBonus("fasterBad", bonus.fasterBadResponse);
+            quickerPlayerWiyhFalseResponseFound=true;
+          }
+          el.addBonus("incorrect", bonus.badResponse);
         }
       });
+      // this.players.forEach((el) => {
+      //   if (el.player.response.response === this.question.question.response) {
+          
+      //     if (playerSortedByResponseTime[0].player.id === el.player.id) {
+      //       console.log("fasterResponse", el.player.name);
+      //       el.addBonus("faster", bonus.fasterResponse);
+      //     }
+      //     el.addBonus("correct", bonus.goodResponse);
+      //     el.addBonus("streak", Math.floor(el.player.streak / 3));
+      //   } else if (el.player.response.response !== null) {
+      //     el.addBonus("incorrect", bonus.badResponse);
+      //   }else{
+      //     el.addBonus("incorrect", bonus.noResponse);
+      //   }
+      // });
       this.saveHistory();
       resolve(null);
     });
@@ -279,7 +298,7 @@ class GamePlayer {
     streak: number;
     oldScore: number;
     bonus: {
-      type: "faster" | "correct" | "incorrect" | "streak";
+      type: "faster" | "correct" | "incorrect" | "streak" |"fasterBad";
       value: number;
     }[];
   };
@@ -311,7 +330,7 @@ class GamePlayer {
     };
   }
 
-  addBonus(type: "faster" | "correct" | "incorrect" | "streak", value: number) {
+  addBonus(type: "faster" | "correct" | "incorrect" | "streak" | "fasterBad", value: number) {
     this.player.bonus.push({ type, value });
     switch (type) {
       case "correct":
@@ -319,6 +338,7 @@ class GamePlayer {
         this.player.score += value;
         break;
       case "incorrect":
+      case "fasterBad":
         this.player.streak = 0;
         this.player.score += value;
         break;

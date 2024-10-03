@@ -11,7 +11,7 @@ export interface listStatPlayer{
   score:number
   streak:number
   bonus:{
-    type:'faster' | 'correct' | 'incorrect' | 'streak',
+    type:'faster' | 'correct' | 'incorrect' | 'streak' |'fasterBad',
     value:number
   }[],
   oldScore:number,

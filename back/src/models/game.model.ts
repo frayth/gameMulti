@@ -18,7 +18,7 @@ export interface historyModel{
     response:number|null,
     timer:number|null,
     bonus:{
-      type: "faster" | "correct" | "incorrect" | "streak";
+      type: "faster" | "correct" | "incorrect" | "streak" |"fasterBad";
       value: number;
   }[]
   }[]
