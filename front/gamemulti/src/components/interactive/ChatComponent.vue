@@ -46,12 +46,12 @@
         @keyup.enter="sendMessage"
         placeholder="type your message here..."
       />
-      <gear
+      <ActivePopUp :message="'Chat options'">
+        <gear
         class="option-chat"
-        @mouseenter="startPopUp('Chat options')"
-        @mouseleave="cancelPopUp"
         @click.prevent="optionPanelIsOpen = !optionPanelIsOpen"
       ></gear>
+      </ActivePopUp>
       <button @click="sendMessage" :class="`${!sendIsPossible ? 'disabled' : ''}`">Send</button>
     </div>
   </div>
@@ -63,7 +63,7 @@ import {RoomStore} from '@/stores/user'
 import { useSocketStore } from '../../stores/socket'
 import statut from '../UI/ConnexionStatut.vue'
 import gear from '../../assets/SVG/GearSvg.vue'
-import { usePopup } from '@/stores/popUp'
+import ActivePopUp from '../UI/ActivePopUp.vue'
 import optionModal from '../interactive/OptionChat.vue'
 import {userStore} from '@/stores/user'
 const roomStore=RoomStore()
@@ -71,7 +71,6 @@ const currentUser=userStore()
 export interface OptionChat {
   server: boolean
 }
-const appli = usePopup()
 defineProps({
   user: {
     type: String,
@@ -121,12 +120,7 @@ function sendMessage() {
   currentMessage.value = ''
   emitScroll()
 }
-function startPopUp(message: string) {
-  appli.startPopUpTimer(message)
-}
-function cancelPopUp() {
-  appli.cancelPopUpTimer()
-}
+
 </script>
 
 <style scoped>

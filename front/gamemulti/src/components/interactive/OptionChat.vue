@@ -5,18 +5,18 @@
     </div>
     <div class="option-chat-container">
       <input type="checkbox" id="server" name="server" v-model="optionsChat.server"/>
-      <label for="server" @mouseenter="appli.startPopUpTimer('active ou supprime les messages d\'état du serveur')"  @mouseleave="appli.cancelPopUpTimer">Afficher les messages serveur</label>
+      <ActivePopUp :message="'active ou supprime les messages d\'état du serveur'">
+        <label for="server">Afficher les messages serveur</label>
+      </ActivePopUp>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
-import { usePopup } from '@/stores/popUp';
+import ActivePopUp from '../UI/ActivePopUp.vue';
 import type { OptionChat } from './ChatComponent.vue'
 import { defineModel, nextTick, onBeforeUnmount } from 'vue'
 const optionsChat=defineModel<OptionChat>() as unknown as OptionChat
-const appli = usePopup()
 const emit=defineEmits({
   close:null
 })

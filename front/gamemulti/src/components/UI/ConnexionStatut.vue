@@ -1,13 +1,13 @@
 <template>
-  <div class="status-container" @mouseenter="startTimer" @mouseleave="cancelTimer">
-
-  </div>
+  <ActivePopUp :message="statusConnection?'En ligne':'Hors ligne'">
+    <div class="status-container">
+    </div>
+  </ActivePopUp>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { usePopup } from '@/stores/popUp';
-const appli = usePopup()
+import ActivePopUp from './ActivePopUp.vue';
  const props= defineProps({
     statusConnection:{
       type:Boolean,
@@ -19,12 +19,6 @@ const appli = usePopup()
       default:12
     }
   })
-  function startTimer(){
-    appli.startPopUpTimer(props.statusConnection?'En ligne':'Hors ligne')
-  }
-  function cancelTimer(){
-    appli.cancelPopUpTimer()
-  }
   const statusColor=computed(()=>{
     return props.statusConnection?'#4c9e4c':'grey'
   })

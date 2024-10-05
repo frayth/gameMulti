@@ -7,11 +7,21 @@
         <div class="bonus" v-for="el in bonusToShow" :key="el.name">
           <div class="bonus-cont">
             <div>
-              <HAPPY :size="40" v-if="el.name==='correct'" @mouseenter="startTimer('Bonne réponse')" @mouseleave="cancelTimer" />
-              <SAD :size="40" v-else-if="el.name==='incorrect'" @mouseenter="startTimer('Mauvaise réponse')" @mouseleave="cancelTimer"/>
-              <FAST :size="40" v-else-if="el.name==='faster'" @mouseenter="startTimer('Le plus rapide')" @mouseleave="cancelTimer"/>
-              <bulleye :size="40" v-else-if="el.name==='streak'" @mouseenter="startTimer('Streak')" @mouseleave="cancelTimer"/>
-              <FAST :size="40" v-else-if="el.name==='fasterBad'" fill="var(--main-red)" @mouseenter="startTimer('Le plus rapide mais faux')" @mouseleave="cancelTimer"/>
+              <ActivePopUp :message="'Bonne réponse'"  v-if="el.name==='correct'">
+                <HAPPY :size="40"/>
+              </ActivePopUp>
+              <ActivePopUp v-else-if="el.name==='incorrect'" message="Mauvaise réponse">
+                <SAD :size="40"/>
+              </ActivePopUp>
+              <ActivePopUp v-else-if="el.name==='faster'" message="Le plus rapide">
+                <FAST :size="40"/>
+              </ActivePopUp>
+              <ActivePopUp v-else-if="el.name==='streak'" message="Streak">
+                <bulleye :size="40"/>
+              </ActivePopUp>
+              <ActivePopUp v-else-if="el.name==='fasterBad'" message="Le plus rapide mais faux">
+                <FAST :size="40" fill="var(--main-red)"/>
+              </ActivePopUp>
               <div v-else>{{el.name}}</div>
             </div>
             <div :class="{value:true,positif:el.value>0,negatif:el.value<0}" v-if="el.posY>= 0" :style="{top:`${el.posY}%`,opacity:`${el.posY>=30?'100':el.posY}%`}">
@@ -26,18 +36,14 @@
 </template>
 
 <script setup lang="ts">
+import ActivePopUp from '../UI/ActivePopUp.vue'
 import { ref,reactive, onUnmounted } from 'vue'
 import SAD from '@/assets/SVG/SadSvg.vue'
 import HAPPY from '@/assets/SVG/HappySvg.vue'
 import FAST from '@/assets/SVG/FastSvg.vue'
 import bulleye from '@/assets/SVG/BullEyes.vue'
-import { usePopup } from '@store/popUp'
 import {audioStore} from '@/stores/audio'
 const audio=audioStore()
-onUnmounted(() => {
-  cancelTimer()
-})
-const popup=usePopup()
 interface Bonus{
   type: string;
   value: number;
@@ -61,12 +67,7 @@ const props = defineProps({
   }
   
 })
-function startTimer(value:string){
-  popup.startPopUpTimer(value)
-}
-function cancelTimer(){
-  popup.cancelPopUpTimer()
-}
+
 const tempBonus =ref( props.bonus.map((el) => {
   return {
     name: el.type,

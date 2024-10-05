@@ -6,6 +6,7 @@ import { userStore } from './stores/user'
 import { useSocketStore } from './stores/socket'
 import { appliStore } from './stores/appli'
 import bandeau from './components/disconnectBanderolle.vue'
+import ActivePopUp from './components/UI/ActivePopUp.vue'
 import popUp from './components/interactive/PopUp.vue'
 import router from './router/index'
 import logOut from '@/assets/SVG/logOut.vue'
@@ -25,12 +26,7 @@ function ping() {
 window.addEventListener('popstate', function () {
   router.go(0)
 })
-function startTimer(){
-  popupStore.startPopUpTimer("Déconnexion")
-}
-function cancelTimer(){
-  popupStore.cancelPopUpTimer()
-}
+
 </script>
 
 <template>
@@ -40,7 +36,10 @@ function cancelTimer(){
   <header>
     <p @click="ping">Quizz game</p>
     <div class="logout">
-      <logOut  size="40" v-if="user.isConnect" @mouseenter="startTimer" @mouseleave="cancelTimer" @click="user.logout"/>
+      <ActivePopUp :message="'Déconnexion'"  v-if="user.isConnect">
+        <logOut  size="40" :action="user.logout" @click="user.logout"/>
+      </ActivePopUp>
+      
     </div>
   </header>
   <RouterView class="view" />

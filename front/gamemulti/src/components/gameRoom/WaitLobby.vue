@@ -7,7 +7,9 @@
         :key="player.id"
       >
         <div v-if="isOwner(player.id)" class="owner">
-          <BadgeOwner fill="white" @mouseenter="startTimer" @mouseleave="cancelTimer" />
+          <ActivePopUp :message="'Leader'">
+            <BadgeOwner fill="white"/>
+          </ActivePopUp>
         </div>
         <div :class="`wait-status`">
           <ConnexionStatut :statusConnection="player.connected" :size="12" />
@@ -58,13 +60,12 @@ import type { panelErrorInfoRoom } from '@/models/room.model'
 import { computed, reactive, watch } from 'vue'
 import { gameStore } from '@store/game'
 import { userStore } from '@store/user'
-import { usePopup } from '@store/popUp'
+import ActivePopUp from '../UI/ActivePopUp.vue'
 import { useSocketStore } from '@store/socket'
 import BadgeOwner from '@/assets/SVG/BadgeOwner.vue'
 import ConnexionStatut from '../UI/ConnexionStatut.vue'
 import happyFace from '@/assets/SVG/happyFace.vue'
 import countDown from '@/components/gameRoom/divers/CountDown.vue'
-const popUp = usePopup()
 const panelError: panelErrorInfoRoom = reactive({
   error: false as boolean,
   message: '',
@@ -118,12 +119,6 @@ function handleStartGame() {
   } else {
     panelError.setError('Tous les joueurs ne sont pas prêt', true)
   }
-}
-function startTimer() {
- popUp.startPopUpTimer('Leader')
-}
-function cancelTimer() {
-  popUp.cancelPopUpTimer()
 }
 function lauchGame() {
   if(user.id===game.owner){
