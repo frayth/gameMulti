@@ -36,5 +36,19 @@
     width: v-bind(maxWidth);
     z-index: 1000;
     max-width:v-bind(maxWidth) ;
+    animation: popIn 0.3s ease-in-out;
+  }
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      top:calc(v-bind(mousePositiony) + 12px - 20px);
+      left: calc(v-bind(mousePositionx) + 12px - 50px );
+      transform: scale(0);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 </style>

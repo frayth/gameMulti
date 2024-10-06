@@ -13,14 +13,14 @@ class timeOutList {
     this.timeOutList = [];
   }
   public add(player:Player) {
+    if(this.timeOutList.find((el) => el.player.id === player.id)){
+      return;
+    }
+    
     if(player.room.room instanceof GameRoom){
       player.room.room?.sendInfoGame()
     }else{
       player.room.room?.sendInfo({status:'disconnect',name:player.name})
-    }
-    
-    if(this.timeOutList.find((el) => el.player.id === player.id)){
-      return;
     }
     this.timeOutList.push({
       player: player,

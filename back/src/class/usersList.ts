@@ -1,5 +1,5 @@
 import { Socket } from "socket.io";
-
+import { timeOutListUser } from "./timeOutList";
 import { generateKey } from "../modules/keyGenerator";
 import Player from "./player";
 import { generateToken } from "../modules/jwt";
@@ -70,4 +70,4 @@ export const usersList = new UsersList();
 //       timeOutListUser.add(user);
 //     }
 //   })
-// },1000);
+// },1000*60*10);

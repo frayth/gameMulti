@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
-import { ref, type Ref } from 'vue'
+import { ref, type Ref,watch } from 'vue'
 import type { GameStatus, InfoGameRoom } from '@/models/room.model'
 import { useSocketStore } from './socket'
+import { usePopup } from './popUp'
 import type Player from '@/models/player.model'
 import { userStore } from './user'
 import type { listStatPlayer } from '@/models/player.model'
@@ -9,9 +10,13 @@ import useFecth from '@/modules/fetch'
 import shuffle from '@/modules/shuffle'
 
 export const gameStore = defineStore('game', () => {
+  const popUp = usePopup()
   const user = userStore()
   const status: Ref<GameStatus> = ref('waiting')
   const phaseGame = ref<'intro' | 'presentation' | 'question' | 'score' | 'end'>('intro')
+  watch(phaseGame, () => {
+    popUp.popUp.show = false
+  })
   const players = ref<Player[]>([])
   const socket = useSocketStore()
   const owner = ref<number>(0)

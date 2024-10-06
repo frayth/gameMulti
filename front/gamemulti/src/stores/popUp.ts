@@ -25,7 +25,7 @@ export const usePopup = defineStore('popup', () => {
     html:null
   })
   window.addEventListener('mousemove', (e) => {
-    if(body.value && e.pageX+popUpMaxWidth>body.value.clientWidth){
+    if(body.value && e.pageX+popUpMaxWidth+15>body.value.clientWidth){
     mousePosition.value.x = e.pageX - popUpMaxWidth - 15
     }else{
       mousePosition.value.x = e.pageX

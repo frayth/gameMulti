@@ -8802,5 +8802,666 @@
     "response": 4,
     "descriptionResponse": "“homo homini lupus est” signifie L'homme est un loup pour l'homme"
   }
+  ,  {
+    "id": 260,
+    "question": "Si un espagnol vous parle de son gato, de quoi parle-t-il ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Son métier"
+      },
+      {
+        "id": 2,
+        "value": "Son gateau"
+      },
+      {
+        "id": 3,
+        "value": "Son père"
+      },
+      {
+        "id": 4,
+        "value": "Son chat"
+      },
+      {
+        "id": 5,
+        "value": "Son fils"
+      },
+      {
+        "id": 6,
+        "value": "Son vélo"
+      }
+    ],
+    "category": "Langues",
+    "difficulty": 2,
+    "response": 4,
+    "descriptionResponse": "Si un espagnol vous parle de son gato, il vous parle de son chat"
+  },  {
+    "id": 261,
+    "question": "Combien de temps dure la rotation complète de la Lune autour de la Terre ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "7 jours"
+      },
+      {
+        "id": 2,
+        "value": "14 jours"
+      },
+      {
+        "id": 3,
+        "value": "21 jours"
+      },
+      {
+        "id": 4,
+        "value": "28 jours"
+      },
+      {
+        "id": 5,
+        "value": "31 jours"
+      },
+      {
+        "id": 6,
+        "value": "35 jours"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "La rotation complète de la Lune autour de la Terre dure 28 jours."
+  },  {
+    "id": 262,
+    "question": "Comment écrit-on le chiffre 2 en allemand ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Zwei"
+      },
+      {
+        "id": 2,
+        "value": "Drei"
+      },
+      {
+        "id": 3,
+        "value": "Vier"
+      },
+      {
+        "id": 4,
+        "value": "Fünf"
+      },
+      {
+        "id": 5,
+        "value": "Sechs"
+      },
+      {
+        "id": 6,
+        "value": "Sieben"
+      }
+    ],
+    "category": "Langues",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Le chiffre 2 s'écrit \"Zwei\" en allemand."
+  },  {
+    "id": 263,
+    "question": "Comment catégorise-t-on la Chanson de Roland du XIe siècle ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Chanson à texte"
+      },
+      {
+        "id": 2,
+        "value": "Chanson de geste"
+      },
+      {
+        "id": 3,
+        "value": "Chanson d'amour"
+      },
+      {
+        "id": 4,
+        "value": "Chanson de guerre"
+      },
+      {
+        "id": 5,
+        "value": "Chanson de fête"
+      },
+      {
+        "id": 6,
+        "value": "Chanson de pirate"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 5,
+    "response": 2,
+    "descriptionResponse": "La Chanson de Roland du XIe siècle est catégorisée comme une Chanson de geste."
+  },  {
+    "id": 264,
+    "question": "Quel oiseau proche du corbeau porte le même nom que l'auteur de \"Cinna\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le choucas"
+      },
+      {
+        "id": 2,
+        "value": "Le geai"
+      },
+      {
+        "id": 3,
+        "value": "Le merle"
+      },
+      {
+        "id": 4,
+        "value": "Le corneille"
+      },
+      {
+        "id": 5,
+        "value": "Le pigeon"  
+      },
+      {
+        "id": 6,
+        "value": "Le moineau"
+      }
+    ],
+    "category": "Biologie",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "L'oiseau proche du corbeau qui porte le même nom que l'auteur de \"Cinna\" est la corneille."
+  },  {
+    "id": 265,
+    "question": "Combien d'années séparent la période des dinosaures et celle des Hommes sur la Terre ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "600 000 ans"
+      },
+      {
+        "id": 2,
+        "value": "6 millions d'années"
+      },
+      {
+        "id": 3,
+        "value": "60 millions d'années"
+      },
+      {
+        "id": 4,
+        "value": "600 millions d'années"
+      },
+      {
+        "id": 5,
+        "value": "6 milliards d'années"
+      },
+      {
+        "id": 6,
+        "value": "60 milliards d'années"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 4,
+    "response": 3,
+    "descriptionResponse": "La période des dinosaures et celle des Hommes sur la Terre sont séparées de 60 millions d'années."
+  },  {
+    "id": 266,
+    "question": "Quel artiste interprète le titre \"J'aime les filles\" en 1967 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Jacques Dutronc"
+      },
+      {
+        "id": 2,
+        "value": "Serge Gainsbourg"
+      },
+      {
+        "id": 3,
+        "value": "Johnny Hallyday"
+      },
+      {
+        "id": 4,
+        "value": "Françoise Hardy"
+      },
+      {
+        "id": 5,
+        "value": "Michel Polnareff"
+      },
+      {
+        "id": 6,
+        "value": "Claude François"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "En 1967, le titre \"J'aime les filles\" est interprété par Jacques Dutronc."
+  },  {
+    "id": 267,
+    "question": "Dans quel pays africain, le Kilimandjaro se trouve-t-il ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Kenya"
+      },
+      {
+        "id": 2,
+        "value": "Tanzanie"
+      },
+      {
+        "id": 3,
+        "value": "Ouganda"
+      },
+      {
+        "id": 4,
+        "value": "Rwanda"
+      },
+      {
+        "id": 5,
+        "value": "Burundi"
+      },
+      {
+        "id": 6,
+        "value": "Zambie"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 4,
+    "response": 2,
+    "descriptionResponse": "Le Kilimandjaro se trouve en Tanzanie."
+  },  {
+    "id": 268,
+    "question": "Dans quelle ville peut-on voir le Château des ducs de Bretagne ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Nantes"
+      },
+      {
+        "id": 2,
+        "value": "Rennes"
+      },
+      {
+        "id": 3,
+        "value": "Brest"
+      },
+      {
+        "id": 4,
+        "value": "Quimper"
+      },
+      {
+        "id": 5,
+        "value": "Vannes"
+      },
+      {
+        "id": 6,
+        "value": "Saint-Malo"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "Le Château des ducs de Bretagne se trouve à Nantes."
+  },  {
+    "id": 269,
+    "question": "Quel pays possède un drapeau qui représente un aigle qui dévore un serpent ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le Mexique"
+      },
+      {
+        "id": 2,
+        "value": "La Russie"
+      },
+      {
+        "id": 3,
+        "value": "L'Albanie"
+      },
+      {
+        "id": 4,
+        "value": "L'Égypte"
+      },
+      {
+        "id": 5,
+        "value": "L'Arabie Saoudite"
+      },
+      {
+        "id": 6,
+        "value": "L'Indonésie"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 5,
+    "response": 4,
+    "descriptionResponse": "Le pays qui possède un drapeau qui représente un aigle qui dévore un serpent est l'Égypte."
+  },  {
+    "id": 270,
+    "question": "Quelle année est restée dans l'histoire comme la chute de Constantinople ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "1380"
+      },
+      {
+        "id": 2,
+        "value": "1453"
+      },
+      {
+        "id": 3,
+        "value": "1460"
+      },
+      {
+        "id": 4,
+        "value": "1494"
+      },
+      {
+        "id": 5,
+        "value": "1498"
+      },
+      {
+        "id": 6,
+        "value": "1520"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 6,
+    "response": 2,
+    "descriptionResponse": "La chute de Constantinople est restée dans l'histoire comme étant en 1453."
+  },  {
+    "id": 271,
+    "question": "Quel monument italien était autrefois l’amphithéâtre Flavien ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le Colisée"
+      },
+      {
+        "id": 2,
+        "value": "Le Panthéon"
+      },
+      {
+        "id": 3,
+        "value": "Le Forum romain"
+      },
+      {
+        "id": 4,
+        "value": "Le Circus Maximus"
+      },
+      {
+        "id": 5,
+        "value": "Le Palatin"
+      },
+      {
+        "id": 6,
+        "value": "Le Capitole"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "L'amphithéâtre Flavien était autrefois le Colisée."
+  },  {
+    "id": 272,
+    "question": "En combien de périodes, un match de basketball est-il composé (sans prolongations) ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "value": "4"
+      },
+      {
+        "id": 5,
+        "value": "5"
+      },
+      {
+        "id": 6,
+        "value": "6"
+      }
+    ],
+    "category": "Sports",
+    "difficulty": 2,
+    "response": 4,
+    "descriptionResponse": "Un match de basketball est composé de 4 périodes."
+  },  {
+    "id": 273,
+    "question": "Quel jeune animal peut être une génisse ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Un jeune cheval"
+      },
+      {
+        "id": 2,
+        "value": "Un jeune mouton"
+      },
+      {
+        "id": 3,
+        "value": "Un jeune cochon"
+      },
+      {
+        "id": 4,
+        "value": "Un jeune bovin"
+      },
+      {
+        "id": 5,
+        "value": "Un jeune chien"
+      },
+      {
+        "id": 6,
+        "value": "Un jeune chat"
+      }
+    ],
+    "category": "Biologie",
+    "difficulty": 3,
+    "response": 4,
+    "descriptionResponse": "Une génisse est un jeune bovin."
+  },  {
+    "id": 274,
+    "question": "Sous quel autre nom était connu Guillaume le Conquérant ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Guillaume le Grand"
+      },
+      {
+        "id": 2,
+        "value": "Guillaume le Sage"
+      },
+      {
+        "id": 3,
+        "value": "Guillaume le Juste"
+      },
+      {
+        "id": 4,
+        "value": "Guillaume le Bâtard"
+      },
+      {
+        "id": 5,
+        "value": "Guillaume du Piémont"
+      },
+      {
+        "id": 6,
+        "value": "Guillaume de Normandie"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 6,
+    "response": 6,
+    "descriptionResponse": "Guillaume le Conquérant était aussi connu sous le nom de Guillaume de Normandie."
+  },  {
+    "id": 275,
+    "question": "Comment désigne-t-on le système de numération utilisant la base 2 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Binaire"
+      },
+      {
+        "id": 2,
+        "value": "Ternaire"
+      },
+      {
+        "id": 3,
+        "value": "Quaternaire"
+      },
+      {
+        "id": 4,
+        "value": "Octal"
+      },
+      {
+        "id": 5,
+        "value": "Décimal"
+      },
+      {
+        "id": 6,
+        "value": "Hexadécimal"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 1,
+    "response": 1,
+    "descriptionResponse": "Le système de numération utilisant la base 2 est appelé binaire."
+  },  {
+    "id": 276,
+    "question": "Avec le bleu, quelle est la seconde couleur principale de la mésange bleue ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le jaune"
+      },
+      {
+        "id": 2,
+        "value": "Le rouge"
+      },
+      {
+        "id": 3,
+        "value": "Le vert"
+      },
+      {
+        "id": 4,
+        "value": "Le blanc"
+      },
+      {
+        "id": 5,
+        "value": "Le noir"
+      },
+      {
+        "id": 6,
+        "value": "Le violet"
+      }
+    ],
+    "category": "Biologie",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "Avec le bleu, la seconde couleur principale de la mésange bleue est le jaune."
+  },  {
+    "id": 277,
+    "question": "Quel est le nom de cette prise universelle qui permet à un ordinateur d'être connecté à Internet avec un câble ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "RJ45"
+      },
+      {
+        "id": 2,
+        "value": "PC66"
+      },
+      {
+        "id": 3,
+        "value": "MV90"
+      },
+      {
+        "id": 4,
+        "value": "BG87"
+      },
+      {
+        "id": 5,
+        "value": "HD32"
+      },
+      {
+        "id": 6,
+        "value": "CD21"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Le nom de cette prise universelle qui permet à un ordinateur d'être connecté à Internet avec un câble est RJ45."
+  },  {
+    "id": 278,
+    "question": "De quel pays est originaire la langue tamoul ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Thaïlande"
+      },
+      {
+        "id": 2,
+        "value": "Chine"
+      },
+      {
+        "id": 3,
+        "value": "Japon"
+      },
+      {
+        "id": 4,
+        "value": "Indonésie"
+      },
+      {
+        "id": 5,
+        "value": "Inde"
+      },
+      {
+        "id": 6,
+        "value": "Vietnam"
+      }
+    ],
+    "category": "Langues",
+    "difficulty": 6,
+    "response": 5,
+    "descriptionResponse": "La langue tamoul est originaire d'Inde."
+  },  {
+    "id": 279,
+    "question": "De quel film sorti à la fin des années 80, la chanson “Calling you” de Jevetta Steele est-elle la bande originale ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Bagdad Café"
+      },
+      {
+        "id": 2,
+        "value": "Out of Africa"
+      },
+      {
+        "id": 3,
+        "value": "Philadelphia"
+      },
+      {
+        "id": 4,
+        "value": "Pulp Fiction"
+      },
+      {
+        "id": 5,
+        "value": "Le Dernier Empereur"
+      },
+      {
+        "id": 6,
+        "value": "Breakfast Club"
+      }
+    ],
+    "category": "Culture",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "La chanson “Calling you” de Jevetta Steele est la bande originale du film Bagdad Café."
+  }
  
 ]

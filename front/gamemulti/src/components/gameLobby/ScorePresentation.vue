@@ -2,7 +2,10 @@
   <div class="presentation">
       <div class="pres-description"><p>{{firstPart}}<span>{{correctSpan.value}}</span> {{secondPart}}</p></div>
       <div class="separator"></div>
-      <scorePresentation v-for="(game,i) in gameStat.players" :key="i" :score="game.oldScore" :name="game.name" :bonus="game.bonus" :activeSound="game.id===user.id"></scorePresentation>
+      <div v-for="(game,i) in gameStat.players" :key="i" class="test" :style="{animationDelay:`${i*0.15}s`,opacity:0 }">
+        <scorePresentation   :score="game.oldScore" :name="game.name" :bonus="game.bonus" :activeSound="game.id===user.id"
+        ></scorePresentation>
+      </div>
   </div>
 </template>
 
@@ -34,10 +37,16 @@
     },{firstPart:'',secondPart:''})
   
 
-
 </script>
 
 <style scoped>
+.test{
+  animation: pop 0.5s ease;
+  will-change: opacity, transform;
+  animation-fill-mode: forwards;
+  width: 100%;
+  margin-top: 10px;
+}
 .pres-description{
   font-size: 1.5em;
   color: var(--normalTextColor);
@@ -76,6 +85,45 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes pop {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.list-animation-enter-active {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.list-animation-leave-active {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.list-animation-move {
+  transition: transform 0.5s ease;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

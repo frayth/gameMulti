@@ -150,6 +150,7 @@ const animateScore=async (value:number)=>{
   height: 100px;
   padding: 10px;
   border: 1px solid var(--normalTextColor);
+  border-radius: 10px;
 }
 .name-pres {
   font-size: 20px;

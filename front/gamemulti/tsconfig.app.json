@@ -12,6 +12,9 @@
       
     }
   },
+  "files": [
+    "node_modules/gsap/types/index.d.ts"
+  ],
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
 }

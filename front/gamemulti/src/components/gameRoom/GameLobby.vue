@@ -99,6 +99,7 @@ const scoreGameIsOpen = ref(false)
   position: relative;
   overflow-x: hidden;
   width: 100%;
+  padding: 10px;
 }
 .openScore {
   position: absolute;
