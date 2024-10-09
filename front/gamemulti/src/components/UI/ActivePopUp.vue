@@ -1,5 +1,5 @@
 <template>
-  <div  @mouseenter="startTimer" @mouseleave="cancelTimer" class="activePopUp">
+  <div  @mouseenter="startTimer" @mouseleave="cancelTimer" @click="cancelTimer" class="activePopUp">
     <slot></slot>
   </div>
 </template>
