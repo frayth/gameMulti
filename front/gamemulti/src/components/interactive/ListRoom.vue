@@ -4,7 +4,7 @@
       <input type="text" v-model="filterName" placeholder="Rechercher une partie" />
       <SearchComp :size="30" color="black" :stroke-width="2" class="search-svg" />
     </div>
-    <div @click="setJoinableFilter" :style="{width:'40px',justifySelf:'end',alignSelf:'center'}" >
+    <div @click="setJoinableFilter" :style="{width:'40px',justifySelf:'end',alignSelf:'center'}" v-if="listRooms.length>0" >
       <ActivePopUp :message="'Filtrer par parties accessibles'">
       <div :class="{
         'select-container':true,
