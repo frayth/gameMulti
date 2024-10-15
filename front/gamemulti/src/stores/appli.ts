@@ -1,6 +1,6 @@
 
 import { defineStore } from 'pinia'
-import {ref } from 'vue'
+import {onMounted, onUnmounted, ref } from 'vue'
 
 
 
@@ -8,6 +8,19 @@ export const appliStore = defineStore('appli', () => {
   const isOnline = ref(true)
   const isMobile = ref()
   const body=ref(document.querySelector('body'))
+  const appliWidth=ref(0)
+  onMounted(()=>{
+    appliWidth.value=getBodyWidth()
+    window.addEventListener('resize',()=>{
+      console.log('resize')
+      appliWidth.value=getBodyWidth()
+    })
+  })
+  onUnmounted(()=>{
+    window.removeEventListener('resize',()=>{
+      appliWidth.value=getBodyWidth()
+    })
+  })
   function getBodyWidth(){
     if(body.value)return body.value.clientWidth
     else return 0
@@ -43,5 +56,5 @@ export const appliStore = defineStore('appli', () => {
   })
 
 
-  return { isOnline,  isMobile,checkIfMobile,body,getBodyWidth }
+  return { isOnline,  isMobile,checkIfMobile,body,getBodyWidth,appliWidth }
 })

@@ -1,27 +1,27 @@
 import Player from "./player";
 import questions from "../assets/question.json";
-import type { QuestionModel,historyModel } from "../models/game.model";
+import type {
+  QuestionModel,
+  historyModel,
+} from "../models/game.model";
 import bonus from "../assets/bonus.json";
-import prand from 'pure-rand';
+import prand from "pure-rand";
 import { GameRoom } from "./GameRoom";
-import options from "../assets/options"
+import options from "../assets/options";
 const offsetResponseTime = 2000;
 export default class Game {
-  parent:GameRoom;
+  parent: GameRoom;
   players: GamePlayer[];
   question: Question;
-  history:historyModel[];
+  history: historyModel[];
   skippedRulePlayers: Player[];
   event: NodeJS.Timeout | null;
   askedQuestion: number[];
   nextEvent: number;
-  questionAskedAt: number|null;
-  phaseGame: "intro" | "presentation" | "question" | "score" | 'end';
-  optionsGame:{
-    maxPoint:number
-  }
-  constructor(players: Player[],gameRoom:GameRoom) {
-    this.parent=gameRoom;
+  questionAskedAt: number | null;
+  phaseGame: "intro" | "presentation" | "question" | "score" | "end";
+  constructor(players: Player[], gameRoom: GameRoom) {
+    this.parent = gameRoom;
     this.players = players.map((el) => new GamePlayer(el));
     this.question = new Question();
     this.event = null;
@@ -29,33 +29,30 @@ export default class Game {
     this.nextEvent = Date.now();
     this.askedQuestion = [];
     this.phaseGame = "intro";
-    this.questionAskedAt=null;
-    this.history=[];
-    this.optionsGame={
-      maxPoint:bonus.defautScore
-    }
+    this.questionAskedAt = null;
+    this.history = [];
   }
 
   clearEvent() {
     if (this.event) clearTimeout(this.event);
   }
 
-  private async changePhaseGame(){
+  private async changePhaseGame() {
     switch (this.phaseGame) {
       case "intro":
       case "score":
         this.phaseGame = "presentation";
         await this.getQuestion();
         this.createEvent(() => {
-            this.changePhaseGame();
+          this.changePhaseGame();
         }, 5000);
 
-        if(this.haveAWinner()){
+        if (this.haveAWinner()) {
           this.endGame();
-        }else{
+        } else {
           this.sendPresentation();
         }
-        
+
         break;
       case "presentation":
         this.phaseGame = "question";
@@ -72,9 +69,8 @@ export default class Game {
     }
   }
 
-   async LauchIntro() {
+  async LauchIntro() {
     return new Promise((resolve) => {
-      console.log("LauchIntro",options.timeForRule);
       this.createEvent(() => {
         this.changePhaseGame();
       }, options.timeForRule);
@@ -82,10 +78,6 @@ export default class Game {
     });
   }
   private sendScore() {
-    console.log(
-      "sendScore",
-      this.players.map((el) => el.player.score)
-    );
     this.players.forEach((el) => {
       el.player.socket?.emit("score:game", {
         playersStats: this.players.map((el) => el.getStats()),
@@ -110,67 +102,64 @@ export default class Game {
       };
     });
   }
-  private saveHistory(){
+  private saveHistory() {
     this.history.push({
-      id:this.question.question.id,
-      historyUser:this.players.map((el)=>({
-        id:el.player.id!,
-        bonus:el.player.bonus,
-        response:el.player.response.response,
-        timer:el.player.response.time?this.questionAskedAt!-el.player.response.time:null
-      }))
-    })
-    console.log('history',this.history.map((el)=>el.historyUser))
+      id: this.question.question.id,
+      historyUser: this.players.map((el) => ({
+        id: el.player.id!,
+        bonus: el.player.bonus,
+        response: el.player.response.response,
+        timer: el.player.response.time
+          ? this.questionAskedAt! - el.player.response.time
+          : null,
+      })),
+    });
+    console.log(
+      "history",
+      this.history.map((el) => el.historyUser)
+    );
   }
+
   private async calculateScore() {
-    
     await new Promise((resolve) => {
-      let quickerPlayerFound=false;
-      let quickerPlayerWiyhFalseResponseFound=false;
+      let quickerPlayerFound = false;
+      let quickerPlayerWiyhFalseResponseFound = false;
       const playerSortedByResponseTime = this.players
         .filter((el) => el.player.response.time !== null)
         .sort((a, b) => a.player.response.time! - b.player.response.time!);
-      console.log("playeSortedByResponseTime", playerSortedByResponseTime);
       this.players.forEach((el) => {
         el.refreshBonus();
         el.player.oldScore = el.player.score;
       });
       playerSortedByResponseTime.forEach((el) => {
-        if (el.player.response.response === this.question.question.response){
-          if(!quickerPlayerFound){
-            el.addBonus("faster", bonus.fasterResponse);
-            quickerPlayerFound=true;
-            quickerPlayerWiyhFalseResponseFound=true;
+        console.log(
+          "response",
+          el.player.response.response,
+          this.question.question.response
+        );
+        if (el.player.response.response === Number(this.question.question.response)) {
+          if (!quickerPlayerFound) {
+            el.addBonus("faster",Number(this.parent.optionsGame.fasterResponse));
+            quickerPlayerFound = true;
+            quickerPlayerWiyhFalseResponseFound = true;
           }
-          el.addBonus("correct", bonus.goodResponse);
-          el.addBonus("streak", Math.floor(el.player.streak / 3));
-        }else{
-          if(!quickerPlayerWiyhFalseResponseFound){
-            el.addBonus("fasterBad", bonus.fasterBadResponse);
-            quickerPlayerWiyhFalseResponseFound=true;
+          el.addBonus("correct",Number( this.parent.optionsGame.goodResponse));
+          el.addBonus("streak", Math.floor(el.player.streak / Number(this.parent.optionsGame.numberOfStreakForBonus)));
+        } else if (el.player.response.response === null) {
+          el.addBonus("incorrect", Number(this.parent.optionsGame.noResponse));
+        } else {
+          if (!quickerPlayerWiyhFalseResponseFound) {
+            el.addBonus("fasterBad", Number(this.parent.optionsGame.fasterBadResponse));
+            quickerPlayerWiyhFalseResponseFound = true;
           }
-          el.addBonus("incorrect", bonus.badResponse);
+          el.addBonus("incorrect", Number(this.parent.optionsGame.badResponse));
         }
       });
-      // this.players.forEach((el) => {
-      //   if (el.player.response.response === this.question.question.response) {
-          
-      //     if (playerSortedByResponseTime[0].player.id === el.player.id) {
-      //       console.log("fasterResponse", el.player.name);
-      //       el.addBonus("faster", bonus.fasterResponse);
-      //     }
-      //     el.addBonus("correct", bonus.goodResponse);
-      //     el.addBonus("streak", Math.floor(el.player.streak / 3));
-      //   } else if (el.player.response.response !== null) {
-      //     el.addBonus("incorrect", bonus.badResponse);
-      //   }else{
-      //     el.addBonus("incorrect", bonus.noResponse);
-      //   }
-      // });
+
       this.saveHistory();
       resolve(null);
     });
-    this.sendScore();   
+    this.sendScore();
   }
   private sendUpdateResponse() {
     let data = this.players
@@ -185,26 +174,28 @@ export default class Game {
   private askQuestion() {
     this.createEvent(async () => {
       this.changePhaseGame();
-    }, 15000);
+    }, Number(this.parent.optionsGame.responseTime) + 2000);
 
     this.players.forEach((el) => {
       el.player.socket?.emit("question:game", this.getInfoGame());
     });
-    this.questionAskedAt=Date.now();
+    this.questionAskedAt = Date.now();
   }
-  private endGame(){
-    this.phaseGame='end';
-    this.parent.changeStatus('end')
+  private endGame() {
+    this.phaseGame = "end";
+    this.parent.changeStatus("end");
     this.clearEvent();
     this.players.forEach((el) => {
       el.player.socket?.emit("end:game", {
-        score:this.players.map((el) => el.getStats())
+        score: this.players.map((el) => el.getStats()),
       });
     });
   }
   skipRegle(player: Player) {
     if (this.phaseGame === "intro") {
-      const playerHasAlreadySkipped = this.skippedRulePlayers.find( (el) => el.id === player.id);
+      const playerHasAlreadySkipped = this.skippedRulePlayers.find(
+        (el) => el.id === player.id
+      );
       if (!playerHasAlreadySkipped) {
         this.skippedRulePlayers.push(player);
 
@@ -223,12 +214,15 @@ export default class Game {
     if (user) {
       user.player.response = { response: response.response, time: Date.now() };
       this.sendUpdateResponse();
-      if(this.players.find((el)=>!el.hasResponded())===undefined){
+      if (this.players.find((el) => !el.hasResponded()) === undefined) {
         const nexteventinMillisecond = this.nextEvent - Date.now();
-        this.createEvent(()=>{
-          this.clearEvent();
-          this.changePhaseGame();
-        },nexteventinMillisecond<=2000?nexteventinMillisecond:2000)
+        this.createEvent(
+          () => {
+            this.clearEvent();
+            this.changePhaseGame();
+          },
+          nexteventinMillisecond <= 2000 ? nexteventinMillisecond : 2000
+        );
       }
     }
   }
@@ -260,7 +254,9 @@ export default class Game {
     }
   }
   private haveAWinner() {
-    return this.players.find((el) => el.player.score >= this.optionsGame.maxPoint);
+    return this.players.find(
+      (el) => el.player.score >= Number(this.parent.optionsGame.defautScore)
+    );
   }
   getInfoGame() {
     return {
@@ -282,7 +278,7 @@ export default class Game {
 
   createEvent(callback: () => void, time: number) {
     this.clearEvent();
-    console.log("createEvent", time,Date.now(),time+Date.now(),new Date());
+    console.log("createEvent", time, Date.now(), time + Date.now(), new Date());
     this.nextEvent = Date.now() + time;
     this.event = setTimeout(callback, time);
   }
@@ -298,7 +294,7 @@ class GamePlayer {
     streak: number;
     oldScore: number;
     bonus: {
-      type: "faster" | "correct" | "incorrect" | "streak" |"fasterBad";
+      type: "faster" | "correct" | "incorrect" | "streak" | "fasterBad";
       value: number;
     }[];
   };
@@ -330,7 +326,10 @@ class GamePlayer {
     };
   }
 
-  addBonus(type: "faster" | "correct" | "incorrect" | "streak" | "fasterBad", value: number) {
+  addBonus(
+    type: "faster" | "correct" | "incorrect" | "streak" | "fasterBad",
+    value: number
+  ) {
     this.player.bonus.push({ type, value });
     switch (type) {
       case "correct":
@@ -351,8 +350,8 @@ class GamePlayer {
   refreshBonus() {
     this.player.bonus = [];
   }
-  hasResponded(){
-    return this.player.response.time !== null
+  hasResponded() {
+    return this.player.response.time !== null;
   }
 }
 class Question {
@@ -360,7 +359,7 @@ class Question {
   constructor(
     category: string | null = null,
     difficulty: number | null = null,
-    alreadyUsed: number[] = [],
+    alreadyUsed: number[] = []
   ) {
     this.question = this.getQuestion(category, difficulty, alreadyUsed);
   }
@@ -374,14 +373,15 @@ class Question {
       .filter((el) => !alreadyUsed.includes(el.id))
       .filter((el) => (category ? el.category === category : true))
       .filter((el) => (difficulty ? el.difficulty === difficulty : true));
-     const seed=Date.now() ^ (Math.random() * 0x100000000);
-     const rng = prand.xoroshiro128plus(seed);
-     const rand = (min:number, max:number) => {
+    const seed = Date.now() ^ (Math.random() * 0x100000000);
+    const rng = prand.xoroshiro128plus(seed);
+    const rand = (min: number, max: number) => {
       const out = (rng.unsafeNext() >>> 0) / 0x100000000;
       return min + Math.floor(out * (max - min + 1));
     };
-     const randomIndex =rand(0,questionsFiltered.length-1);
-     //let randomIndex = Math.floor(Math.random() * questionsFiltered.length);
-      return questionsFiltered[randomIndex];
+    const randomIndex = rand(0, questionsFiltered.length - 1);
+    //let randomIndex = Math.floor(Math.random() * questionsFiltered.length);
+    if(questionsFiltered[randomIndex]===undefined)return questionsFiltered[0]
+    return questionsFiltered[randomIndex];
   }
 }

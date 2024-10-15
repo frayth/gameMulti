@@ -27,6 +27,7 @@ window.addEventListener('popstate', function () {
   router.go(0)
 })
 
+
 </script>
 
 <template>

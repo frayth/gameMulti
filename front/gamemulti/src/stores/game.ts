@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, type Ref,watch } from 'vue'
-import type { GameStatus, InfoGameRoom } from '@/models/room.model'
+import type { GameStatus, InfoGameRoom ,optionsGame} from '@/models/room.model'
 import { useSocketStore } from './socket'
 import { usePopup } from './popUp'
 import type Player from '@/models/player.model'
@@ -9,6 +9,7 @@ import type { listStatPlayer } from '@/models/player.model'
 import useFecth from '@/modules/fetch'
 import shuffle from '@/modules/shuffle'
 
+
 export const gameStore = defineStore('game', () => {
   const popUp = usePopup()
   const user = userStore()
@@ -16,6 +17,16 @@ export const gameStore = defineStore('game', () => {
   const phaseGame = ref<'intro' | 'presentation' | 'question' | 'score' | 'end'>('intro')
   watch(phaseGame, () => {
     popUp.popUp.show = false
+  })
+  const optionsGame=ref<optionsGame>({
+    goodResponse:'0',
+    fasterResponse:'0',
+    badResponse:'0',
+    numberOfStreakForBonus:'0',
+    fasterBadResponse:'0',
+    noResponse:'0',
+    defautScore:'0',
+    responseTime:'0'
   })
   const players = ref<Player[]>([])
   const socket = useSocketStore()
@@ -171,75 +182,7 @@ export const gameStore = defineStore('game', () => {
     InfoCurrentQuestion.value.refresh()
     waitLobbyProperties.value.init()
   }
-  // socket.socket?.on('startCount:timer', () => {
-  //   waitLobbyProperties.value.lauchGame = true
-  // })
-  // socket.socket?.on('cancelCount:timer', () => {
-  //   waitLobbyProperties.value.lauchGame = false
-  // })
-  // socket.socket?.on(
-  //   'question:game',
-  //   (data: { question: string; answers: { id: number; value: string }[]; nextEvent: number }) => {
-  //     console.log('question:game', data)
-  //     phaseGame.value = 'question'
-  //     gameQuestions.value.question = data.question
-  //     gameQuestions.value.answers = shuffle(data.answers)
-  //     gameQuestions.value.nextEvent = data.nextEvent
-  //   }
-  // )
-  // socket.socket?.on(
-  //   'presentation:game',
-  //   (data: {
-  //     phaseGame: 'intro' | 'presentation' | 'question' | 'score'
-  //     category: string
-  //     difficulty: number
-  //   }) => {
-  //     console.log('presentation:game', data)
-  //     phaseGame.value = data.phaseGame
-  //     gameQuestions.value.category = data.category
-  //     gameQuestions.value.difficulty = data.difficulty
-  //     InfoCurrentQuestion.value.refresh()
-  //   }
-  // )
-  // socket.socket?.on('end:game', () => {
-  //   console.log('end:game')
-  //   phaseGame.value = 'end'
-  //   gameStat.value.affectRankForPlayer()
-  // })
 
-  // socket.socket?.on(
-  //   'score:game',
-  //   (data: {
-  //     playersStats: {
-  //       rank: null | number
-  //       id: number
-  //       name: string
-  //       score: number
-  //       streak: number
-  //       oldScore: number
-  //       response: {
-  //         response: number | null
-  //         time: number | null
-  //       }
-  //       bonus: {
-  //         type: 'faster' | 'correct' | 'incorrect' | 'streak'
-  //         value: number
-  //       }[]
-  //     }[]
-  //     correctAnswer: string
-  //   }) => {
-  //     console.log('score:game', data)
-  //     gameQuestions.value.correctAnswer = data.correctAnswer
-  //     gameStat.value.players = data.playersStats
-  //     gameStat.value.sortedPlayerByScore()
-  //     phaseGame.value = 'score'
-  //   }
-  // )
-
-  // socket.socket?.on('update:response', (data: number[]) => {
-  //   console.log('update:response', data)
-  //   InfoCurrentQuestion.value.currentResponse = data
-  // })
   function skipRegle() {
     socket.socket?.emit('skipRegle:game')
   }
@@ -273,6 +216,7 @@ export const gameStore = defineStore('game', () => {
     setPresentation,
     setScore,
     updateResponse,
-    lauchGame
+    lauchGame,
+    optionsGame
   }
 })

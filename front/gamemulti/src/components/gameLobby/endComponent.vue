@@ -17,8 +17,8 @@ import { computed, onMounted } from 'vue';
 import HistoryComp from './endLobby/HistoryComp.vue';
 const historyToShow=computed(()=>game.gameHistory.value)
 const game = gameStore()
-onMounted(()=>{
-  game.gameHistory.getHistory()
+onMounted(async()=>{
+  await game.gameHistory.getHistory()
 })
 
 </script>
@@ -41,7 +41,7 @@ onMounted(()=>{
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 0px 10px 0px white;
+  box-shadow: 0px 0px 10px 0px var(--colorNormalText);
   animation: blinkShadow 2s infinite ease-in-out;
   border-radius: 10px;
 }
@@ -54,13 +54,13 @@ onMounted(()=>{
 }
 @keyframes blinkShadow {
   0% {
-    box-shadow: 0px 0px 10px 0px white;
+    box-shadow: 0px 0px 10px 0px var(--colorNormalText);
   }
   50% {
     box-shadow: 0px 0px 10px 0px transparent;
   }
   100% {
-    box-shadow:0px 0px 10px 0px white;;
+    box-shadow:0px 0px 10px 0px var(--colorNormalText);
   }
 }
 @keyframes slide {
@@ -73,5 +73,9 @@ onMounted(()=>{
     transform: translateY(0);
   }
 }
-
+@media (max-width: 600px){
+  .cont-podium{
+    overflow: hidden;
+  }
+}
 </style>

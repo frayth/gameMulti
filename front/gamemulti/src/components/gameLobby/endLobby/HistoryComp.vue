@@ -87,11 +87,13 @@ import {computed, defineProps,ref, useTemplateRef} from 'vue';
     if(value){
       if(currentIndex.value===userList.value.length-1) return
       title.value?.classList.remove('animateRight')
+      title.value?.classList.remove('animateleft')
       title.value?.classList.add('animateleft')
       currentIndex.value+=1
     }else{
       if(currentIndex.value===0) return
       title.value?.classList.remove('animateleft')
+      title.value?.classList.remove('animateRight')
       title.value?.classList.add('animateRight')
       currentIndex.value-=1
     }
@@ -160,7 +162,7 @@ import {computed, defineProps,ref, useTemplateRef} from 'vue';
   width: 100px;
   border-radius: 5px;
   background-color: goldenrod;
-  color: white;
+  color: var(--colorNormalText);
   border: none;
   cursor: pointer;
 }
@@ -172,7 +174,7 @@ import {computed, defineProps,ref, useTemplateRef} from 'vue';
   border: 1px solid var(--main-green);
   border-radius: 5px;
   padding: 5px;
-  color: white;
+  color: var(--colorNormalText);
   font-size: 20px;
   text-align: center;
   overflow: hidden;
@@ -186,14 +188,14 @@ import {computed, defineProps,ref, useTemplateRef} from 'vue';
   width: 100%;
   display: grid;
   grid-template: auto auto / auto auto;
-  box-shadow: 0px 0px 5px 0px white;
+  box-shadow: 0px 0px 5px 0px var(--colorNormalText);
   padding: 10px;
 }
 .bonus-value{
   position: absolute;
   right: 7px;
   top: 5px;
-  color: white;
+  color: var(--colorNormalText);
   font-size: 16px;
 }
 .animateleft{
@@ -240,6 +242,13 @@ import {computed, defineProps,ref, useTemplateRef} from 'vue';
   }
   .wrapper-name{
     font-size: 16px;
+  }
+}
+@media  (max-width: 400px) {
+
+  .wrapper-name{
+    font-size: 14px;
+    padding: 0px;
   }
 }
 </style>

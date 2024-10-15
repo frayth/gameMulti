@@ -5,6 +5,7 @@
     r="100" stroke-width="3" stroke="#41424145" stroke-linecap="round" />
     <g transform="translate(150,150)">
       <text
+      class="text-chrono"
         text-anchor="middle"
         transform="rotate(90)"
         font-size="3rem"
@@ -89,5 +90,8 @@ svg{
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 100;
+}
+.text-chrono{
+  color:var(--normalTextColor);
 }
 </style>

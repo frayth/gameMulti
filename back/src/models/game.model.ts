@@ -23,3 +23,14 @@ export interface historyModel{
   }[]
   }[]
 }
+
+export interface optionsGameModel{
+  goodResponse:number,
+  fasterResponse:number,
+  badResponse:number,
+  numberOfStreakForBonus:number,
+  fasterBadResponse:number,
+  noResponse:number,
+  defautScore:number,
+  responseTime:number
+}

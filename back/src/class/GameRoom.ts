@@ -4,22 +4,40 @@ import {
   GameStatus,
   TypeRoom,
 } from "../models/player.model";
-
+import bonus from "../assets/bonus.json";
 import { rooms } from "../rooms";
 import Game from "./game";
 import { waitingRoom } from "./waitingRoom";
+import { optionsGameModel } from "../models/game.model";
 export class GameRoom extends Room {
   public type: TypeRoom;
   public status: GameStatus;
   public joinable: boolean;
   public game: Game | null;
+  public optionsGame:optionsGameModel;
   constructor(id: number, name: string, players: Player[] = []) {
     super(id, name, players);
     this.type = "gameRoom";
     this.status = "waiting";
     this.joinable = true;
     this.game = null;
+    this.optionsGame = {
+      goodResponse: bonus.goodResponse,
+      fasterResponse: bonus.fasterResponse,
+      badResponse: bonus.badResponse,
+      numberOfStreakForBonus: bonus.numberOfStreakForBonus,
+      fasterBadResponse: bonus.fasterBadResponse,
+      noResponse: bonus.noResponse,
+      defautScore: bonus.defautScore,
+      responseTime: bonus.responseTime,
+    };
   }
+  public setOptions(options: optionsGameModel) {
+    this.optionsGame = options;
+    this.players.forEach((el) => {
+        el.socket?.emit("options:game", options)
+    });
+  };
   initRoom() {
     this.status = "waiting";
     this.players.forEach((el) => {

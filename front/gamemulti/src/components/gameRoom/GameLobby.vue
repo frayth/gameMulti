@@ -143,5 +143,14 @@ const scoreGameIsOpen = ref(false)
     height: 20px;
   }
 }
+@media (max-width: 400px) {
+  .container-lobby{
+  padding: 0px;
+  }
+  .gameLobby {
+    padding: 5px;
+  }
+
+}
 </style>
 //

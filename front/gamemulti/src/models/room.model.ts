@@ -50,3 +50,14 @@ export interface History {
     user: number
   }[]
 }
+
+export interface optionsGame {
+  goodResponse:string,
+  fasterResponse:string,
+  badResponse:string,
+  numberOfStreakForBonus:string,
+  fasterBadResponse:string,
+  noResponse:string,
+  defautScore:string,
+  responseTime:string
+}

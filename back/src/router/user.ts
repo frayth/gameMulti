@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response, response } from "express";
+import { NextFunction, Request, Response } from "express";
 import {loginValidation,historyRequestValidation} from "../Validations/user"
 import {verifyToken} from "../modules/jwt"
 import {Result, validationResult}  from 'express-validator';

@@ -211,7 +211,7 @@ const lauchPodium = async () => {
   justify-content: center;
   align-items: center;
   font-size:clamp(10px, 5vw, 15px);
-  color: white;
+  color: var(--colorNormalText);
   flex-shrink: 1;
   animation: name 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   overflow: hidden;
@@ -226,8 +226,8 @@ const lauchPodium = async () => {
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px white;
-  width: 100%;
+  box-shadow: 0px 0px 5px 0px var(--colorNormalText);
+  width: 90%;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1,6 +1,6 @@
 <template>
   <div class="main-form" >
-      <p>Veuillez choisir un speudo pour vous authentifier auprès des autres joueurs.</p>
+      <p>Veuillez choisir un pseudo pour vous authentifier auprès des autres joueurs.</p>
         <div class="input-container">
             <label for="pseudo">Pseudo</label>
             <input type="text" id="pseudo" name="pseudo" v-model="speudo" @input="testLength" @keypress.enter="login">

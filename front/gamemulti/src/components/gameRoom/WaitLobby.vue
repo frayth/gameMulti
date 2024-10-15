@@ -1,6 +1,17 @@
 <template>
   <div class="main-wait">
-    <div class="main-waitLobby">
+    <OptionSvg class="option" v-if="widthAppli<=630" @click="showPanelOption=true" :color="'var(--normalTextColor)'"/>
+    <Transition name="panel">
+      <div id="panelOption" v-show="showPanelOption" >
+        <ArrowUndoSvg @click="showPanelOption=false" class="undo" :color="'var(--colorNormalText)'" />
+        </div>
+    </Transition>
+    <div class="flex-main">
+    <Teleport defer to="#panelOption" :disabled="widthAppli>630">
+      <OptionsLobby />
+    </Teleport>
+    <div>
+    <div class="main-waitLobby"> 
       <div
         :class="`wait-info ${isReady(player.id) ? 'isReady' : ''}`"
         v-for="player in currentPlayer"
@@ -52,20 +63,27 @@
         <countDown :countDown="game.waitLobbyProperties.countDown" @ready="lauchGame" />
       </div>
     </div>
+    </div>
+  </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { panelErrorInfoRoom } from '@/models/room.model'
-import { computed, reactive, watch } from 'vue'
+import OptionSvg from '@/assets/SVG/OptionSvg.vue'
+import { computed, reactive, ref, watch } from 'vue'
 import { gameStore } from '@store/game'
 import { userStore } from '@store/user'
+import { appliStore } from '@store/appli'
 import ActivePopUp from '../UI/ActivePopUp.vue'
+import ArrowUndoSvg from '@/assets/SVG/ArrowUndoSvg.vue'
 import { useSocketStore } from '@store/socket'
 import BadgeOwner from '@/assets/SVG/BadgeOwner.vue'
 import ConnexionStatut from '../UI/ConnexionStatut.vue'
 import happyFace from '@/assets/SVG/happyFace.vue'
 import countDown from '@/components/gameRoom/divers/CountDown.vue'
+import OptionsLobby from '../WaitLobby/OptionsLobby.vue'
+
 const panelError: panelErrorInfoRoom = reactive({
   error: false as boolean,
   message: '',
@@ -78,11 +96,12 @@ const panelError: panelErrorInfoRoom = reactive({
     }, 3000)
   }
 })
-
+const appli = appliStore()
 const game = gameStore()
-
 const user = userStore()
 const socket = useSocketStore()
+const widthAppli = computed(() => appli.appliWidth)
+const showPanelOption = ref(false)
 const currentPlayer = computed(() => {
   const index = game.players.findIndex((player) => player.id === user.id)
   if (index !== -1) {
@@ -128,6 +147,43 @@ function lauchGame() {
 </script>
 
 <style scoped>
+#panelOption{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--color-background);
+  z-index: 10;
+ padding: 10px;
+ animation: popfromUp 0.5s;
+ display: grid;
+  grid-template: 30px 1fr / 1fr ;
+}
+.option{
+  justify-self: end;
+  cursor: pointer;
+}
+.panel-enter-active,
+.panel-leave-active{
+  transition: all 0.5s ease;
+}
+.panel-enter-from,
+.panel-leave-to
+{
+  opacity: 0;
+  transform: translateY(-10%);
+}
+.panel-enter-to{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.undo{
+  justify-self: end;
+  cursor: pointer;
+}
 .countDown{
   color: var(--normalTextColor);
 }
@@ -167,7 +223,7 @@ function lauchGame() {
 }
 .wait-info {
   display: grid;
-  grid-template: repeat(3, auto) / repeat(3, 1fr);
+  grid-template: repeat(1, auto) /  12px 18px repeat(3, 1fr);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   justify-content: space-between;
@@ -175,19 +231,19 @@ function lauchGame() {
   align-content: space-around;
   justify-items: center;
   border-radius: 5px;
-  width: 200px;
-  height: 130px;
+  width: 320px;
+  height: 80px;
   color: var(--normalTextColor);
   gap: 10px;
   transition: all 0.5s ease;
 }
 .name-player {
-  grid-row: 2;
-  grid-column: 1 / span 3;
+  grid-row: 1/span 2;
+  grid-column: 3 / span 2;
 }
 .face {
   grid-row: 1;
-  grid-column: 3;
+  grid-column: 5;
   justify-self: end;
 }
 .wait-status {
@@ -197,7 +253,7 @@ function lauchGame() {
   justify-self: start;
   gap: 5px;
   grid-column: 1;
-  grid-row: 1;
+  grid-row: 1/span 2;
 }
 button {
   width: 200px;
@@ -220,24 +276,30 @@ button {
   background-color: #797979;
 }
 .ready-button {
-  width: 100px;
+  width: 80px;
   height: 25px;
   background-color: #f1f1f14d;
   border: none;
   border-radius: 5px;
   font-size: 15px;
   cursor: pointer;
-  grid-column: 1 / span 3;
-  grid-row: 3;
+  grid-column: 5 / span 1;
+  grid-row: 2;
 }
 .ready-button:hover {
   background-color: #f1f1f1;
 }
 .main-wait {
+  display: grid;
+  grid-template:30px 1fr / 1fr;
+  padding: 0 5px;
+  position: relative;
+}
+.flex-main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 .ready {
@@ -247,7 +309,7 @@ button {
   box-shadow: 0 0 10px 0 rgb(21, 155, 72) !important;
 }
 .owner {
-  grid-row: 1;
+  grid-row: 1/span 2;
   grid-column: 2;
 }
 .panel-error-wait {
@@ -260,5 +322,24 @@ button {
   font-size: 15px;
   transition: all 0.5s ease;
   margin-top: 10px;
+}
+@media (min-width:630px){
+  #panelOption{
+    display: none;
+  }
+}
+@keyframes popfromUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 }
 </style>
