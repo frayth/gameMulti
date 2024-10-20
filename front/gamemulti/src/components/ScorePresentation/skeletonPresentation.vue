@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import ActivePopUp from '../UI/ActivePopUp.vue'
-import { ref,reactive, onUnmounted } from 'vue'
+import { ref,reactive} from 'vue'
 import SAD from '@/assets/SVG/SadSvg.vue'
 import HAPPY from '@/assets/SVG/HappySvg.vue'
 import FAST from '@/assets/SVG/FastSvg.vue'
@@ -101,16 +101,20 @@ setTimeout(() => {
 
 const startShowBonus=async ()=>{
   const event=ref<null|NodeJS.Timeout>(null)
+  console.log('all bonus',tempBonus.value)
   for(let i in tempBonus.value){
     if(tempBonus.value[i].value===0){
       continue
     }
+    console.log('no 0 value',tempBonus.value[i])
     bonusToShow.value.push(tempBonus.value[i])
-    await animateScore(bonusToShow.value[i].value)
+
+    
+    await animateScore(bonusToShow.value[bonusToShow.value.length-1].value)
     await new Promise((resolve) => {
       event.value=setInterval(() => {
-        bonusToShow.value[i].posY-=2
-        if(bonusToShow.value[i].posY<=-1){
+        bonusToShow.value[bonusToShow.value.length-1].posY-=2
+        if(bonusToShow.value[bonusToShow.value.length-1].posY<=-1){
           clearInterval(event.value as NodeJS.Timeout)
           resolve(null)
         }
@@ -120,22 +124,24 @@ const startShowBonus=async ()=>{
 }
 const animateScore=async (value:number)=>{
   const event=ref<null|NodeJS.Timeout>(null)
-
+  console.log(value)
   await new Promise((resolve) => {
     event.value=setInterval(() => {
       if(props.activeSound) audio.playSound('pop')
      if(value>0){
+      console.log('positif',value)
       tempScore.changeValue(1)
       value-=1
-     }else{
-      tempScore.changeValue(-1)
-      value+=1
-     }
-      if(value===0){
+     }else if (value===0){
+      console.log('zero',value)
         tempScore.changeValue(0)
         clearInterval(event.value as NodeJS.Timeout)
         resolve(null)
-      }
+      }else{
+        console.log('negatif',value)
+      tempScore.changeValue(-1)
+      value+=1
+     }
     }, 100);
   });
 }
