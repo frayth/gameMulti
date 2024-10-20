@@ -77,7 +77,7 @@ export const useSocketStore = defineStore('socket', () => {
       socket.value?.on(
         'list:user',
         (userList: { id: number; name: string; connected: boolean }[]) => {
-          console.log('list user', userList)
+          //console.log('list user', userList)
           user.room.userList = userList
         }
       )
@@ -116,7 +116,7 @@ export const useSocketStore = defineStore('socket', () => {
           answers: { id: number; value: string }[]
           nextEvent: number
         }) => {
-          console.log('question:game', data)
+          //console.log('question:game', data)
           game.setQuestion(data)
         }
       )
@@ -127,7 +127,7 @@ export const useSocketStore = defineStore('socket', () => {
           category: string
           difficulty: number
         }) => {
-          console.log('presentation:game', data)
+          //console.log('presentation:game', data)
           game.setPresentation(data)
         }
       )
@@ -152,7 +152,7 @@ export const useSocketStore = defineStore('socket', () => {
           }[]
           correctAnswer: string
         }) => {
-          console.log('score:game', data)
+         // console.log('score:game', data)
           game.setScore(data)
         }
       )
@@ -163,7 +163,7 @@ export const useSocketStore = defineStore('socket', () => {
         game.lauchGame(true)
       })
       socket.value?.on('update:response', (data: number[]) => {
-        console.log('update:response', data)
+        //console.log('update:response', data)
         game.updateResponse(data)
       })
       socket.value?.on('disconnect', (reason): void => {

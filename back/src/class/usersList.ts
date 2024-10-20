@@ -1,5 +1,5 @@
 import { Socket } from "socket.io";
-import { timeOutListUser } from "./timeOutList";
+
 import { generateKey } from "../modules/keyGenerator";
 import Player from "./player";
 import { generateToken } from "../modules/jwt";

@@ -12,7 +12,6 @@ export const appliStore = defineStore('appli', () => {
   onMounted(()=>{
     appliWidth.value=getBodyWidth()
     window.addEventListener('resize',()=>{
-      console.log('resize')
       appliWidth.value=getBodyWidth()
     })
   })

@@ -1,10 +1,9 @@
 import Player from "./player";
-import questions from "../assets/question.json";
+import questionsList from "../class/QuestionsList";
 import type {
   QuestionModel,
   historyModel,
 } from "../models/game.model";
-import bonus from "../assets/bonus.json";
 import prand from "pure-rand";
 import { GameRoom } from "./GameRoom";
 import options from "../assets/options";
@@ -238,9 +237,10 @@ export default class Game {
   }
 
   private async getQuestion() {
+    console.log(questionsList.themes);
     if (!this.askedQuestion.includes(this.question.question.id))
       this.askedQuestion.push(this.question.question.id);
-    if (this.askedQuestion.length === questions.length) this.askedQuestion = [];
+    if (this.askedQuestion.length === questionsList.questions.length) this.askedQuestion = [];
     const instance = this;
     return new Promise((resolve, reject) => {
       instance.question = new Question(null, null, instance.askedQuestion);
@@ -369,7 +369,7 @@ class Question {
     difficulty: number | null = null,
     alreadyUsed: number[] = []
   ) {
-    let questionsFiltered = questions
+    let questionsFiltered = questionsList.questions
       .filter((el) => !alreadyUsed.includes(el.id))
       .filter((el) => (category ? el.category === category : true))
       .filter((el) => (difficulty ? el.difficulty === difficulty : true));

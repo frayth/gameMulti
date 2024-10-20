@@ -5,6 +5,6 @@
   "numberOfStreakForBonus":3,
   "fasterBadResponse":-2,
   "noResponse":0,
-  "defautScore":5,
+  "defautScore":100,
   "responseTime":20000
 }

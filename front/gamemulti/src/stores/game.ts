@@ -108,7 +108,7 @@ export const gameStore = defineStore('game', () => {
 
   function setInfoRoom (data: InfoGameRoom){
     setTimeout(() => {
-      console.log(data)
+      //console.log(data)
       status.value = data.status
     }, 10)
     phaseGame.value = data.game?.phaseGame || 'intro'

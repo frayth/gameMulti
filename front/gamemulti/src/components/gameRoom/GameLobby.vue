@@ -7,28 +7,42 @@
       <Theme></Theme>
     </div>
     <question v-else-if="game.phaseGame === 'question'"></question>
-    <div v-else-if="game.phaseGame === 'score'" :style="{width:'100%'}" class="container-lobby">
-      <ScorePresentation :style="{width:'100%'}"></ScorePresentation>
+    <div v-else-if="game.phaseGame === 'score'" :style="{ width: '100%' }" class="container-lobby">
+      <ScorePresentation :style="{ width: '100%' }"></ScorePresentation>
     </div>
-      <endComponent v-else class="container-lobby"></endComponent>
+    <endComponent v-else class="container-lobby"></endComponent>
     <Teleport to="#screenNotif" v-if="game.phaseGame !== 'intro'">
-    <Transition mode="out-in">
-      <div id="scoreboard" v-if="scoreGameIsOpen">
-        <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>
-        <scoreBoard></scoreBoard>
-      </div>
-      <div v-else 
-      :class="{
-        openScore:true,
-        normalPosition:game.phaseGame!=='end',
-        endPosition:game.phaseGame==='end'
-      }" >
-        <trophy @click="scoreGameIsOpen = true" :size="50"></trophy>
-      </div>
-    </Transition>
+      <Transition mode="out-in">
+        <div id="scoreboard" v-if="scoreGameIsOpen">
+          <close class="close" @click="scoreGameIsOpen = false" :size="50">Close</close>
+          <div class="view-scoreboard">
+            <div class="option-scoreboard">
+              <trophy  :size="16" :class="{'selected-option':selectedOption==='score'}" @click="selectedOption='score'"></trophy>
+              <GearSvg :size="16" :fill="'var(--main-green)'" :class="{'selected-option':selectedOption==='option'}"  @click="selectedOption='option'" ></GearSvg>
+            </div>
+            <div class="view-element">
+              <scoreBoard v-show="selectedOption==='score'"></scoreBoard>
+              <OptionsLobby v-show="selectedOption==='option'" :disabled="true"></OptionsLobby>
+            </div>
+            
+          </div>
+         
+          
+        </div>
+        <div
+          v-else
+          @mousedown="activeDrag"
+          :style="{ top: trophyPosition.top + 'px' }"
+          :class="{
+            openScore: true,
+            normalPosition: game.phaseGame !== 'end',
+            endPosition: game.phaseGame === 'end'
+          }"
+        >
+          <trophy @click="scoreGameIsOpen = true" :size="50"></trophy>
+        </div>
+      </Transition>
     </Teleport>
-
-
   </div>
 </template>
 
@@ -43,12 +57,60 @@ import trophy from '@/assets/SVG/TrophySvg.vue'
 import close from '@/assets/SVG/CloseSvg.vue'
 import ScorePresentation from '@/components/gameLobby/ScorePresentation.vue'
 import regle from '@/components/gameLobby/RegleComp.vue'
+import GearSvg from '@/assets/SVG/GearSvg.vue'
+import OptionsLobby from '../WaitLobby/OptionsLobby.vue'
+const trophyPosition = ref<{top:number|string}>({
+  top: '50%'
+})
 
+function activeDrag() {
+  console.log('drag')
+  window.addEventListener('mousemove', dragElement)
+  window.addEventListener('mouseup', () => {
+    window.removeEventListener('mousemove', dragElement)
+    window.removeEventListener('mouseup', () => {})
+  })
+}
+function dragElement(e: MouseEvent) {
+  trophyPosition.value = {
+    top: e.clientY< 50 ? 50 : e.clientY> window.innerHeight - 50 ? window.innerHeight - 50 : e.clientY,
+  }
+}
+const selectedOption= ref<'score' | 'option'>('score')
 const game = gameStore()
 const scoreGameIsOpen = ref(false)
 </script>
 
 <style scoped>
+.view-element{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+}
+.option-scoreboard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.5s;
+  padding: 5px;
+}
+.option-scoreboard * {
+  cursor: pointer;
+}
+.view-scoreboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.selected-option{
+  transform: scale(2);
+  box-shadow: 0px 0px 2px 0px inset var(--normalTextColor), 0px 0px 5px 1px var(--normalTextColor);
+  border-radius: 10px;
+  padding: 1px;
+}
 #scoreboard {
   position: absolute;
   height: 100%;
@@ -59,23 +121,23 @@ const scoreGameIsOpen = ref(false)
   z-index: 50;
   padding: 20px;
   animation: slideInFromRight 0.5s ease-in-out;
-  border-left:1px solid var(--normalTextColor);
+  border-left: 1px solid var(--normalTextColor);
   pointer-events: all;
 }
-.normalPosition{
+.normalPosition {
   top: 50%;
   right: 5px;
 }
-.endPosition{
-  top: 90px;
+.endPosition {
+  top: 90px !important;
   right: 10px;
 }
-.container-lobby{
+.container-lobby {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap:30px
+  gap: 30px;
 }
 #scoreboard .close {
   position: absolute;
@@ -113,7 +175,7 @@ const scoreGameIsOpen = ref(false)
 .v-enter-active {
   transition: all ease 1s;
 }
-.v-leave-active{
+.v-leave-active {
   transition: all ease 0.3s;
 }
 .v-enter-from {
@@ -136,21 +198,23 @@ const scoreGameIsOpen = ref(false)
     top: auto;
     bottom: 25px !important;
   }
-  #scoreboard .close{
-    top:20px;
+  #scoreboard .close {
+    top: 20px;
     left: 25px;
     width: 20px;
     height: 20px;
   }
+  .option-scoreboard {
+    justify-content: flex-end;
+  }
 }
 @media (max-width: 400px) {
-  .container-lobby{
-  padding: 0px;
+  .container-lobby {
+    padding: 0px;
   }
   .gameLobby {
     padding: 5px;
   }
-
 }
 </style>
 //

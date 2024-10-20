@@ -53,6 +53,7 @@ header {
   padding: 10px;
   color: var(--colorNormalText);
   font-size: 30px;
+  user-select: none;
 }
 video{
   background-color: transparent;

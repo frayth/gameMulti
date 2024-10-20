@@ -1,12 +1,12 @@
 <template>
   <div class="option-container">
-    <h1>Options</h1>
+    <h1 v-if="!disabled">Options</h1>
     <div class="cat-container">
       <h2>Principales</h2>
       <OptionElement
         @update="updateOptions"
         v-model="options.defautScore"
-        :editable="game.owner===user.id"
+        :editable="game.owner===user.id && !disabled"
         :min="50"
         :max="150"
         :step="10"
@@ -14,7 +14,7 @@
         message="Points pour victoire"
       ></OptionElement>
       <OptionElement
-      :editable="game.owner===user.id"
+      :editable="game.owner===user.id && !disabled"
          @update="updateOptions"
         v-model="options.responseTime"
         :min="10000"
@@ -28,7 +28,7 @@
     <div class="cat-container">
       <h2>Bonus</h2>
       <OptionElement
-      :editable="game.owner===user.id"
+      :editable="game.owner===user.id && !disabled"
        @update="updateOptions"
         v-model="options.goodResponse"
         :min="1"
@@ -38,7 +38,7 @@
         message="Bonne réponse"
       ></OptionElement>
       <OptionElement
-      :editable="game.owner===user.id"
+      :editable="game.owner===user.id && !disabled"
        @update="updateOptions"
         v-model="options.numberOfStreakForBonus"
         :min="1"
@@ -48,7 +48,7 @@
         message="Ajout bonus streak"
       ></OptionElement>
       <OptionElement
-      :editable="game.owner===user.id"
+      :editable="game.owner===user.id && !disabled"
        @update="updateOptions"
         v-model="options.fasterResponse"
         :min="0"
@@ -62,7 +62,7 @@
     <div class="cat-container">
       <h2>Malus</h2>
       <OptionElement
-      :editable="game.owner===user.id"
+      :editable="game.owner===user.id && !disabled"
        @update="updateOptions"
         v-model="options.badResponse"
         :min="-10"
@@ -72,7 +72,7 @@
         message="Mauvaise réponse"
       ></OptionElement>
       <OptionElement
-      :editable="game.owner===user.id"
+      :editable="game.owner===user.id && !disabled"
        @update="updateOptions"
         v-model="options.fasterBadResponse"
         :min="-10"
@@ -82,7 +82,7 @@
         message="Malus rapidité"
       ></OptionElement>
       <OptionElement
-      :editable="game.owner===user.id"
+      :editable="game.owner===user.id && !disabled"
        @update="updateOptions"
         v-model="options.noResponse"
         :min="-10"
@@ -92,7 +92,7 @@
         message="Malus passe"
       ></OptionElement>
     </div>
-    <button class="reset" @click="resetOptions" v-if="game.owner===user.id">Reset</button>
+    <button class="reset" @click="resetOptions" v-if="game.owner===user.id && !disabled">Reset</button>
   </div>
 </template>
 
@@ -106,6 +106,7 @@ import { useSocketStore } from '@store/socket'
 import { userStore } from '@store/user'
 import { gameStore } from '@store/game'
 import { storeToRefs } from 'pinia'
+const props=defineProps<{disabled:boolean}>()
 const socket = useSocketStore()
 const user= userStore()
 const game= gameStore()

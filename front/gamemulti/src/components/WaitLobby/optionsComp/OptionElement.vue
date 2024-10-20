@@ -2,7 +2,7 @@
   <div :class="{'option-element-container':true,'no-input':!editable}">
     <div class="message-element">{{ message }}:</div>
     <input type="range" :min :max :step v-model="model" @input="test" v-if="editable" :disabled="disable">
-    <div class="value-element">{{model}}</div>
+    <div class="value-element">{{Number(model)>8000?Number(model)/1000:model}}</div>
   </div>
 </template>
 

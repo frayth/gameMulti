@@ -35,8 +35,8 @@ onMounted(()=>{
   background-color: var(--main-red);
   margin: 20px 0;
   border: none;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 5px;
+  font-size: 14px;
   cursor: pointer;
 }
 

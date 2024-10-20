@@ -40,6 +40,7 @@ onUnmounted(()=>{
   font-size: 1.5rem;
   color: var(--normalTextColor);
   margin-top: 2rem;
+  text-align: center;
 }
 .main-countdown p{
   margin: 0;
