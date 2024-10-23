@@ -11462,6 +11462,1655 @@
     "difficulty": 2,
     "response": 1,
     "descriptionResponse": "L'homme plus connu sous le nom Che Guevara s'appelle Ernesto."
+  },  {
+    "id": 341,
+    "question": "Qui était le dernier empereur aztèque ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Moctezuma II"
+      },
+      {
+        "id": 2,
+        "value": "Atahualpa"
+      },
+      {
+        "id": 3,
+        "value": "Pachacutec"
+      },
+      {
+        "id": 4,
+        "value": "Huayna Capac"
+      },
+      {
+        "id": 5,
+        "value": "Tupac Amaru"
+      },
+      {
+        "id": 6,
+        "value": "Tupac Katari"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 8,
+    "response": 1,
+    "descriptionResponse": "Le dernier empereur aztèque était Moctezuma II."
+  },  {
+    "id": 342,
+    "question": "Quel traité mit fin à la Première Guerre mondiale ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le traité de Versailles"
+      },
+      {
+        "id": 2,
+        "value": "Le traité de Trianon"
+      },
+      {
+        "id": 3,
+        "value": "Le traité de Saint-Germain-en-Laye"
+      },
+      {
+        "id": 4,
+        "value": "Le traité de Neuilly-sur-Seine"
+      },
+      {
+        "id": 5,
+        "value": "Le traité de Sèvres"
+      },
+      {
+        "id": 6,
+        "value": "Le traité de Lausanne"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "Le traité de Versailles mit fin à la Première Guerre mondiale."
+  },  {
+    "id": 343,
+    "question": "Dans quelle ville Jules César fut-il assassiné ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Rome"
+      },
+      {
+        "id": 2,
+        "value": "Alexandrie"
+      },
+      {
+        "id": 3,
+        "value": "Athènes"
+      },
+      {
+        "id": 4,
+        "value": "Carthage"
+      },
+      {
+        "id": 5,
+        "value": "Byzance"
+      },
+      {
+        "id": 6,
+        "value": "Troyes"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 1,
+    "response": 1,
+    "descriptionResponse": "Jules César fut assassiné à Rome."
+  },  {
+    "id": 344,
+    "question": "Qui était le premier empereur de Chine ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Qin Shi Huang"
+      },
+      {
+        "id": 2,
+        "value": "Qin Er Shi"
+      },
+      {
+        "id": 3,
+        "value": "Qin Shi Huang Di"
+      },
+      {
+        "id": 4,
+        "value": "Qin Shi Huang Ti"
+      },
+      {
+        "id": 5,
+        "value": "Qin Shi Huang Xi"
+      },
+      {
+        "id": 6,
+        "value": "Qin Shi Huang Qi"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 9,
+    "response": 1,
+    "descriptionResponse": "Le premier empereur de Chine était Qin Shi Huang."
+  },  {
+    "id": 345,
+    "question": "En quelle année la guerre de Cent Ans s'est-elle terminée ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "1453"
+      },
+      {
+        "id": 2,
+        "value": "1454"
+      },
+      {
+        "id": 3,
+        "value": "1455"
+      },
+      {
+        "id": 4,
+        "value": "1450"
+      },
+      {
+        "id": 5,
+        "value": "1449"
+      },
+      {
+        "id": 6,
+        "value": "1448"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 8,
+    "response": 1,
+    "descriptionResponse": "La guerre de Cent Ans s'est terminée en 1453."
+  },  {
+    "id": 346,
+    "question": "Quel était le nom du premier satellite artificiel lancé dans l'espace ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Spoutnik 1"
+      },
+      {
+        "id": 2,
+        "value": "Lancer 2"
+      },
+      {
+        "id": 3,
+        "value": "Vanguard TV3"
+      },
+      {
+        "id": 4,
+        "value": "Explorer 1"
+      },
+      {
+        "id": 5,
+        "value": "Pioneer 0"
+      },
+      {
+        "id": 6,
+        "value": "Luna 1"
+      }
+    ],
+    "category": "Espace",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "Le premier satellite artificiel lancé dans l'espace s'appelait Spoutnik 1."
+  },  {
+    "id": 347,
+    "question": "Qui a découvert la pierre de Rosette ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Pierre François Xavier Bouchard"
+      },
+      {
+        "id": 2,
+        "value": "Jean-François Champollion"
+      },
+      {
+        "id": 3,
+        "value": "Auguste Mariette"
+      },
+      {
+        "id": 4,
+        "value": "Howard Carter"
+      },
+      {
+        "id": 5,
+        "value": "Giovanni Battista Belzoni"
+      },
+      {
+        "id": 6,
+        "value": "Hiram Bingham"
+      }
+    ],
+    "category": "Histoire",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "La pierre de Rosette a été découverte par Pierre François Xavier Bouchard."
+  },  {
+    "id": 348,
+    "question": "Quelle est la plus haute montagne d'Afrique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le Kilimandjaro"
+      },
+      {
+        "id": 2,
+        "value": "Le Mont Kenya"
+      },
+      {
+        "id": 3,
+        "value": "Le Mont Elgon"
+      },
+      {
+        "id": 4,
+        "value": "Le Mont Meru"
+      },
+      {
+        "id": 5,
+        "value": "Le Mont Karisimbi"
+      },
+      {
+        "id": 6,
+        "value": "Le Mont Ruwenzori"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "La plus haute montagne d'Afrique est le Kilimandjaro."
+  },  {
+    "id": 349,
+    "question": "Dans quel pays se trouve le lac Baïkal ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Russie"
+      },
+      {
+        "id": 2,
+        "value": "Mongolie"
+      },
+      {
+        "id": 3,
+        "value": "Chine"
+      },
+      {
+        "id": 4,
+        "value": "Kazakhstan"
+      },
+      {
+        "id": 5,
+        "value": "Ouzbékistan"
+      },
+      {
+        "id": 6,
+        "value": "Turkménistan"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Le lac Baïkal se trouve en Russie."
+  },  {
+    "id": 350,
+    "question": "Quelle est la capitale de la Nouvelle-Zélande ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Wellington"
+      },
+      {
+        "id": 2,
+        "value": "Auckland"
+      },
+      {
+        "id": 3,
+        "value": "Christchurch"
+      },
+      {
+        "id": 4,
+        "value": "Hamilton"
+      },
+      {
+        "id": 5,
+        "value": "Dunedin"
+      },
+      {
+        "id": 6,
+        "value": "Tauranga"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "La capitale de la Nouvelle-Zélande est Wellington."
+  },  {
+    "id": 351,
+    "question": "Quel est le plus long fleuve d'Europe ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La Volga"
+      },
+      {
+        "id": 2,
+        "value": "Le Danube"
+      },
+      {
+        "id": 3,
+        "value": "Le Rhin"
+      },
+      {
+        "id": 4,
+        "value": "La Loire"
+      },
+      {
+        "id": 5,
+        "value": "La Seine"
+      },
+      {
+        "id": 6,
+        "value": "L'Elbe"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "La Volga est le plus long fleuve d'Europe."
+  },  {
+    "id": 352,
+    "question": "Dans quel océan se trouve l'archipel des Maldives ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Océan Indien"
+      },
+      {
+        "id": 2,
+        "value": "Océan Atlantique"
+      },
+      {
+        "id": 3,
+        "value": "Océan Pacifique"
+      },
+      {
+        "id": 4,
+        "value": "Océan Arctique"
+      },
+      {
+        "id": 5,
+        "value": "Océan Antarctique"
+      },
+      {
+        "id": 6,
+        "value": "Mer Méditerranée"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "L'archipel des Maldives se trouve dans l'Océan Indien."
+  },  {
+    "id": 353,
+    "question": "Quel est le détroit qui sépare l'Asie de l'Amérique du Nord ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le détroit de Béring"
+      },
+      {
+        "id": 2,
+        "value": "Le détroit de Gibraltar"
+      },
+      {
+        "id": 3,
+        "value": "Le détroit de Magellan"
+      },
+      {
+        "id": 4,
+        "value": "Le détroit de Malacca"
+      },
+      {
+        "id": 5,
+        "value": "Le détroit de Messine"
+      },
+      {
+        "id": 6,
+        "value": "Le détroit de Tsugaru"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "Le détroit qui sépare l'Asie de l'Amérique du Nord est le détroit de Béring."
+  },  {
+    "id": 354,
+    "question": "Dans quel pays se trouve le désert d'Atacama ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Chili"
+      },
+      {
+        "id": 2,
+        "value": "Argentine"
+      },
+      {
+        "id": 3,
+        "value": "Pérou"
+      },
+      {
+        "id": 4,
+        "value": "Bolivie"
+      },
+      {
+        "id": 5,
+        "value": "Équateur"
+      },
+      {
+        "id": 6,
+        "value": "Colombie"
+      }
+    ],
+    "category": "Géographie",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Le désert d'Atacama se trouve au Chili."
+  },  {
+    "id": 355,
+    "question": "Quelle est la vitesse de la lumière dans le vide ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "299 792 458 m/s"
+      },
+      {
+        "id": 2,
+        "value": "299 792 458 km/h"
+      },
+      {
+        "id": 3,
+        "value": "299 792 458 km/s"
+      },
+      {
+        "id": 4,
+        "value": "299 792 458 m/h"
+      },
+      {
+        "id": 5,
+        "value": "299 792 458 cm/s"
+      },
+      {
+        "id": 6,
+        "value": "299 792 458 cm/h"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "La vitesse de la lumière dans le vide est de 299 792 458 m/s."
+  },  {
+    "id": 356,
+    "question": "Quel est le nom de la particule élémentaire qui porte une charge électrique négative ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "L'électron"
+      },
+      {
+        "id": 2,
+        "value": "Le proton"
+      },
+      {
+        "id": 3,
+        "value": "Le neutron"
+      },
+      {
+        "id": 4,
+        "value": "Le positron"
+      },
+      {
+        "id": 5,
+        "value": "Le neutrino"
+      },
+      {
+        "id": 6,
+        "value": "Le muon"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "La particule élémentaire qui porte une charge électrique négative est l'électron."
+  },  {
+    "id": 357,
+    "question": "Quelle est la formule chimique de l'acide sulfurique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "H2SO4"
+      },
+      {
+        "id": 2,
+        "value": "H2O"
+      },
+      {
+        "id": 3,
+        "value": "HCl"
+      },
+      {
+        "id": 4,
+        "value": "HNO3"
+      },
+      {
+        "id": 5,
+        "value": "H2O2"
+      },
+      {
+        "id": 6,
+        "value": "H2CO3"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "La formule chimique de l'acide sulfurique est H2SO4."
+  },  {
+    "id": 358,
+    "question": "Qu'est-ce que l'effet photoélectrique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "L'émission d'électrons par un matériau éclairé"
+      },
+      {
+        "id": 2,
+        "value": "La réflexion de la lumière par un matériau"
+      },
+      {
+        "id": 3,
+        "value": "La réfraction de la lumière par un matériau"
+      },
+      {
+        "id": 4,
+        "value": "La diffraction de la lumière par un matériau"
+      },
+      {
+        "id": 5,
+        "value": "La polarisation de la lumière par un matériau"
+      },
+      {
+        "id": 6,
+        "value": "La dispersion de la lumière par un matériau"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "L'effet photoélectrique est l'émission d'électrons par un matériau éclairé."
+  },  {
+    "id": 359,
+    "question": "Quel mouvement artistique Salvador Dalí représentait-il ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le surréalisme"
+      },
+      {
+        "id": 2,
+        "value": "Le cubisme"
+      },
+      {
+        "id": 3,
+        "value": "L'expressionnisme"
+      },
+      {
+        "id": 4,
+        "value": "L'art abstrait"
+      },
+      {
+        "id": 5,
+        "value": "Le fauvisme"
+      },
+      {
+        "id": 6,
+        "value": "Le dadaïsme"
+      }
+    ],
+    "category": "Art",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Salvador Dalí représentait le surréalisme."
+  },  {
+    "id": 360,
+    "question": "Quel architecte a conçu la pyramide du Louvre ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Ieoh Ming Pei"
+      },
+      {
+        "id": 2,
+        "value": "Frank Gehry"
+      },
+      {
+        "id": 3,
+        "value": "Renzo Piano"
+      },
+      {
+        "id": 4,
+        "value": "Norman Foster"
+      },
+      {
+        "id": 5,
+        "value": "Zaha Hadid"
+      },
+      {
+        "id": 6,
+        "value": "Jean Nouvel"
+      }
+    ],
+    "category": "Art",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "La pyramide du Louvre a été conçue par l'architecte Ieoh Ming Pei."
+  },  {
+    "id": 361,
+    "question": "Quelle est la maxime célèbre de Descartes ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Je pense, donc je suis"
+      },
+      {
+        "id": 2,
+        "value": "Je suis, donc je pense"
+      },
+      {
+        "id": 3,
+        "value": "Je suis, donc je vis"
+      },
+      {
+        "id": 4,
+        "value": "Je vis, donc je suis"
+      },
+      {
+        "id": 5,
+        "value": "Je pense, donc je vis"
+      },
+      {
+        "id": 6,
+        "value": "Je vis, donc je pense"
+      }
+    ],
+    "category": "Philosophie",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "La maxime célèbre de Descartes est : Je pense, donc je suis."
+  },  {
+    "id": 362,
+    "question": "Quel philosophe grec était le maître d'Alexandre le Grand ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Aristote"
+      },
+      {
+        "id": 2,
+        "value": "Platon"
+      },
+      {
+        "id": 3,
+        "value": "Socrate"
+      },
+      {
+        "id": 4,
+        "value": "Héraclite"
+      },
+      {
+        "id": 5,
+        "value": "Épicure"
+      },
+      {
+        "id": 6,
+        "value": "Diogène"
+      }
+    ],
+    "category": "Philosophie",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Aristote était le maître d'Alexandre le Grand."
+  },  {
+    "id": 363,
+    "question": "Qui a écrit \"Ainsi parlait Zarathoustra\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Friedrich Nietzsche"
+      },
+      {
+        "id": 2,
+        "value": "Arthur Schopenhauer"
+      },
+      {
+        "id": 3,
+        "value": "Immanuel Kant"
+      },
+      {
+        "id": 4,
+        "value": "Jean-Paul Sartre"
+      },
+      {
+        "id": 5,
+        "value": "Albert Camus"
+      },
+      {
+        "id": 6,
+        "value": "Martin Heidegger"
+      }
+    ],
+    "category": "Philosophie",
+    "difficulty": 8,
+    "response": 1,
+    "descriptionResponse": "Ainsi parlait Zarathoustra a été écrit par Friedrich Nietzsche."
+  },  {
+    "id": 364,
+    "question": "Quel philosophe est connu pour sa théorie des Idées ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Platon"
+      },
+      {
+        "id": 2,
+        "value": "Aristote"
+      },
+      {
+        "id": 3,
+        "value": "Socrate"
+      },
+      {
+        "id": 4,
+        "value": "Héraclite"
+      },
+      {
+        "id": 5,
+        "value": "Épicure"
+      },
+      {
+        "id": 6,
+        "value": "Diogène"
+      }
+    ],
+    "category": "Philosophie",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Platon est connu pour sa théorie des Idées."
+  },  {
+    "id": 365,
+    "question": "Qui a écrit \"Le Capital\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Karl Marx"
+      },
+      {
+        "id": 2,
+        "value": "Friedrich Engels"
+      },
+      {
+        "id": 3,
+        "value": "Vladimir Lénine"
+      },
+      {
+        "id": 4,
+        "value": "Joseph Staline"
+      },
+      {
+        "id": 5,
+        "value": "Mao Zedong"
+      },
+      {
+        "id": 6,
+        "value": "Che Guevara"
+      }
+    ],
+    "category": "Politique",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "Le Capital a été écrit par Karl Marx."
+  },  {
+    "id": 366,
+    "question": "Quel économiste est connu pour sa \"main invisible\" ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Adam Smith"
+      },
+      {
+        "id": 2,
+        "value": "John Maynard Keynes"
+      },
+      {
+        "id": 3,
+        "value": "Milton Friedman"
+      },
+      {
+        "id": 4,
+        "value": "Karl Marx"
+      },
+      {
+        "id": 5,
+        "value": "Friedrich Hayek"
+      },
+      {
+        "id": 6,
+        "value": "Joseph Schumpeter"
+      }
+    ],
+    "category": "Économie",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Adam Smith est connu pour sa \"main invisible\"."
+  },  {
+    "id": 367,
+    "question": "En quelle année l'euro est-il devenu la monnaie officielle de l'UE ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "2002"
+      },
+      {
+        "id": 2,
+        "value": "2000"
+      },
+      {
+        "id": 3,
+        "value": "1999"
+      },
+      {
+        "id": 4,
+        "value": "2001"
+      },
+      {
+        "id": 5,
+        "value": "2003"
+      },
+      {
+        "id": 6,
+        "value": "1998"
+      }
+    ],
+    "category": "Politique",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "L'euro est devenu la monnaie officielle de l'UE en 2002."
+  },  {
+    "id": 368,
+    "question": "Quel est le siège de la Banque centrale européenne ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Francfort"
+      },
+      {
+        "id": 2,
+        "value": "Paris"
+      },
+      {
+        "id": 3,
+        "value": "Bruxelles"
+      },
+      {
+        "id": 4,
+        "value": "Londres"
+      },
+      {
+        "id": 5,
+        "value": "Berlin"
+      },
+      {
+        "id": 6,
+        "value": "Madrid"
+      }
+    ],
+    "category": "Politique",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Le siège de la Banque centrale européenne est à Francfort."
+  },  {
+    "id": 369,
+    "question": "Qui a créé la Réserve fédérale américaine ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Woodrow Wilson"
+      },
+      {
+        "id": 2,
+        "value": "Theodore Roosevelt"
+      },
+      {
+        "id": 3,
+        "value": "Franklin D. Roosevelt"
+      },
+      {
+        "id": 4,
+        "value": "Herbert Hoover"
+      },
+      {
+        "id": 5,
+        "value": "Calvin Coolidge"
+      },
+      {
+        "id": 6,
+        "value": "Warren G. Harding"
+      }
+    ],
+    "category": "Politique",
+    "difficulty": 9,
+    "response": 1,
+    "descriptionResponse": "La Réserve fédérale américaine a été créée par Woodrow Wilson."
+  },  {
+    "id": 370,
+    "question": "Quel événement a déclenché la Grande Dépression ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Le krach boursier de 1929"
+      },
+      {
+        "id": 2,
+        "value": "La crise des subprimes"
+      },
+      {
+        "id": 3,
+        "value": "La crise pétrolière de 1973"
+      },
+      {
+        "id": 4,
+        "value": "La crise financière de 2008"
+      },
+      {
+        "id": 5,
+        "value": "La crise de la dette souveraine"
+      },
+      {
+        "id": 6,
+        "value": "La crise du Covid-19"
+      }
+    ],
+    "category": "Politique",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "La Grande Dépression a été déclenchée par le krach boursier de 1929."
+  },  {
+    "id": 371,
+    "question": "Qu'est-ce que le PIB ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Produit intérieur brut"
+      },
+      {
+        "id": 2,
+        "value": "Passive income balance"
+      },
+      {
+        "id": 3,
+        "value": "Profitable investment balance"
+      },
+      {
+        "id": 4,
+        "value": "Produit intérieur bas"
+      },
+      {
+        "id": 5,
+        "value": "Passe intérieur brut"
+      },
+      {
+        "id": 6,
+        "value": "Profit intérieur brut"
+      }
+    ],
+    "category": "Économie",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Le PIB est le Produit intérieur brut."
+  },  {
+    "id": 372,
+    "question": "Qui était le dieu grec de la mer ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Poséidon"
+      },
+      {
+        "id": 2,
+        "value": "Zeus"
+      },
+      {
+        "id": 3,
+        "value": "Hadès"
+      },
+      {
+        "id": 4,
+        "value": "Apollon"
+      },
+      {
+        "id": 5,
+        "value": "Arès"
+      },
+      {
+        "id": 6,
+        "value": "Hermès"
+      }
+    ],
+    "category": "Mythologie",
+    "difficulty": 1,
+    "response": 1,
+    "descriptionResponse": "Poséidon était le dieu grec de la mer."
+  },  {
+    "id": 373,
+    "question": "Dans la mythologie nordique, qui est le père de Thor ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Odin"
+      },
+      {
+        "id": 2,
+        "value": "Loki"
+      },
+      {
+        "id": 3,
+        "value": "Freyr"
+      },
+      {
+        "id": 4,
+        "value": "Tyr"
+      },
+      {
+        "id": 5,
+        "value": "Baldr"
+      },
+      {
+        "id": 6,
+        "value": "Heimdall"
+      }
+    ],
+    "category": "Mythologie",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Odin est le père de Thor dans la mythologie nordique."
+  },  {
+    "id": 374,
+    "question": "Qui est le dieu égyptien des morts ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Anubis"
+      },
+      {
+        "id": 2,
+        "value": "Osiris"
+      },
+      {
+        "id": 3,
+        "value": "Rê"
+      },
+      {
+        "id": 4,
+        "value": "Horus"
+      },
+      {
+        "id": 5,
+        "value": "Isis"
+      },
+      {
+        "id": 6,
+        "value": "Seth"
+      }
+    ],
+    "category": "Mythologie",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "Anubis est le dieu égyptien des morts."
+  },  {
+    "id": 375,
+    "question": "En quelle année la première PlayStation de Sony a-t-elle été lancée ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "1994"
+      },
+      {
+        "id": 2,
+        "value": "1995"
+      },
+      {
+        "id": 3,
+        "value": "1996"
+      },
+      {
+        "id": 4,
+        "value": "1997"
+      },
+      {
+        "id": 5,
+        "value": "1993"
+      },
+      {
+        "id": 6,
+        "value": "1992"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 8,
+    "response": 1,
+    "descriptionResponse": "La première PlayStation de Sony a été lancée en 1994."
+  },  {
+    "id": 376,
+    "question": "Quel est le nom du protagoniste principal de la série \"The Legend of Zelda\" ",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Link"
+      },
+      {
+        "id": 2,
+        "value": "Zelda"
+      },
+      {
+        "id": 3,
+        "value": "Ganon"
+      },
+      {
+        "id": 4,
+        "value": "Impa"
+      },
+      {
+        "id": 5,
+        "value": "Tingle"
+      },
+      {
+        "id": 6,
+        "value": "Saria"
+      }
+    ],
+    "category": "Jeux vidéo",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "Le protagoniste principal de la série The Legend of Zelda s'appelle Link."
+  },  {
+    "id": 377,
+    "question": "Qui a inventé le téléphone en 1876 ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Alexander Graham Bell"
+      },
+      {
+        "id": 2,
+        "value": "Thomas Edison"
+      },
+      {
+        "id": 3,
+        "value": "Nikola Tesla"
+      },
+      {
+        "id": 4,
+        "value": "Guglielmo Marconi"
+      },
+      {
+        "id": 5,
+        "value": "Samuel Morse"
+      },
+      {
+        "id": 6,
+        "value": "Elisha Gray"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 7,
+    "response": 1,
+    "descriptionResponse": "Le téléphone a été inventé par Alexander Graham Bell en 1876."
+  },  {
+    "id": 378,
+    "question": "En quelle année le World Wide Web a-t-il été inventé par Tim Berners-Lee ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "1989"
+      },
+      {
+        "id": 2,
+        "value": "1990"
+      },
+      {
+        "id": 3,
+        "value": "1991"
+      },
+      {
+        "id": 4,
+        "value": "1992"
+      },
+      {
+        "id": 5,
+        "value": "1988"
+      },
+      {
+        "id": 6,
+        "value": "1993"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Le World Wide Web a été inventé par Tim Berners-Lee en 1989."
+  },  {
+    "id": 379,
+    "question": "Qui est l'inventeur de l'ampoule électrique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Thomas Edison"
+      },
+      {
+        "id": 2,
+        "value": "Nikola Tesla"
+      },
+      {
+        "id": 3,
+        "value": "Joseph Swan"
+      },
+      {
+        "id": 4,
+        "value": "Humphry Davy"
+      },
+      {
+        "id": 5,
+        "value": "Georges Claude"
+      },
+      {
+        "id": 6,
+        "value": "Heinrich Göbel"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "L'inventeur de l'ampoule électrique est Thomas Edison."
+  },  {
+    "id": 380,
+    "question": "Quel est le seul nombre premier pair ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "value": "28"
+      },
+      {
+        "id": 3,
+        "value": "230"
+      },
+      {
+        "id": 4,
+        "value": "78"
+      },
+      {
+        "id": 5,
+        "value": "13696"
+      },
+      {
+        "id": 6,
+        "value": "1856"
+      }
+    ],
+    "category": "Mathématiques",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "Le seul nombre premier pair est 2."
+  },  {
+    "id": 381,
+    "question": "Quelle est l'unité de mesure de la force dans le système international ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Newton"
+      },
+      {
+        "id": 2,
+        "value": "Joule"
+      },
+      {
+        "id": 3,
+        "value": "Watt"
+      },
+      {
+        "id": 4,
+        "value": "Volt"
+      },
+      {
+        "id": 5,
+        "value": "Ampère"
+      },
+      {
+        "id": 6,
+        "value": "Ohm"
+      }
+    ],
+    "category": "Physique",
+    "difficulty": 2,
+    "response": 1,
+    "descriptionResponse": "L'unité de mesure de la force dans le système international est le Newton."
+  },  {
+    "id": 382,
+    "question": "Comment s'appelle le théorème qui stipule que dans un triangle rectangle, a² + b² = c² ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Théorème de Pythagore"
+      },
+      {
+        "id": 2,
+        "value": "Théorème de Thalès"
+      },
+      {
+        "id": 3,
+        "value": "Théorème de Bell "
+      },
+      {
+        "id": 4,
+        "value": "Théorème de Fermat"
+      },
+      {
+        "id": 5,
+        "value": "Théorème de Thévenin"
+      },
+      {
+        "id": 6,
+        "value": "Théorème de Norton"
+      }
+    ],
+    "category": "Mathématiques",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "Le théorème qui stipule que dans un triangle rectangle, a² + b² = c² est le théorème de Pythagore."
+  },  {
+    "id": 383,
+    "question": "Quel est le jeu vidéo le plus vendu de tous les temps ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Minecraft"
+      },
+      {
+        "id": 2,
+        "value": "Tetris"
+      },
+      {
+        "id": 3,
+        "value": "Grand Theft Auto V"
+      },
+      {
+        "id": 4,
+        "value": "Wii Sports"
+      },
+      {
+        "id": 5,
+        "value": "Super Mario Bros."
+      },
+      {
+        "id": 6,
+        "value": "Pokémon Rouge et Bleu"
+      }
+    ],
+    "category": "Jeux vidéo",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "Le jeu vidéo le plus vendu de tous les temps est Minecraft."
+  },  {
+    "id": 384,
+    "question": "Quelle société a créé le jeu Tetris ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Dorodnitsyn Computing Centre"
+      },
+      {
+        "id": 2,
+        "value": "Nintendo"
+      },
+      {
+        "id": 3,
+        "value": "Sega"
+      },
+      {
+        "id": 4,
+        "value": "Atari"
+      },
+      {
+        "id": 5,
+        "value": "Konami"
+      },
+      {
+        "id": 6,
+        "value": "Taito"
+      }
+    ],
+    "category": "Jeux vidéo",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "Le jeu Tetris a été créé par la société russe Dorodnitsyn Computing Centre et précisement par Alexey Pajitnov."
+  },  {
+    "id": 385,
+    "question": "Combien y a-t-il de faces sur un dodécaèdre ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "12"
+      },
+      {
+        "id": 2,
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "value": "6"
+      },
+      {
+        "id": 5,
+        "value": "20"
+      },
+      {
+        "id": 6,
+        "value": "24"
+      }
+    ],
+    "category": "Mathématiques",
+    "difficulty": 4,
+    "response": 1,
+    "descriptionResponse": "Il y a 12 faces sur un dodécaèdre."
+  },  {
+    "id": 386,
+    "question": "Marie Curie a reçu deux prix Nobel. Dans quels domaines ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Physique et Chimie"
+      },
+      {
+        "id": 2,
+        "value": "Physique et Médecine"
+      },
+      {
+        "id": 3,
+        "value": "Chimie et Médecine"
+      },
+      {
+        "id": 4,
+        "value": "Physique et Littérature"
+      },
+      {
+        "id": 5,
+        "value": "Chimie et Littérature"
+      },
+      {
+        "id": 6,
+        "value": "Médecine et Littérature"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 5,
+    "response": 1,
+    "descriptionResponse": "Marie Curie a reçu deux prix Nobel, en Physique et en Chimie."
+  },  {
+    "id": 387,
+    "question": "Qui est connu pour avoir développé le premier vaccin contre la rage ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Louis Pasteur"
+      },
+      {
+        "id": 2,
+        "value": "Robert Koch"
+      },
+      {
+        "id": 3,
+        "value": "Edward Jenner"
+      },
+      {
+        "id": 4,
+        "value": "Alexander Fleming"
+      },
+      {
+        "id": 5,
+        "value": "Joseph Lister"
+      },
+      {
+        "id": 6,
+        "value": "Paul Ehrlich"
+      }
+    ],
+    "category": "Sciences",
+    "difficulty": 3,
+    "response": 1,
+    "descriptionResponse": "Louis Pasteur est connu pour avoir développé le premier vaccin contre la rage."
+  },  {
+    "id": 388,
+    "question": "Qu’est-ce que la “loi de Moore” en informatique ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "La puissance des microprocesseurs double tous les deux ans"
+      },
+      {
+        "id": 2,
+        "value": "La capacité des disques durs double tous les deux ans"
+      },
+      {
+        "id": 3,
+        "value": "La vitesse de connexion à Internet double tous les deux ans"
+      },
+      {
+        "id": 4,
+        "value": "La taille des écrans double tous les deux ans"
+      },
+      {
+        "id": 5,
+        "value": "Le nombre de transistors double tous les deux ans"
+      },
+      {
+        "id": 6,
+        "value": "La durée de vie des batteries double tous les deux ans"
+      }
+    ],
+    "category": "Technologie",
+    "difficulty": 6,
+    "response": 1,
+    "descriptionResponse": "La loi de Moore en informatique stipule que le nombre de transistors dans un microprocesseur double tous les deux ans."
+  },  {
+    "id": 389,
+    "question": "Quel film a remporté l'Oscar du meilleur film en 1997 et est centré sur une catastrophe maritime ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "Titanic"
+      },
+      {
+        "id": 2,
+        "value": "Braveheart"
+      },
+      {
+        "id": 3,
+        "value": "Forrest Gump"
+      },
+      {
+        "id": 4,
+        "value": "Le Patient anglais"
+      },
+      {
+        "id": 5,
+        "value": "Shakespeare in Love"
+      },
+      {
+        "id": 6,
+        "value": "Gladiator"
+      }
+    ],
+    "category": "Cinéma",
+    "difficulty": 1,
+    "response": 1,
+    "descriptionResponse": "Le film Titanic a remporté l'Oscar du meilleur film en 1997 et est centré sur une catastrophe maritime."
+  },  {
+    "id": 390,
+    "question": "Dans la théorie des cordes, combien de dimensions sont postulées pour l'univers ?",
+    "answers": [
+      {
+        "id": 1,
+        "value": "11"
+      },
+      {
+        "id": 2,
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "value": "8"
+      },
+      {
+        "id": 5,
+        "value": "7"
+      },
+      {
+        "id": 6,
+        "value": "6"
+      }
+    ],
+    "category": "Physique",
+    "difficulty": 8,
+    "response": 1,
+    "descriptionResponse": "Dans la théorie des cordes, 11 dimensions sont postulées pour l'univers."
   }
- 
 ]
